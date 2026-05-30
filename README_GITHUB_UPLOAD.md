@@ -616,6 +616,88 @@ body.map-half #table-section{max-height:none;flex:1}
   }
 }
 
+
+
+/* ===== TRUE PHONE LAYOUT PATCH v4 =====
+   Phone should not be a squeezed desktop. Keep it map-first: search, optional filters,
+   compact metric strip, full-width map, then raw table/detail. */
+#mobile-filter-toggle{display:none}
+
+@media (max-width: 760px){
+  html,body{width:100%;max-width:100%;height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+  body{display:block;background:#fff;}
+  #header{position:sticky;top:0;z-index:3000;height:auto;min-height:52px;padding:8px 10px;}
+  #header-right{display:none;}
+  #header-left{width:100%;gap:9px;min-width:0;}
+  .savills-logo-wrap,.savills-logo-wrap svg{width:34px;height:34px;}
+  #header-titles{min-width:0;}
+  #header-titles h1{font-size:12px;line-height:1.15;max-width:calc(100vw - 58px);white-space:normal;}
+  #header-titles p{display:none;}
+
+  #body,#main,#map-section,#map-wrapper,#table-section{display:block;overflow:visible;min-height:0;flex:none;width:100%;}
+
+  /* Mobile search/filter tray */
+  #sidebar{width:100%;display:block;padding:8px 10px 6px;background:#fff;border-right:0;border-bottom:1px solid var(--border);overflow:visible;max-height:none;}
+  #sidebar .sidebar-section{padding:0;margin:0 0 7px 0;border:0;min-width:0;}
+  #sidebar .sidebar-section:first-child{display:block;margin-bottom:6px;}
+  #sidebar .sidebar-section:not(:first-child){display:none;}
+  #sidebar.mobile-filters-open .sidebar-section:not(:first-child){display:block;}
+  #sidebar .sidebar-section:last-child{display:none!important;}
+  #mobile-filter-toggle{display:block;width:100%;height:30px;border:1px solid #d7d7d7;background:#f7f7f7;color:var(--savills-navy);border-radius:6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin:0 0 4px 0;}
+  .sidebar-label{font-size:8px;letter-spacing:.8px;margin-bottom:3px;}
+  #search-input,select.filter-select{width:100%;min-height:36px;font-size:13px;padding:7px 9px;margin:0;border-radius:5px;}
+
+  /* Compact KPI strip - no giant boxes */
+  #kpi-bar{display:flex;gap:6px;overflow-x:auto;overflow-y:hidden;padding:7px 9px;background:#fff;border-bottom:1px solid var(--border);-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  #kpi-bar::-webkit-scrollbar{display:none;}
+  .kpi-cell{flex:0 0 auto;min-width:132px;max-width:155px;border:1px solid #e2e2e2;border-radius:8px;padding:6px 8px;background:#fafafa;}
+  .kpi-label{font-size:7px;line-height:1.1;letter-spacing:.55px;white-space:normal;}
+  .kpi-val{font-size:15px;line-height:1.1;margin-top:2px;}
+  .kpi-sub{font-size:8px;margin-top:0;}
+
+  /* Remove desktop card rail from phone. Cards are useful on desktop, but they bury the map on mobile. */
+  #cards-panel{display:none!important;}
+
+  /* Map-first mobile view */
+  #map-wrapper{position:relative;width:100%;height:430px;min-height:430px;border-bottom:1px solid var(--border);overflow:hidden;background:#eee;}
+  #map{display:block;width:100%;height:430px!important;min-height:430px!important;}
+  #map-section.map-half,body.map-half #map-section,body.map-half #table-section{flex:none;max-height:none;}
+  #map-collapse-btn{display:none!important;}
+
+  /* Keep only the map-options button, not duplicate KPI stats */
+  #map-stats-bar{position:absolute;top:8px;right:8px;left:auto;width:auto;display:block;padding:0;background:transparent;border:0;box-shadow:none;z-index:1001;}
+  #map-stats-bar .ms-cell{display:none!important;}
+  #map-options-btn{display:block;width:auto;min-height:30px;margin:0;padding:6px 10px;border-radius:16px;background:rgba(37,39,58,.92);font-size:10px;box-shadow:0 2px 8px rgba(0,0,0,.22);}
+  #map-options-panel{position:absolute;top:46px;left:8px;right:8px;min-width:0;max-width:none;max-height:300px;overflow-y:auto;z-index:1002;border-radius:8px;}
+  .map-opt-btn{font-size:10px;padding:6px 9px;}
+
+  /* Raw data below map */
+  #table-section{height:330px;max-height:none;border-top:0;overflow:hidden;background:#fff;}
+  #table-header{position:relative;top:auto;z-index:2;min-height:44px;padding:8px 10px;}
+  #table-header h3{font-size:12px;}
+  #visible-count{font-size:11px;}
+  #export-btn{font-size:10px;padding:6px 10px;}
+  #table-wrap{height:286px;overflow:auto;-webkit-overflow-scrolling:touch;}
+  #data-table{min-width:1080px;}
+  #data-table th{font-size:9px;padding:7px 8px;}
+  #data-table td{font-size:10px;padding:7px 8px;}
+
+  #detail-panel{position:fixed;top:0;right:-100vw;width:100vw;height:100vh;z-index:4000;}
+  #detail-panel.open{right:0;}
+  #email-modal-box{width:96vw;max-height:92vh;}
+}
+
+@media (max-width:430px){
+  #sidebar{padding:8px;}
+  #kpi-bar{padding:7px 8px;}
+  .kpi-cell{min-width:124px;padding:6px 7px;}
+  .kpi-val{font-size:14px;}
+  #map-wrapper{height:405px;min-height:405px;}
+  #map{height:405px!important;min-height:405px!important;}
+  #table-section{height:315px;}
+  #table-wrap{height:271px;}
+}
+
 </style>
 </head>
 <body>
@@ -649,6 +731,7 @@ body.map-half #table-section{max-height:none;flex:1}
       <div class="sidebar-label">Search Tenant / Address</div>
       <input type="text" id="search-input" placeholder="Search tenant, address, city, landlord…">
     </div>
+    <button id="mobile-filter-toggle" type="button" onclick="toggleMobileFilters()">Filters ▾</button>
     <div class="sidebar-section">
       <div class="sidebar-label">Expiration Window</div>
       <select class="filter-select" id="f-window">
@@ -1083,6 +1166,15 @@ function filteredBDs() {
 // ============================================================
 // MAP COLLAPSE TOGGLE
 // ============================================================
+function toggleMobileFilters() {
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('mobile-filter-toggle');
+  if (!sidebar || !btn) return;
+  const open = sidebar.classList.toggle('mobile-filters-open');
+  btn.textContent = open ? 'Filters ▴' : 'Filters ▾';
+  setTimeout(() => { if (map) map.invalidateSize(); }, 250);
+}
+
 let mapCollapsed = false;
 function toggleMapCollapse() {
   mapCollapsed = !mapCollapsed;
