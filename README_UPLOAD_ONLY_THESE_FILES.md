@@ -1,15 +1,15 @@
-# v39 Market AI bar charts
+# v41 comp evidence table QA fix
 
 Single-file GitHub package.
 
 Updates:
-- Replaced tiny line charts in Market AI insights with large bar-based comp economics cards.
-- Added large horizontal bar summaries for:
-  - Free rent trend
-  - TI / PSF trend
-  - NER trend
-- Each bar card now shows the latest quarter value by region plus quarter-over-quarter direction.
-- Styled to fit the existing Savills dashboard layout more clearly.
+- Removed long rent escalation/comment-style fields from the main Comp evidence table.
+- Cleaned comp economics display logic so raw shifted values do not fall back into Free rent.
+- Suppressed suspect free-rent values from visible table/cards while preserving them in RawFreeRentField.
+- Confirmed Behr Paints and GEODIS suspect free-rent values are suppressed.
+- Sortable table headers preserved.
+
+Suppressed suspect raw free-rent fields: 6
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
