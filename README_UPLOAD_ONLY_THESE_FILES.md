@@ -1,17 +1,14 @@
-# v32 Market AI insights
+# v33 Market AI reports clean-up
 
 Single-file GitHub package.
 
 Updates:
-- Replaced Market Rents section with Market AI insights.
-- Added expandable quarterly report-style panels for:
-  - Northern New Jersey
-  - PA I-81 / I-78 Corridor
-  - Philadelphia / Southern New Jersey
-- Added AI-assisted market analysis based on the embedded building, comp and lease-event database.
-- Added visuals for rent benchmark, vacancy, inventory and submarket scale.
-- Confirmed rent comparison policy: Savills research / market benchmark data is the rent-comparison source, with actual Savills comp economics used as transaction evidence. CoStar asking rents and estimated asking rents are not used as the core market rent comparison.
-- Removed visible internal QA notes.
+- Market AI insights now focuses on Savills Research, not lease-event email-prompt language.
+- Each market card includes a thumbnail of the actual Savills Q1 2026 Market in Minutes report.
+- The enlarged report modal shows the actual two-page Savills report images.
+- AI analysis uses Savills report metrics and the dashboard database overlay.
+- Removed internal QA notes and removed captive-tenant language from the market research section.
+- Captive-tenant / market competition language remains only in the lease-event email prompt builder.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
