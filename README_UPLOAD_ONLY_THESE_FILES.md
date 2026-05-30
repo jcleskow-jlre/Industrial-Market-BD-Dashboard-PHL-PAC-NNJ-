@@ -1,23 +1,20 @@
-# v28 single-file bulletproof package
+# v32 Market AI insights
 
-This package intentionally has:
-- no PNG files
-- no favicon files
-- no external data folder dependency
+Single-file GitHub package.
 
-All dashboard data is embedded directly inside dashboard.html.
+Updates:
+- Replaced Market Rents section with Market AI insights.
+- Added expandable quarterly report-style panels for:
+  - Northern New Jersey
+  - PA I-81 / I-78 Corridor
+  - Philadelphia / Southern New Jersey
+- Added AI-assisted market analysis based on the embedded building, comp and lease-event database.
+- Added visuals for rent benchmark, vacancy, inventory and submarket scale.
+- Confirmed rent comparison policy: Savills research / market benchmark data is the rent-comparison source, with actual Savills comp economics used as transaction evidence. CoStar asking rents and estimated asking rents are not used as the core market rent comparison.
+- Removed visible internal QA notes.
 
-Upload only these files into `/Claude-Dashboard/`:
-- index.html
+Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
+- index.html
 - .nojekyll
 - README_UPLOAD_ONLY_THESE_FILES.md
-
-Best process:
-1. Delete the existing `/Claude-Dashboard/` folder contents on GitHub.
-2. Upload these four files.
-3. Wait 1-3 minutes.
-4. Hard refresh.
-5. Open `/Claude-Dashboard/dashboard.html?v=28`.
-
-If you still see `PNG IHDR`, then GitHub still has an old binary file named dashboard.html or index.html in that folder.
