@@ -1,0 +1,9 @@
+metric,value
+Buildings loaded,2663
+Lease comps loaded,1459
+BD lease events loaded,465
+BD matched to buildings,272
+BD unmatched/review,193
+Comps matched to buildings,829
+Comps unmatched/review,630
+Buildings with coordinates,2663

@@ -185,6 +185,29 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',Arial,sa
 .loading-bar{width:200px;height:2px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden}
 .loading-fill{height:100%;background:var(--yellow);border-radius:2px;width:0;animation:loadFill 1.2s ease forwards}
 @keyframes loadFill{to{width:100%}}
+
+
+/* ===== RESPONSIVE LOGIN PATCH ===== */
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; padding: 36px 24px; overflow-y: auto; }
+  .left-panel { min-height: auto; }
+  .right-panel { justify-content: flex-start; }
+  .login-card { max-width: 520px; }
+  .stat-row { flex-wrap: wrap; gap: 20px; }
+}
+@media (max-width: 640px) {
+  html, body { overflow-y: auto; }
+  .layout { padding: 24px 16px; }
+  .logo-row { margin-bottom: 24px; }
+  .headline { font-size: clamp(28px, 10vw, 48px); }
+  .subline { font-size: 13px; margin-bottom: 24px; }
+  .feature-pills { margin-bottom: 28px; }
+  .stat-row { gap: 16px; margin-bottom: 24px; }
+  .stat-num { font-size: 24px; }
+  .login-card { padding: 22px 18px; }
+  .map-nodes { display: none; }
+}
+
 </style>
 </head>
 <body>
@@ -261,7 +284,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',Arial,sa
   <div class="right-panel">
     <div class="login-card">
       <div class="card-title">Secure access</div>
-      <div class="card-sub">Enter your Savills credentials to open the PA/NJ Industrial Market Intelligence Dashboard.</div>
+      <div class="card-sub">Enter your Savills credentials to open the PHI-PAC-NNJ Industrial Market Intelligence Dashboard.</div>
 
       <form id="login-form" onsubmit="return handleLogin(event)">
         <div class="form-group">

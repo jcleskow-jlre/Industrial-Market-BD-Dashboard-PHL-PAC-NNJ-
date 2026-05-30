@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PA/NJ Industrial Market & BD Dashboard</title>
+<title>PHI-PAC-NNJ Industrial Market & BD Dashboard</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='124' height='124' viewBox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='124' height='124' fill='%23FFE843'/%3E%3Cpath d='M18.07 116.1C11.73 116.1 7.43 112.86 7.43 106.82V106.59H10.91V106.75C10.91 110.69 13.77 113.01 18.1 113.01C20.42 113.01 24.83 112.01 24.83 108.29C24.83 101.1 8.28 106.2 8.28 95.92C8.28 90.74 13.11 88.42 17.9 88.42C23.55 88.42 27.38 91.67 27.38 96.92V97.16H23.91V96.92C23.91 93.52 21.51 91.51 17.64 91.51C14.94 91.51 11.77 92.67 11.77 95.76C11.77 102.49 28.32 97.78 28.32 108.14C28.32 113.63 23.18 116.1 18.08 116.1M48.11 101.72C47.57 102.18 46.26 102.42 45.56 102.49L43.09 102.8C38.45 103.34 34.11 104.27 34.11 108.29C34.11 111.62 36.98 113.01 39.53 113.01C42.16 113.01 44.48 112.08 46.1 110.46C47.42 109.07 48.11 107.21 48.11 105.2V101.72ZM48.73 115.33C48.34 113.94 48.34 111.16 48.34 111.16C47.03 114.02 44.01 116.1 39.3 116.1C33.88 116.1 30.63 113.17 30.63 108.37C30.63 101.41 36.9 100.71 43.01 100.02L44.32 99.86C46.8 99.55 48.11 99.24 48.11 96.54C48.11 93.06 46.1 91.51 41.77 91.51C38.14 91.51 35.2 93.06 35.2 97V97.23H31.72V97C31.72 90.89 36.59 88.42 42.16 88.42C48.19 88.42 51.66 90.81 51.66 96.46V110.69C51.66 111.93 51.87 114.56 52.18 115.33H48.73ZM74.33 89.19H74.64L65.67 115.33H61.88L52.6 89.19H56.63L63.81 111.34L70.92 89.19H74.33ZM80.56 82.31C80.56 81.66 80.3 81.04 79.84 80.59C79.38 80.13 78.77 79.87 78.12 79.87C76.82 79.87 75.68 80.93 75.68 82.23C75.68 82.87 75.94 83.49 76.4 83.95C76.86 84.4 77.47 84.66 78.12 84.66C78.77 84.66 79.38 84.4 79.84 83.95C80.3 83.49 80.56 82.87 80.56 82.23V82.31ZM76.34 89.19H79.98V115.33H76.34V89.19ZM83.54 79.29H87.17V115.33H83.54V79.29ZM90.65 79.29H94.29V115.33H90.65V79.29ZM107.02 116.1C100.6 116.1 96.3 112.86 96.3 106.82V106.59H99.78V106.75C99.78 110.69 102.72 113.01 106.97 113.01C109.29 113.01 113.78 112.01 113.78 108.29C113.78 101.1 97.15 106.2 97.15 95.92C97.15 90.74 101.97 88.42 106.77 88.42C112.49 88.42 116.33 91.67 116.33 96.92V97.16H112.85V96.92C112.85 93.52 110.45 91.51 106.58 91.51C103.8 91.51 100.63 92.67 100.63 95.76C100.63 102.49 117.26 97.78 117.26 108.14C117.26 113.63 112.12 116.1 107.02 116.1' fill='%23C90C0F'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -225,6 +225,73 @@ body.map-half #table-section{max-height:none;flex:1}
 
 /* Leaflet overrides */
 .leaflet-container{background:#e8e8e8}
+
+
+/* ===== RESPONSIVE LAYOUT PATCH - desktop / iPad / mobile ===== */
+@media (max-width: 1180px) {
+  :root { --sidebar-w: 220px; }
+  #header { height: auto; min-height: 52px; padding: 8px 12px; gap: 10px; }
+  #header-titles h1 { font-size: 14px; }
+  #header-titles p, #header-right { font-size: 9px; }
+  #kpi-bar { grid-template-columns: repeat(2, 1fr); }
+  #cards-panel { width: 255px; }
+  #map-stats-bar { grid-template-columns: repeat(2, 1fr) auto; }
+  #detail-panel { width: min(480px, 92vw); }
+}
+
+@media (max-width: 920px) {
+  body { overflow: hidden; }
+  #header { align-items: flex-start; }
+  #header-right { display: none; }
+  #body { flex-direction: column; overflow: hidden; }
+  #sidebar {
+    width: 100%; max-height: 168px; flex-direction: row; flex-wrap: wrap;
+    gap: 6px; padding: 8px; border-right: 0; border-bottom: 1px solid var(--border);
+    overflow-y: auto;
+  }
+  .sidebar-section { padding: 0; border-bottom: 0; flex: 1 1 150px; min-width: 145px; }
+  .sidebar-section:first-child { flex-basis: 100%; }
+  .legend-item { display: inline-flex; margin-right: 8px; }
+  #main { min-height: 0; }
+  #kpi-bar { grid-template-columns: repeat(4, minmax(90px, 1fr)); overflow-x: auto; }
+  .kpi { padding: 7px 10px; min-width: 108px; }
+  #map-section { flex-direction: column; }
+  #cards-panel {
+    width: 100%; height: 190px; border-right: 0; border-bottom: 1px solid var(--border);
+  }
+  #cards-list { display: flex; overflow-x: auto; overflow-y: hidden; gap: 8px; padding: 8px; }
+  .bd-card { min-width: 260px; max-width: 280px; }
+  #map-stats-bar { grid-template-columns: repeat(4, minmax(70px, 1fr)) auto; overflow-x: auto; }
+  #map-options-panel { top: 42px; right: 6px; min-width: min(340px, calc(100vw - 16px)); max-width: calc(100vw - 16px); }
+  #table-section { max-height: 230px; }
+  #em-body { grid-template-columns: 1fr; overflow-y: auto; }
+  .em-col { border-right: 0; border-bottom: 1px solid #e0e0e0; }
+}
+
+@media (max-width: 640px) {
+  #header-left { gap: 8px; min-width: 0; }
+  .savills-logo-wrap { width: 32px; height: 32px; }
+  .savills-logo-wrap svg { width: 32px; height: 32px; }
+  #header-titles h1 { font-size: 12px; white-space: normal; }
+  #header-titles p { display: none; }
+  #sidebar { max-height: 150px; }
+  #kpi-bar { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+  .kpi-value { font-size: 16px; }
+  #cards-panel { height: 170px; }
+  .bd-card { min-width: 235px; }
+  .card-grid { grid-template-columns: 1fr 1fr; }
+  #map-stats-bar { grid-template-columns: repeat(2, minmax(90px, 1fr)); padding-right: 6px; }
+  #map-options-btn { grid-column: 1 / -1; width: 100%; }
+  #map-options-panel { top: 84px; left: 6px; right: 6px; min-width: 0; }
+  #table-section { max-height: 210px; }
+  #data-table { min-width: 900px; }
+  #detail-panel { right: -100vw; width: 100vw; }
+  #detail-panel.open { right: 0; }
+  .dp-grid, .comp-meta { grid-template-columns: 1fr; }
+  #dp-tabs { overflow-x: auto; }
+  .dp-tab { white-space: nowrap; }
+}
+
 </style>
 </head>
 <body>
@@ -239,8 +306,8 @@ body.map-half #table-section{max-height:none;flex:1}
       </svg>
     </div>
     <div id="header-titles">
-      <h1>PA/NJ Industrial Market &amp; BD Dashboard (Living Market File)</h1>
-      <p>Internal BD map &nbsp;·&nbsp; building-level inventory first &nbsp;·&nbsp; clickable lease comps &nbsp;·&nbsp; comps nested by property</p>
+      <h1>PHI-PAC-NNJ Industrial Market &amp; BD Dashboard</h1>
+      <p>Building-level inventory &nbsp;·&nbsp; lease events &nbsp;·&nbsp; market rent benchmarks &nbsp;·&nbsp; BD opportunities</p>
     </div>
   </div>
   <div id="header-right">
@@ -734,10 +801,9 @@ function populateFilters() {
   const sSel = document.getElementById('f-submarket');
   subs.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sSel.appendChild(o); });
 
-  // Map options region buttons
+  // Map options region buttons — generated from current dataset so imports do not break filters.
   const moGrid = document.getElementById('mo-region');
-  const regionBtns = ['PA/NJ', 'NNJ', 'Lehigh Valley', 'Philly / SNJ', 'I-78 / I-81'];
-  regionBtns.forEach(r => {
+  regions.forEach(r => {
     const btn = document.createElement('button');
     btn.className = 'map-opt-btn';
     btn.textContent = r;
