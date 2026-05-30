@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>PHI-PAC-NNJ Industrial Market & BD Dashboard</title>
+<title>Industrial Market Intelligence & BD Dashboard (PHL-PAC-NNJ)</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -213,8 +213,8 @@ button,input,select{font:inherit}
   <div class="brand-cluster">
     <div class="logo-wrap"><img class="logo" src="savills-logo.png" alt="Savills logo"></div>
     <div class="brand-copy">
-      <div class="kicker">Industrial market intelligence</div>
-      <div class="title">PHI-PAC-NNJ industrial market and BD dashboard</div>
+      <div class="kicker">Industrial Advisory</div>
+      <div class="title">Industrial Market Intelligence & BD Dashboard (PHL-PAC-NNJ)</div>
     </div>
   </div>
   <nav class="topnav">
