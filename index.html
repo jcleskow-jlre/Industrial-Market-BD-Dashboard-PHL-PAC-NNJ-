@@ -7,17 +7,222 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
-*{box-sizing:border-box} :root{--yellow:#FFDF00;--navy:#25273A;--ink:#1d2133;--muted:#687183;--line:#dce2ec;--bg:#eef2f7;--card:#fff;--red:#CE181E;--teal:#238291} html,body{margin:0;font-family:Arial,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink)} body{min-height:100vh}.app{min-height:100vh}.topbar{position:sticky;top:0;z-index:600;background:var(--navy);color:#fff;border-bottom:5px solid var(--yellow);padding:14px 18px;display:flex;align-items:center;gap:16px}.logo{width:64px;height:48px;background:var(--yellow);color:#c90c0f;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:0 0 auto}.title{font-size:24px;line-height:1.05;font-weight:900;letter-spacing:-.3px}.subtitle{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;color:rgba(255,255,255,.58);margin-top:4px}.filter-btn{margin-left:auto;background:var(--yellow);border:0;border-radius:999px;padding:14px 24px;font-weight:900;font-size:18px;color:#111;box-shadow:0 4px 16px rgba(0,0,0,.25);cursor:pointer}.wrap{display:grid;grid-template-columns:310px 1fr;gap:16px;padding:16px;max-width:1600px;margin:0 auto}.filters{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 6px 24px rgba(37,39,58,.08);height:max-content;position:sticky;top:92px}.filters h3{margin:0 0 14px;font-size:13px;letter-spacing:2px;text-transform:uppercase}.field{margin-bottom:12px}.field label{display:block;margin:0 0 6px;font-size:11px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;color:#25273A}.field input,.field select{width:100%;border:1px solid #cfd6df;border-radius:10px;padding:11px 12px;font-size:15px;background:#fff}.reset{width:100%;border:1px solid #cfd6df;background:#f5f7fb;border-radius:10px;padding:11px;font-weight:800;cursor:pointer}.main{min-width:0}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}.kpi{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:0 4px 16px rgba(37,39,58,.07)}.kpi .label{font-size:12px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;color:#687183}.kpi .value{font-size:34px;font-weight:950;line-height:1.05;margin-top:7px}.kpi .sub{font-size:14px;font-weight:800;color:#687183;margin-top:4px}.map-card{position:relative;background:#fff;border:1px solid #ccd4df;border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(37,39,58,.08);height:520px;margin-bottom:16px}.map{height:100%;width:100%;background:#d8dee8}.map-options{position:absolute;right:18px;top:18px;z-index:450}.map-options>button{background:var(--yellow);border:0;border-radius:999px;padding:13px 20px;font-weight:950;font-size:17px;box-shadow:0 4px 14px rgba(0,0,0,.25)}.map-menu{display:none;position:absolute;right:0;top:54px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;min-width:260px;box-shadow:0 12px 40px rgba(0,0,0,.22)}.map-menu.open{display:block}.pill-row{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid #cfd6df;background:#fff;border-radius:999px;padding:9px 12px;font-weight:800;cursor:pointer}.pill.active{background:var(--yellow);border-color:var(--yellow)}.map-stats{position:absolute;left:18px;right:18px;bottom:16px;z-index:440;display:flex;gap:10px;pointer-events:none}.map-stat{background:rgba(255,255,255,.93);border-radius:13px;padding:11px 15px;min-width:145px;box-shadow:0 4px 14px rgba(0,0,0,.18)}.map-stat.primary{background:var(--yellow)}.map-stat span{display:block;font-size:10px;font-weight:950;letter-spacing:.9px;text-transform:uppercase;color:#596273}.map-stat strong{font-size:24px;font-weight:950}.data-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(37,39,58,.07)}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px;border-bottom:1px solid var(--line)}.tab{border:1px solid #cfd6df;background:#fff;border-radius:999px;padding:12px;font-weight:950;font-size:15px;cursor:pointer}.tab.active{background:var(--yellow);border-color:var(--yellow)}.section-head{padding:18px 22px;border-bottom:1px solid var(--line)}.section-head h2{margin:0;font-size:28px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:16px}.table-wrap{overflow:auto;max-height:560px}.table{width:100%;border-collapse:collapse;font-size:13px}.table th{position:sticky;top:0;background:#f7f8fb;text-align:left;padding:10px;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:1px}.table td{padding:9px 10px;border-bottom:1px solid #edf0f5;white-space:nowrap}.table tr{cursor:pointer}.table tr:hover{background:#fffbe1}.cards{display:none}.record{border:1px solid var(--line);border-radius:18px;background:#fff;padding:18px;box-shadow:0 3px 12px rgba(37,39,58,.06)}.record-title{font-size:20px;font-weight:950;line-height:1.15}.record-sub{margin-top:5px;color:#626b7b;font-size:16px;line-height:1.25}.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.kv .k{font-size:10px;font-weight:950;color:#6f7787;text-transform:uppercase;letter-spacing:1.2px}.kv .v{font-size:16px;font-weight:850;color:#1f2437;margin-top:4px}.kv .v.positive{color:#16845b}.kv .v.negative{color:#CE181E}.kv .v.neutral{color:#1f2437}.delta-note{font-size:11px;font-weight:800;color:#687183;margin-top:3px}.actions{display:flex;gap:8px;margin-top:15px}.mini{border:1px solid #cfd6df;background:#fff;border-radius:999px;padding:10px 12px;font-weight:850}.mini.yellow{background:var(--yellow);border-color:var(--yellow)}.detail{position:fixed;right:0;top:0;bottom:0;width:min(560px,100vw);background:#fff;z-index:1000;transform:translateX(104%);transition:.22s ease;box-shadow:-16px 0 55px rgba(0,0,0,.28);display:flex;flex-direction:column}.detail.open{transform:translateX(0)}.detail-head{padding:18px 20px;background:var(--navy);color:#fff}.detail-head button{float:right;background:var(--yellow);border:0;border-radius:999px;padding:8px 12px;font-weight:900}.detail-title{font-size:23px;font-weight:950}.detail-sub{color:rgba(255,255,255,.65);margin-top:4px}.detail-body{padding:18px;overflow:auto}.detail-section{border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}.detail-section h4{margin:0 0 12px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#606b7c}.drawer-backdrop{display:none}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:#25273A;color:#fff;border-radius:999px;padding:12px 18px;font-weight:850;z-index:1500;transition:.2s}.toast.show{transform:translateX(-50%) translateY(0)}.error{margin:16px;padding:16px;border-radius:14px;background:#fff3f3;border:1px solid #ffb6b6;color:#9c1d1d;font-weight:800}.leaflet-control-attribution{font-size:10px!important}.mobile-intro{display:none}
-@media(max-width:900px){.wrap{grid-template-columns:1fr}.filters{position:static;display:none}.filter-btn{display:block}.filters.open{display:block}.kpis{grid-template-columns:1fr 1fr}.tabs{grid-template-columns:1fr 1fr}.title{font-size:21px}.map-card{height:460px}}
-@media(max-width:760px){body{background:#eef2f7}.topbar{padding:13px 12px;gap:12px}.logo{width:56px;height:56px;border-radius:0;font-size:18px}.title{font-size:22px;max-width:210px}.subtitle{display:none}.filter-btn{font-size:17px;padding:13px 20px}.wrap{padding:12px;gap:12px}.kpis{gap:12px;margin-bottom:12px}.kpi{border-radius:16px;padding:15px;min-height:104px}.kpi .label{font-size:11px}.kpi .value{font-size:28px}.kpi .sub{font-size:14px}.map-card{height:392px;border-radius:18px;margin-bottom:10px}.map-options{right:92px;top:18px}.map-options>button{font-size:18px;padding:12px 22px}.map-menu{right:-76px;width:calc(100vw - 32px)}.map-stats{left:15px;right:15px;bottom:12px;overflow-x:auto;scrollbar-width:none}.map-stats::-webkit-scrollbar{display:none}.map-stat{min-width:160px;padding:10px 14px}.map-stat strong{font-size:22px}.mobile-intro{display:block;margin:4px 4px 10px;color:#687183;font-size:16px;line-height:1.35}.data-card{border-radius:18px}.tabs{padding:14px;gap:10px}.tab{font-size:16px;padding:13px 8px}.section-head{padding:18px 20px}.section-head h2{font-size:28px}.section-head p{font-size:18px}.table-wrap{display:none}.cards{display:grid;grid-template-columns:1fr;gap:13px;padding:14px}.record{padding:19px}.filters{display:block;position:fixed;z-index:1000;left:0;right:0;top:0;max-height:86vh;overflow:auto;border-radius:0 0 24px 24px;transform:translateY(-105%);transition:.22s ease;box-shadow:0 16px 50px rgba(0,0,0,.35)}.filters.open{transform:translateY(0)}.drawer-backdrop{display:none;position:fixed;z-index:900;inset:0;background:rgba(0,0,0,.45)}.drawer-backdrop.open{display:block}.field input,.field select{font-size:17px;padding:14px}.reset{font-size:16px;padding:14px}.detail{width:100vw}.meta{gap:10px}.leaflet-control-zoom{right:12px!important;left:auto!important}}
+
+*{box-sizing:border-box}
+:root{
+  --yellow:#FFDF00;
+  --yellow-2:#f2c300;
+  --navy:#0c1020;
+  --navy-2:#12182a;
+  --navy-3:#171f35;
+  --panel:#0f1528;
+  --panel-2:#111a30;
+  --panel-3:#18223b;
+  --line:rgba(255,255,255,.09);
+  --line-soft:rgba(255,255,255,.06);
+  --text:#f4f7ff;
+  --muted:#97a4bd;
+  --muted-2:#6f7b92;
+  --bg:#08101d;
+  --bg-2:#0d1526;
+  --red:#d94a4a;
+  --green:#2ec27e;
+  --shadow:0 18px 42px rgba(0,0,0,.28);
+}
+html,body{margin:0;padding:0;background:
+  radial-gradient(circle at 20% -10%, rgba(255,223,0,.12), transparent 28%),
+  radial-gradient(circle at 85% 0%, rgba(35,130,145,.11), transparent 30%),
+  linear-gradient(180deg, #08101d 0%, #0b1222 38%, #09101d 100%);
+  color:var(--text); font-family:Arial,'Segoe UI',sans-serif; min-height:100%;}
+a{color:inherit}
+button,input,select{font:inherit}
+.app{min-height:100vh}
+.topbar{position:sticky;top:0;z-index:800;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,11,20,.84);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.brand-cluster{display:flex;align-items:center;gap:18px;min-width:0}
+.logo{width:62px;height:62px;border-radius:10px;background:var(--yellow);color:#c90c0f;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;text-transform:lowercase;box-shadow:0 10px 24px rgba(255,223,0,.14);flex:0 0 auto}
+.brand-copy{min-width:0}
+.kicker{font-size:12px;font-weight:800;color:var(--yellow);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:3px}
+.title{font-size:34px;line-height:1.05;font-weight:900;letter-spacing:-.7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.subtitle{display:none}
+.topnav{display:flex;gap:8px;align-items:center;justify-content:flex-start;min-width:0;overflow:auto;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.nav-link{border:1px solid transparent;background:transparent;color:var(--muted);padding:10px 12px;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer;white-space:nowrap;transition:.2s}
+.nav-link:hover{color:#fff;border-color:var(--line)}
+.nav-link.active{background:rgba(255,223,0,.12);color:var(--yellow);border-color:rgba(255,223,0,.28)}
+.toolbar{display:flex;align-items:center;gap:12px}
+.toolbar-search{display:flex;align-items:center;gap:10px;padding:0 14px;height:48px;min-width:360px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 0 rgba(255,255,255,.02)}
+.toolbar-search span{color:var(--muted);font-size:15px}
+.toolbar-search input{width:100%;background:transparent;border:0;outline:none;color:#fff;font-size:14px}
+.toolbar-search input::placeholder{color:#8090ab}
+.status-chip{padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#d5dded;font-size:12px;font-weight:800;white-space:nowrap}
+.filter-btn{background:var(--yellow);color:#111;border:0;border-radius:14px;padding:12px 18px;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(255,223,0,.14)}
+.drawer-backdrop{display:none}
+.wrap{display:grid;grid-template-columns:280px minmax(0,1fr);gap:16px;padding:16px;max-width:1780px;margin:0 auto}
+.filters{background:linear-gradient(180deg, rgba(19,27,49,.97), rgba(10,16,31,.98));border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);height:max-content;position:sticky;top:95px}
+.sidebar-header{padding:4px 2px 16px;border-bottom:1px solid var(--line-soft);margin-bottom:16px}
+.sidebar-title{font-size:14px;letter-spacing:1.8px;text-transform:uppercase;color:#eef3ff;font-weight:900;margin-bottom:8px}
+.sidebar-note{font-size:12px;line-height:1.5;color:var(--muted)}
+.sidebar-caption{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#7885a1;font-weight:800;margin-bottom:10px}
+.nav-stack{display:grid;gap:8px;margin-bottom:18px}
+.sidebar-link{display:flex;align-items:center;gap:10px;width:100%;border:1px solid transparent;background:rgba(255,255,255,.03);color:#d9e2f3;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer;text-align:left;transition:.18s}
+.sidebar-link:hover{border-color:var(--line)}
+.sidebar-link.active{background:rgba(255,223,0,.1);color:var(--yellow);border-color:rgba(255,223,0,.24)}
+.filters h3{margin:18px 0 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#93a0ba}
+.field{margin-bottom:12px}
+.field label{display:block;margin:0 0 7px;font-size:10px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;color:#90a0bb}
+.field input,.field select{width:100%;height:46px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:0 12px;font-size:14px;background:rgba(255,255,255,.04);color:#fff;outline:none}
+.field input::placeholder{color:#7f8ca6}
+.field input:focus,.field select:focus,.toolbar-search input:focus{box-shadow:0 0 0 3px rgba(255,223,0,.11)}
+.reset{width:100%;height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:12px;font-weight:900;color:#d7dfef;cursor:pointer;margin-top:4px}
+.sidebar-footer{margin-top:18px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:11px;line-height:1.45;color:#7f8ca4}
+.main{min-width:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+.kpi{position:relative;overflow:hidden;background:linear-gradient(180deg, rgba(18,24,42,.98), rgba(12,18,33,.98));border:1px solid var(--line);border-radius:20px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+.kpi:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--yellow), rgba(255,223,0,0))}
+.kpi:after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle, rgba(255,223,0,.11), transparent 66%)}
+.kpi .label{font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;color:#97a4bd;position:relative;z-index:1}
+.kpi .value{font-size:40px;font-weight:950;line-height:1.02;letter-spacing:-1px;margin-top:8px;position:relative;z-index:1}
+.kpi .sub{font-size:13px;font-weight:800;color:#7fd48f;margin-top:5px;position:relative;z-index:1}
+.kpi:nth-child(2) .sub,.kpi:nth-child(3) .sub,.kpi:nth-child(4) .sub{color:#97a4bd}
+.map-card{position:relative;background:linear-gradient(180deg, rgba(17,22,38,.97), rgba(12,18,32,.97));border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);height:560px;margin-bottom:16px}
+.map-card:before{content:'';position:absolute;left:0;right:0;top:0;height:82px;background:linear-gradient(180deg, rgba(7,11,20,.38), rgba(7,11,20,0));pointer-events:none;z-index:410}
+.map{height:100%;width:100%;background:#0e1528}
+.map-options{position:absolute;right:18px;top:18px;z-index:450}
+.map-options>button{background:var(--yellow);border:0;border-radius:999px;padding:12px 18px;font-weight:950;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer}
+.map-menu{display:none;position:absolute;right:0;top:54px;background:rgba(11,16,29,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:14px;min-width:260px;box-shadow:0 18px 42px rgba(0,0,0,.34)}
+.map-menu.open{display:block}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#dbe4f5;border-radius:999px;padding:10px 12px;font-weight:800;cursor:pointer}
+.pill.active{background:rgba(255,223,0,.15);border-color:rgba(255,223,0,.28);color:var(--yellow)}
+.map-stats{position:absolute;left:18px;right:18px;bottom:16px;z-index:440;display:flex;gap:10px;pointer-events:none}
+.map-stat{background:rgba(11,17,31,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:10px 14px;min-width:148px;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.map-stat.primary{background:rgba(255,223,0,.95);color:#111}
+.map-stat span{display:block;font-size:10px;font-weight:950;letter-spacing:1px;text-transform:uppercase;color:#8f9bb2}
+.map-stat.primary span{color:#30313a}
+.map-stat strong{font-size:24px;font-weight:950;letter-spacing:-.4px}
+.mobile-intro{display:none}
+.data-card{background:linear-gradient(180deg, rgba(18,24,42,.98), rgba(12,18,33,.98));border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:16px;border-bottom:1px solid var(--line)}
+.tab{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);color:#dbe4f5;border-radius:999px;padding:13px 14px;font-weight:900;font-size:15px;cursor:pointer;transition:.18s}
+.tab.active{background:var(--yellow);border-color:var(--yellow);color:#121212}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.section-head h2{margin:0;font-size:36px;letter-spacing:-.8px}
+.section-head p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.table-wrap{overflow:auto;max-height:620px}
+.table{width:100%;border-collapse:collapse;font-size:12.5px}
+.table th{position:sticky;top:0;background:#0f172b;text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#8f9db5;z-index:2}
+.table td{padding:9px 8px;border-bottom:1px solid rgba(255,255,255,.05);white-space:nowrap;color:#ecf2ff}
+.table td.tight{max-width:230px;overflow:hidden;text-overflow:ellipsis}
+.table td.num{text-align:right;font-variant-numeric:tabular-nums}
+.table tr{cursor:pointer;transition:.14s}
+.table tr:hover{background:rgba(255,223,0,.08)}
+.table td.positive,.kv .v.positive,.detail-value.positive{color:var(--green)!important}
+.table td.negative,.kv .v.negative,.detail-value.negative{color:var(--red)!important}
+.cards{display:none}
+.record{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg, rgba(17,24,40,.98), rgba(12,18,33,.98));padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.20)}
+.record-title{font-size:20px;font-weight:950;line-height:1.12;letter-spacing:-.3px}
+.record-sub{margin-top:6px;color:#95a2bb;font-size:15px;line-height:1.3}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.kv .k{font-size:10px;font-weight:950;color:#7f8ca5;text-transform:uppercase;letter-spacing:1.2px}
+.kv .v{font-size:16px;font-weight:900;color:#f3f7ff;margin-top:5px;word-break:break-word}
+.delta-note{font-size:11px;font-weight:800;color:#7b889f;margin-top:3px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.mini{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#ecf1ff;border-radius:999px;padding:10px 12px;font-weight:900;cursor:pointer}
+.mini.yellow{background:var(--yellow);border-color:var(--yellow);color:#111}
+.detail{position:fixed;right:0;top:0;bottom:0;width:min(620px,100vw);background:linear-gradient(180deg,#0d1325,#09111e);border-left:1px solid rgba(255,255,255,.08);z-index:1000;transform:translateX(104%);transition:.22s ease;box-shadow:-16px 0 55px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.detail.open{transform:translateX(0)}
+.detail-head{padding:20px 22px;background:linear-gradient(180deg, rgba(19,27,49,.98), rgba(13,18,34,.98));color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.detail-head button{float:right;background:var(--yellow);border:0;border-radius:999px;padding:10px 14px;font-weight:900;color:#111;cursor:pointer}
+.detail-title{font-size:30px;font-weight:950;letter-spacing:-.7px;line-height:1.05;margin-right:80px}
+.detail-sub{color:#93a2be;margin-top:6px;font-size:15px}
+.detail-body{padding:18px;overflow:auto}
+.detail-section{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);border-radius:18px;padding:16px;margin-bottom:14px}
+.detail-section h4{margin:0 0 12px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9aa9c3}
+.drawer-backdrop{display:none}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);background:#0b1428;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:12px 18px;font-weight:850;z-index:1500;transition:.2s;box-shadow:0 10px 28px rgba(0,0,0,.28)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.error{margin:16px;padding:16px;border-radius:14px;background:#2a1117;border:1px solid rgba(217,74,74,.45);color:#ffbdbd;font-weight:800}
+.leaflet-control-attribution{font-size:10px!important;color:#d7deec!important;background:rgba(10,14,23,.58)!important}
+.leaflet-container{background:#0a1221}
+.geo-label{font-family:Arial,'Segoe UI',sans-serif;color:rgba(255,255,255,.92);text-shadow:0 2px 6px rgba(0,0,0,.95);white-space:nowrap;pointer-events:none;padding:2px 7px;border-radius:999px;background:rgba(8,16,29,.32);backdrop-filter:blur(2px)}
+.geo-label.state{font-size:20px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase}
+.geo-label.county{font-size:12px;font-weight:800;letter-spacing:.8px;color:rgba(255,255,255,.72)}
+@media(min-width:901px){
+  .map-options>button{display:none}
+  .map-menu{display:block;left:18px;top:18px;right:auto;min-width:220px}
+}
+@media(max-width:1280px){
+  .topbar{grid-template-columns:auto 1fr;grid-template-areas:'brand toolbar' 'nav nav';row-gap:14px}
+  .brand-cluster{grid-area:brand}.toolbar{grid-area:toolbar;justify-content:flex-end}.topnav{grid-area:nav}
+  .toolbar-search{min-width:260px}
+}
+@media(max-width:1024px){
+  .wrap{grid-template-columns:1fr}
+  .filters{position:static;display:none}
+  .filters.open{display:block}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .title{font-size:28px}
+}
+@media(max-width:760px){
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 12px;gap:12px}
+  .brand-cluster{gap:12px;min-width:0}.logo{width:56px;height:56px;font-size:17px;border-radius:8px}
+  .kicker{display:none}.title{font-size:22px;white-space:normal;line-height:1.05}.topnav,.toolbar-search,.status-chip{display:none}
+  .filter-btn{padding:13px 18px;border-radius:999px}
+  .wrap{padding:12px;gap:12px}.kpis{gap:12px;margin-bottom:12px}.kpi{padding:15px;min-height:108px;border-radius:18px}.kpi .label{font-size:11px}.kpi .value{font-size:28px}.kpi .sub{font-size:13px}
+  .map-card{height:410px;border-radius:20px;margin-bottom:10px}.map-card:before{display:none}.map-options{right:14px;top:14px}.map-options>button{display:block;font-size:17px;padding:11px 18px}.map-menu{right:-2px;left:auto;top:52px;width:min(280px,calc(100vw - 32px))}
+  .map-stats{left:12px;right:12px;bottom:12px;overflow-x:auto;scrollbar-width:none}.map-stats::-webkit-scrollbar{display:none}.map-stat{min-width:144px}.map-stat strong{font-size:22px}
+  .mobile-intro{display:block;margin:4px 2px 12px;color:#8d9ab2;font-size:15px;line-height:1.35}.data-card{border-radius:20px}.tabs{padding:14px;gap:10px}.tab{font-size:16px;padding:13px 9px}.section-head{display:block;padding:18px}.section-head h2{font-size:28px}.section-head p{font-size:16px}.table-wrap{display:none}.cards{display:grid;grid-template-columns:1fr;gap:13px;padding:14px}.record{padding:18px}.filters{display:block;position:fixed;z-index:1000;left:0;right:0;top:0;max-height:88vh;overflow:auto;border-radius:0 0 24px 24px;transform:translateY(-105%);transition:.22s ease;box-shadow:0 16px 50px rgba(0,0,0,.35)}.filters.open{transform:translateY(0)}.drawer-backdrop{display:none;position:fixed;z-index:900;inset:0;background:rgba(0,0,0,.45)}.drawer-backdrop.open{display:block}.field input,.field select{font-size:17px;height:50px}.reset{font-size:16px;height:50px}.detail{width:100vw}.meta{gap:10px}.leaflet-control-zoom{right:12px!important;left:auto!important}
+}
+
 </style>
 </head>
 <body>
 <div class="app">
-<header class="topbar"><div class="logo">savills</div><div><div class="title">PHI-PAC-NNJ Industrial Market & BD Dashboard</div><div class="subtitle">Living market file</div></div><button class="filter-btn" id="filterBtn">Filters</button></header>
+<header class="topbar">
+  <div class="brand-cluster">
+    <div class="logo">savills</div>
+    <div class="brand-copy">
+      <div class="kicker">Industrial market intelligence</div>
+      <div class="title">PHI-PAC-NNJ industrial market and BD dashboard</div>
+    </div>
+  </div>
+  <nav class="topnav">
+    <button class="nav-link active" data-side-tab="buildings">Building inventory</button>
+    <button class="nav-link" data-side-tab="events">Lease events</button>
+    <button class="nav-link" data-side-tab="comps">Comp intelligence</button>
+    <button class="nav-link" data-side-tab="rents">Market rents</button>
+  </nav>
+  <div class="toolbar">
+    <div class="toolbar-search"><span>⌕</span><input id="quickSearch" placeholder="Search buildings, owners, tenants, deals..."></div>
+    <div class="status-chip">Savills master inventory source</div>
+    <button class="filter-btn" id="filterBtn">Filters</button>
+  </div>
+</header>
 <div class="drawer-backdrop" id="backdrop"></div>
 <div class="wrap">
-  <aside class="filters" id="filters"><h3>Search and filters</h3><div class="field"><label>Search tenant / address</label><input id="search" placeholder="Search tenant, address, city, landlord..."></div><div class="field"><label>Dataset focus</label><select id="focus"><option value="buildings">Building inventory</option><option value="events">Lease events</option><option value="comps">Lease comps</option><option value="rents">Market rents</option></select></div><div class="field"><label>Region / focus</label><select id="region"><option value="">All regions</option></select></div><div class="field"><label>Submarket</label><select id="submarket"><option value="">All</option></select></div><div class="field"><label>Expiration window</label><select id="expiration"><option value="">All</option></select></div><div class="field"><label>BD priority</label><select id="priority"><option value="">All</option></select></div><div class="field"><label>Minimum SF</label><select id="minsf"><option value="0">All sizes</option><option value="50000">50k+ SF</option><option value="100000">100k+ SF</option><option value="200000">200k+ SF</option><option value="500000">500k+ SF</option></select></div><button class="reset" id="resetBtn">Reset filters</button></aside>
+  <aside class="filters" id="filters">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Executive summary</div>
+    <div class="sidebar-note">Savills building inventory remains the master building source of truth. CoStar and comp data are used to enrich property profiles, lease comps, and lease-event intelligence.</div>
+  </div>
+  <div class="sidebar-caption">Data and inventory</div>
+  <div class="nav-stack">
+    <button class="sidebar-link active" data-side-tab="buildings">Building inventory</button>
+    <button class="sidebar-link" data-side-tab="events">Lease events</button>
+    <button class="sidebar-link" data-side-tab="comps">Comp intelligence</button>
+    <button class="sidebar-link" data-side-tab="rents">Market rents</button>
+  </div>
+  <h3>Search and filters</h3>
+  <div class="field"><label>Search tenant / address</label><input id="search" placeholder="Search tenant, address, city, landlord..."></div>
+  <div class="field"><label>Dataset focus</label><select id="focus"><option value="buildings">Building inventory</option><option value="events">Lease events</option><option value="comps">Lease comps</option><option value="rents">Market rents</option></select></div>
+  <div class="field"><label>Region / focus</label><select id="region"><option value="">All regions</option></select></div>
+  <div class="field"><label>Submarket</label><select id="submarket"><option value="">All</option></select></div>
+  <div class="field"><label>Expiration window</label><select id="expiration"><option value="">All</option></select></div>
+  <div class="field"><label>BD priority</label><select id="priority"><option value="">All</option></select></div>
+  <div class="field"><label>Minimum SF</label><select id="minsf"><option value="0">All sizes</option><option value="50000">50k+ SF</option><option value="100000">100k+ SF</option><option value="200000">200k+ SF</option><option value="500000">500k+ SF</option></select></div>
+  <button class="reset" id="resetBtn">Reset filters</button>
+  <div class="sidebar-footer">Use lease events to pressure-test renewal timing, comp intelligence to benchmark economics, and the map to identify real leverage across the platform.</div>
+</aside>
   <main class="main"><div class="kpis"><div class="kpi"><div class="label">BD lease events</div><div class="value" id="k-events">—</div><div class="sub" id="k-events-sub">—</div></div><div class="kpi"><div class="label">Inventory buildings / RBA</div><div class="value" id="k-buildings">—</div><div class="sub" id="k-rba">—</div></div><div class="kpi"><div class="label">Direct vacant SF / rate</div><div class="value" id="k-vacant">—</div><div class="sub" id="k-vac-rate">—</div></div><div class="kpi"><div class="label">Availability SF / rate</div><div class="value" id="k-avail">—</div><div class="sub" id="k-avail-rate">—</div></div></div>
   <section class="map-card"><div class="map" id="map"></div><div class="map-options"><button id="mapOptBtn">⌄ Map options</button><div class="map-menu" id="mapMenu"><div class="field"><label>Map layer</label><div class="pill-row"><button class="pill active" data-layer="buildings">Buildings</button><button class="pill" data-layer="events">Lease events</button><button class="pill" data-layer="comps">Comps</button></div></div></div></div><div class="map-stats"><div class="map-stat primary"><span>Map view records</span><strong id="m-count">0</strong></div><div class="map-stat"><span>High priority</span><strong id="m-priority">0</strong></div><div class="map-stat"><span>0–36 mo. exp.</span><strong id="m-window">0</strong></div><div class="map-stat"><span>SF in view</span><strong id="m-sf">0</strong></div></div></section>
   <div class="mobile-intro">Mobile view is optimized for fast exploration. Use filters and search to focus the market view.</div>
@@ -36,9 +241,24 @@ const byId=new Map(BUILDINGS_SAFE.map(b=>[b.BuildingID,b])); let activeTab='buil
 function fmt(n){n=Number(n)||0;return n.toLocaleString()} function sf(n){n=Number(n)||0;if(!n)return '—'; if(n>=1e9)return (n/1e9).toFixed(2)+' BSF'; if(n>=1e6)return (n/1e6).toFixed(n>=1e8?0:1)+' MSF'; if(n>=1000)return Math.round(n/1000)+'K SF'; return fmt(n)+' SF'} function money(n){n=Number(n);return isFinite(n)&&n>0?'$'+n.toFixed(2):'—'} function pct(n){n=Number(n)||0;return n?n.toFixed(1)+'%':'—'}
 function val(o,keys){for(const k of keys){if(o&&o[k]!==undefined&&o[k]!==null&&String(o[k]).trim()!=='')return o[k]}return ''} function num(o,keys){return Number(val(o,keys))||0}
 function sameTenant(a,b){a=String(a||'').toLowerCase().replace(/[^a-z0-9]/g,''); b=String(b||'').toLowerCase().replace(/[^a-z0-9]/g,''); return a&&b&&(a===b||a.includes(b)||b.includes(a));}
-function latestCompFor(o){const set=COMPS_SAFE.filter(c=>(o.BuildingID&&c.BuildingID===o.BuildingID)||(sameTenant(c.Tenant,o.Tenant)&&String(c.StreetAddress||'').toLowerCase()===String(o.StreetAddress||'').toLowerCase())).filter(c=>toNum(c.StartingRentPSF)!==null); set.sort((a,b)=>String(b.ExecutionDate||b.CommencementDate||'').localeCompare(String(a.ExecutionDate||a.CommencementDate||''))); return set[0]||null;}
+function latestCompFor(o){
+  const addr=String(o.StreetAddress||'').toLowerCase().trim();
+  const city=String(o.City||'').toLowerCase().trim();
+  const tenant=String(o.Tenant||'').toLowerCase().trim();
+  const set=COMPS_SAFE.filter(c=>{
+    const hasRent=toNum(c.StartingRentPSF)!==null||toNum(c.NetEffectiveRentPSF)!==null||toNum(c.EstimatedStartingRentTodayPSF)!==null;
+    if(!hasRent)return false;
+    const caddr=String(c.StreetAddress||'').toLowerCase().trim();
+    const ccity=String(c.City||'').toLowerCase().trim();
+    return (o.BuildingID&&c.BuildingID===o.BuildingID)
+      || (addr&&caddr&&addr===caddr&&(!city||!ccity||city===ccity))
+      || (sameTenant(c.Tenant,o.Tenant)&&addr&&caddr&&addr===caddr);
+  });
+  set.sort((a,b)=>String(b.ExecutionDate||b.CommencementDate||'').localeCompare(String(a.ExecutionDate||a.CommencementDate||'')));
+  return set[0]||null;
+}
 function marketRentFor(o){let v=toNum(o.MarketBenchmarkPSF)||toNum(o.MarketRentPSF); if(v!==null&&v>0)return v; const b=byId.get(o.BuildingID)||{}; v=toNum(b.MarketBenchmarkPSF)||toNum(b.MarketRentPSF)||toNum(b.AvgDirectRentIndustrial); if(v!==null&&v>0)return v; const r=RENT_REGIONS.find(x=>String(x.region||x.label||'').toLowerCase()===String(o.Region||'').toLowerCase()||String(x.label||'').toLowerCase()===String(o.Market||'').toLowerCase()); v=r?toNum(r.overall_asking_rent):null; return v!==null&&v>0?v:null;}
-function currentRentFor(o){let v=toNum(o.CurrentRentPSF)||toNum(o.StartingRentPSF)||toNum(o.CompRentPSF); if(v!==null&&v>0)return v; const c=latestCompFor(o); v=c?toNum(c.StartingRentPSF):null; return v!==null&&v>0?v:null;}
+function currentRentFor(o){let v=toNum(o.CurrentRentPSF)||toNum(o.StartingRentPSF)||toNum(o.CompRentPSF)||toNum(o.NetEffectiveRentPSF)||toNum(o.EstimatedStartingRentTodayPSF); if(v!==null&&v>0)return v; const c=latestCompFor(o); v=c?(toNum(c.StartingRentPSF)||toNum(c.NetEffectiveRentPSF)||toNum(c.EstimatedStartingRentTodayPSF)):null; return v!==null&&v>0?v:null;}
 function rentDeltaFor(o){let v=toNum(o.RentDeltaPSF); if(v!==null)return v; const cur=currentRentFor(o), m=marketRentFor(o); return cur!==null&&m!==null?cur-m:null;}
 function rentDeltaPctFor(o){let v=toNum(o.RentDeltaPct); if(v!==null)return v; const d=rentDeltaFor(o), m=marketRentFor(o); return d!==null&&m?d/m:null;}
 function rentPositionFor(o){if(o.RentPosition)return o.RentPosition; const d=rentDeltaFor(o); if(d===null)return '—'; return d>0?'Above market':d<0?'Below market':'At market';}
@@ -57,14 +277,14 @@ function rentRows(){const f=filters();return RENT_REGIONS.filter(o=>(!f.q||JSON.
 function rows(){if(activeTab==='events')return eventRows(); if(activeTab==='comps')return compRows(); if(activeTab==='rents')return rentRows(); return buildingRows();}
 function render(){current=rows(); updateKpis(); updateSection(); renderRecords(); renderMap(); closeFilters();}
 function updateKpis(){const b=buildingRows(), e=eventRows(); const rba=b.reduce((s,o)=>s+num(o,['RBA','RentableBuildingArea']),0), vac=b.reduce((s,o)=>s+num(o,['DirectVacantSF','VacantSF']),0), avail=b.reduce((s,o)=>s+num(o,['AvailableSF','TotalAvailableSF']),0); $('k-events').textContent=fmt(e.length); $('k-events-sub').textContent=fmt(e.filter(x=>String(x.BDPriority||'').toLowerCase().includes('high')).length)+' high priority'; $('k-buildings').textContent=fmt(b.length); $('k-rba').textContent=sf(rba); $('k-vacant').textContent=sf(vac); $('k-vac-rate').textContent=rba?pct(vac/rba*100):'—'; $('k-avail').textContent=sf(avail); $('k-avail-rate').textContent=rba?pct(avail/rba*100):'—';}
-function updateSection(){const names={buildings:'Building inventory',comps:'Lease comp intelligence',events:'Lease events',rents:'Market rent benchmarks'}; $('sectionTitle').textContent=names[activeTab]; $('sectionSub').textContent=fmt(current.length)+' visible '+(activeTab==='buildings'?'building':activeTab==='events'?'lease event':activeTab==='comps'?'comp':'market rent')+' rows';}
+function updateSection(){const names={buildings:'Building inventory',comps:'Lease comp intelligence',events:'Lease events',rents:'Market rent benchmarks'}; $('sectionTitle').textContent=names[activeTab]; $('sectionSub').textContent=fmt(current.length)+' visible '+(activeTab==='buildings'?'building':activeTab==='events'?'lease event':activeTab==='comps'?'comp':'market rent')+' records';}
 function renderRecords(){renderTable(); renderCards();}
-function cols(){return activeTab==='events'?['Tenant','StreetAddress','City','State','LeasedSF','LeaseExpirationDate','CurrentRentPSF','MarketBenchmarkPSF','RentDeltaPSF','RentDeltaPct','RentPosition','LandlordOwner']:activeTab==='comps'?['Tenant','PropertyName','StreetAddress','City','LeaseSF','ExecutionDate','StartingRentPSF','TransactionType','OwnerLandlord']:activeTab==='rents'?['region','label','overall_asking_rent','overall_vacancy_pct','inventory_msf','report_date']:['PropertyName','StreetAddress','City','State','RBA','OwnerName','DirectVacantSF','AvailableSF','Submarket'];}
+function cols(){return activeTab==='events'?['Tenant','StreetAddress','City','State','LeasedSF','LeaseExpirationDate','CurrentRentPSF','MarketBenchmarkPSF','RentDeltaPct','LandlordOwner']:activeTab==='comps'?['Tenant','PropertyName','StreetAddress','City','LeaseSF','ExecutionDate','StartingRentPSF','TransactionType','OwnerLandlord']:activeTab==='rents'?['region','label','overall_asking_rent','overall_vacancy_pct','inventory_msf','report_date']:['PropertyName','StreetAddress','City','State','RBA','OwnerName','DirectVacantSF','AvailableSF','Submarket'];}
 function colClass(k,v,r){let c=''; if(/SF|Rent|PSF|Pct|Year|Months/i.test(k))c+=' num'; if(/Rent|PSF|Pct|Position/i.test(k))c+=' rent'; if(['Tenant','StreetAddress','LandlordOwner','OwnerName','PropertyName'].includes(k))c+=' tight'; const vc=valueClass(k,v,r); return (c+' '+vc).trim();}
 function renderTable(){const c=cols();let html='<table class="table"><thead><tr>'+c.map(x=>'<th>'+label(x)+'</th>').join('')+'</tr></thead><tbody>';current.slice(0,1200).forEach((r,i)=>{html+='<tr data-i="'+i+'">'+c.map(k=>{const v=derivedValue(r,k); return '<td class="'+colClass(k,v,r)+'">'+cell(k,v,r)+'</td>'}).join('')+'</tr>'});html+='</tbody></table>'; $('tableWrap').innerHTML=html; $('tableWrap').querySelectorAll('[data-i]').forEach(el=>el.onclick=()=>openDetail(current[Number(el.dataset.i)]));}
 
 function renderCards(){let html=''; current.slice(0,160).forEach((r,i)=>{html+=card(r,i)}); if(current.length>160) html+='<div class="record">Showing first 160 records. Use filters/search to narrow the list.</div>'; $('cards').innerHTML=html||'<div class="record">No matching records.</div>'; $('cards').querySelectorAll('[data-i]').forEach(el=>el.onclick=()=>openDetail(current[Number(el.dataset.i)])); $('cards').querySelectorAll('[data-email]').forEach(el=>el.onclick=(ev)=>{ev.stopPropagation();copyPrompt(EVENTS_SAFE[Number(el.dataset.email)]);});}
-function label(k){const custom={CurrentRentPSF:'Current rent',MarketBenchmarkPSF:'Market rent',RentDeltaPSF:'$ delta',RentDeltaPct:'% delta',LeaseExpirationDate:'Expiration',LeasedSF:'Leased SF',StartingRentPSF:'Comp rent'}; if(custom[k])return custom[k]; return String(k).replace(/BD/g,'B D').replace(/PSF/g,' P S F').replace(/Pct/g,' Pct').replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase()).replace(' S F',' SF').replace(' R B A','RBA').replace(' P S F',' PSF').replace(' Pct',' pct')}
+function label(k){const custom={CurrentRentPSF:'Current rent',MarketBenchmarkPSF:'Market rent',RentDeltaPSF:'$ delta',RentDeltaPct:'% above/below',LeaseExpirationDate:'Expiration',LeasedSF:'Leased SF',StartingRentPSF:'Comp rent'}; if(custom[k])return custom[k]; return String(k).replace(/BD/g,'B D').replace(/PSF/g,' P S F').replace(/Pct/g,' Pct').replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase()).replace(' S F',' SF').replace(' R B A','RBA').replace(' P S F',' PSF').replace(' Pct',' pct')}
 function isNil(v){return v===undefined||v===null||v===''||Number.isNaN(v)}
 function toNum(v){if(isNil(v))return null; if(typeof v==='number')return Number.isFinite(v)?v:null; const n=Number(String(v).replace(/[$,%\s,]/g,'')); return Number.isFinite(n)?n:null}
 function fmtYear(v){const n=toNum(v); return n?String(Math.round(n)):(v||'—')}
@@ -119,8 +339,8 @@ Rent position: ${rentPositionFor(o)||''}\nBD priority: ${o.BDPriority||''}\nMark
 function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Email prompt copied')}
 function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
 function openFilters(){$('filters').classList.add('open');$('backdrop').classList.add('open')} function closeFilters(){$('filters').classList.remove('open');$('backdrop').classList.remove('open')}
-function bind(){['search','focus','region','submarket','expiration','priority','minsf'].forEach(id=>$(id).addEventListener('input',()=>{activeTab=$('focus').value; setTabs(); render();})); $('filterBtn').onclick=openFilters; $('backdrop').onclick=closeFilters; $('resetBtn').onclick=()=>{['search','region','submarket','expiration','priority'].forEach(id=>$(id).value='');$('minsf').value='0';render();}; $('mapOptBtn').onclick=()=>$('mapMenu').classList.toggle('open'); document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-layer]').forEach(x=>x.classList.remove('active'));b.classList.add('active');mapLayer=b.dataset.layer;renderMap();}); document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;$('focus').value=activeTab;setTabs();render();}); $('detailClose').onclick=()=>$('detail').classList.remove('open'); window.addEventListener('resize',()=>setTimeout(()=>{try{if(map)map.invalidateSize(); renderMap();}catch(e){}},180));}
-function setTabs(){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===activeTab));}
+function bind(){['search','focus','region','submarket','expiration','priority','minsf'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='search' && $('quickSearch'))$('quickSearch').value=$('search').value; activeTab=$('focus').value; setTabs(); render();})); if($('quickSearch')) $('quickSearch').addEventListener('input',()=>{$('search').value=$('quickSearch').value; render();}); $('filterBtn').onclick=()=>{if(innerWidth<=1024) openFilters(); else document.getElementById('filters').scrollIntoView({behavior:'smooth',block:'start'});}; $('backdrop').onclick=closeFilters; $('resetBtn').onclick=()=>{['search','region','submarket','expiration','priority'].forEach(id=>$(id).value=''); if($('quickSearch')) $('quickSearch').value=''; $('minsf').value='0'; render();}; $('mapOptBtn').onclick=()=>$('mapMenu').classList.toggle('open'); document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-layer]').forEach(x=>x.classList.remove('active'));b.classList.add('active');mapLayer=b.dataset.layer;renderMap();}); document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;$('focus').value=activeTab;setTabs();render();}); document.querySelectorAll('[data-side-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.sideTab;$('focus').value=activeTab;setTabs();render();}); $('detailClose').onclick=()=>$('detail').classList.remove('open'); window.addEventListener('resize',()=>setTimeout(()=>{try{if(map)map.invalidateSize(); renderMap();}catch(e){}},180));}
+function setTabs(){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===activeTab)); document.querySelectorAll('[data-side-tab]').forEach(b=>b.classList.toggle('active',b.dataset.sideTab===activeTab)); if($('focus')) $('focus').value=activeTab;}
 try{init()}catch(e){document.body.innerHTML='<div class="error"><b>Dashboard failed to initialize.</b><br>'+String(e)+'</div>'; console.error(e)}
 })();
 </script>
