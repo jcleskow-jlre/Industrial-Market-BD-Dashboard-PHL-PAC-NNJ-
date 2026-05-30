@@ -1,14 +1,13 @@
-# v33 Market AI reports clean-up
+# v34 final layout touches
 
 Single-file GitHub package.
 
 Updates:
-- Market AI insights now focuses on Savills Research, not lease-event email-prompt language.
-- Each market card includes a thumbnail of the actual Savills Q1 2026 Market in Minutes report.
-- The enlarged report modal shows the actual two-page Savills report images.
-- AI analysis uses Savills report metrics and the dashboard database overlay.
-- Removed internal QA notes and removed captive-tenant language from the market research section.
-- Captive-tenant / market competition language remains only in the lease-event email prompt builder.
+- Header title now wraps/scales at desktop widths and 90% browser zoom.
+- Market AI cards now use responsive metric tiles so numbers do not collide.
+- Market cards switch to a cleaner stacked/horizontal layout on narrower desktop widths.
+- Savills report modals remain enlarged and readable.
+- No data changes from v33.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
