@@ -119743,3 +119743,4 @@ const BUILDINGS = [
     "CoreDashboardFlag": "Yes"
   }
 ];
+window.BUILDINGS = BUILDINGS;

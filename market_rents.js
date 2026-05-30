@@ -39104,3 +39104,4 @@ const COMPS = [
     "LeaseTermInferred": true
   }
 ];
+window.COMPS = COMPS;
