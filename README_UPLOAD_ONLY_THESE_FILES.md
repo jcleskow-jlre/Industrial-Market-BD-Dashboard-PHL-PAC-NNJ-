@@ -1,12 +1,12 @@
-# v35 compact header fix
+# v36 final header fix
 
 Single-file GitHub package.
 
 Updates:
-- Restores compact desktop header layout.
-- Prevents title from becoming a huge vertical stack at laptop widths / 80-90% zoom.
-- Keeps title as a single-line ellipsis on desktop and only wraps at smaller breakpoints.
-- No data changes from v34.
+- Removed the crowded top navigation from the header.
+- Header now has a clean two-part layout: brand/title on the left, search/status/filter on the right.
+- Title stays compact with ellipsis on desktop and only wraps on smaller screens.
+- No data changes from v35.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
