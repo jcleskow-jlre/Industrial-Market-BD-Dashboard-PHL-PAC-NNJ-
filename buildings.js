@@ -14828,4 +14828,3 @@ const BD_OPPORTUNITIES = [
     "ColdEmailBody": "Subject: lease event\n\nHi [First Name],\n\nI noticed Restaurant Depot has a sizable lease event coming up at 43 Stults Road. Given current market conditions in Dayton, it may be useful to pressure-test renewal leverage before the landlord controls the process.\n\nWould it be useful to review the market read for this specific lease event? Either way, please let me know.\n\nBest,\nJohn"
   }
 ];
-window.BD_OPPORTUNITIES = BD_OPPORTUNITIES;

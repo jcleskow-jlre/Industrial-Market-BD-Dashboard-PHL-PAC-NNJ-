@@ -341,4 +341,3 @@ const MARKET_RENTS = {
     }
   ]
 };
-window.MARKET_RENTS = MARKET_RENTS;

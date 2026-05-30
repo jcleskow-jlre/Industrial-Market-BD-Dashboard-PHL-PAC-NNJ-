@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Savills Industrial Intelligence — PA/NJ</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='124' height='124' viewBox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='124' height='124' fill='%23FFE843'/%3E%3Cpath d='M18.07 116.1C11.73 116.1 7.43 112.86 7.43 106.82V106.59H10.91V106.75C10.91 110.69 13.77 113.01 18.1 113.01C20.42 113.01 24.83 112.01 24.83 108.29C24.83 101.1 8.28 106.2 8.28 95.92C8.28 90.74 13.11 88.42 17.9 88.42C23.55 88.42 27.38 91.67 27.38 96.92V97.16H23.91V96.92C23.91 93.52 21.51 91.51 17.64 91.51C14.94 91.51 11.77 92.67 11.77 95.76C11.77 102.49 28.32 97.78 28.32 108.14C28.32 113.63 23.18 116.1 18.08 116.1M48.11 101.72C47.57 102.18 46.26 102.42 45.56 102.49L43.09 102.8C38.45 103.34 34.11 104.27 34.11 108.29C34.11 111.62 36.98 113.01 39.53 113.01C42.16 113.01 44.48 112.08 46.1 110.46C47.42 109.07 48.11 107.21 48.11 105.2V101.72ZM48.73 115.33C48.34 113.94 48.34 111.16 48.34 111.16C47.03 114.02 44.01 116.1 39.3 116.1C33.88 116.1 30.63 113.17 30.63 108.37C30.63 101.41 36.9 100.71 43.01 100.02L44.32 99.86C46.8 99.55 48.11 99.24 48.11 96.54C48.11 93.06 46.1 91.51 41.77 91.51C38.14 91.51 35.2 93.06 35.2 97V97.23H31.72V97C31.72 90.89 36.59 88.42 42.16 88.42C48.19 88.42 51.66 90.81 51.66 96.46V110.69C51.66 111.93 51.87 114.56 52.18 115.33H48.73ZM74.33 89.19H74.64L65.67 115.33H61.88L52.6 89.19H56.63L63.81 111.34L70.92 89.19H74.33ZM80.56 82.31C80.56 81.66 80.3 81.04 79.84 80.59C79.38 80.13 78.77 79.87 78.12 79.87C76.82 79.87 75.68 80.93 75.68 82.23C75.68 82.87 75.94 83.49 76.4 83.95C76.86 84.4 77.47 84.66 78.12 84.66C78.77 84.66 79.38 84.4 79.84 83.95C80.3 83.49 80.56 82.87 80.56 82.23V82.31ZM76.34 89.19H79.98V115.33H76.34V89.19ZM83.54 79.29H87.17V115.33H83.54V79.29ZM90.65 79.29H94.29V115.33H90.65V79.29ZM107.02 116.1C100.6 116.1 96.3 112.86 96.3 106.82V106.59H99.78V106.75C99.78 110.69 102.72 113.01 106.97 113.01C109.29 113.01 113.78 112.01 113.78 108.29C113.78 101.1 97.15 106.2 97.15 95.92C97.15 90.74 101.97 88.42 106.77 88.42C112.49 88.42 116.33 91.67 116.33 96.92V97.16H112.85V96.92C112.85 93.52 110.45 91.51 106.58 91.51C103.8 91.51 100.63 92.67 100.63 95.76C100.63 102.49 117.26 97.78 117.26 108.14C117.26 113.63 112.12 116.1 107.02 116.1' fill='%23C90C0F'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -261,7 +261,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',Arial,sa
   <div class="launch-line l1"></div><div class="launch-line l2"></div><div class="launch-line l3"></div>
   <div class="launch-orbit"></div>
   <div class="launch-card">
-    <div class="launch-logo">savills</div>
+    <img class="launch-logo" src="savills-logo.png" alt="Savills logo">
     <div class="launch-sub">Market intelligence loading</div>
     <div class="launch-title">Opening the PHI-PAC-NNJ command center</div>
     <div class="launch-markets"><span class="launch-chip">Lehigh Valley</span><span class="launch-chip">I-78 / I-81</span><span class="launch-chip">NNJ</span><span class="launch-chip">Philadelphia / SNJ</span></div>
