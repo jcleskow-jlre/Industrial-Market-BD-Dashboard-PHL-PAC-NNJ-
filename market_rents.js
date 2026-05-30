@@ -1,4 +1,4 @@
-// 829 matched Savills lease comp records rebuilt from uploaded Matched_Comps sheet. Actual comp economics only.
+// 829 matched Savills comp records rebuilt from uploaded workbook; NER calculated from Template of NER Calc assumptions.
 const COMPS = [
   {
     "CompEventID": "COMP-00001",
@@ -37,7 +37,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366913,
     "Longitude": -74.485483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.19,
+    "NetEffectiveRentPSF": 4.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00003",
@@ -80,7 +84,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366913,
     "Longitude": -74.485483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.99,
+    "NetEffectiveRentPSF": 3.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00004",
@@ -120,7 +128,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.349689,
     "Longitude": -74.48484,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.11,
+    "NetEffectiveRentPSF": 4.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00005",
@@ -160,7 +172,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5917521,
     "Longitude": -74.2403479,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.8,
+    "NetEffectiveRentPSF": 5.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00007",
@@ -204,7 +220,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3303033,
     "Longitude": -74.492181,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.67,
+    "NetEffectiveRentPSF": 3.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00008",
@@ -245,7 +265,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3504593,
     "Longitude": -74.4937152,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.41,
+    "NetEffectiveRentPSF": 4.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00009",
@@ -283,7 +307,10 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3293405,
     "Longitude": -74.4805214,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": null,
+    "NERCalcSource": "Not calculated",
+    "NERCalculationNotes": "Insufficient starting rent or lease term"
   },
   {
     "CompEventID": "COMP-00010",
@@ -321,7 +348,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.478852,
     "Longitude": -74.303053,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 4.18
   },
   {
     "CompEventID": "COMP-00013",
@@ -362,7 +396,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3303033,
     "Longitude": -74.492181,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.27,
+    "NetEffectiveRentPSF": 4.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00016",
@@ -401,7 +439,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366913,
     "Longitude": -74.485483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.24,
+    "NetEffectiveRentPSF": 4.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00017",
@@ -443,7 +485,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325479,
     "Longitude": -74.460061,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.15,
+    "NetEffectiveRentPSF": 3.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00019",
@@ -483,7 +529,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517844,
     "Longitude": -74.329052,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 5.12
   },
   {
     "CompEventID": "COMP-00020",
@@ -524,7 +577,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3242878,
     "Longitude": -74.505872,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.21,
+    "NetEffectiveRentPSF": 4.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00022",
@@ -565,7 +622,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3459023,
     "Longitude": -74.4877422,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.8,
+    "NetEffectiveRentPSF": 4.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00023",
@@ -605,7 +666,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.462399,
     "Longitude": -74.393903,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.84,
+    "NetEffectiveRentPSF": 4.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00024",
@@ -638,7 +703,7 @@ const COMPS = [
     "BuildingClass": "A",
     "OwnerLandlord": "Blackstone Group",
     "Industry": "Retail",
-    "Comments": "RENEWAL 36â Clear 51 Tailgates, 1 Drive-in",
+    "Comments": "RENEWAL 36\u00e2\u0080\u0099 Clear 51 Tailgates, 1 Drive-in",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-08 to 12-31-13.csv",
@@ -646,7 +711,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3293405,
     "Longitude": -74.4805214,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.22,
+    "NetEffectiveRentPSF": 4.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00028",
@@ -690,7 +759,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3455289,
     "Longitude": -74.4963791,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.04,
+    "NetEffectiveRentPSF": 4.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00029",
@@ -731,7 +804,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.532398,
     "Longitude": -74.391775,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.69,
+    "NetEffectiveRentPSF": 4.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00031",
@@ -773,7 +850,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.38567,
     "Longitude": -74.4475401,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.64,
+    "NetEffectiveRentPSF": 3.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00032",
@@ -814,7 +895,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3139267,
     "Longitude": -74.4851284,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.48,
+    "NetEffectiveRentPSF": 3.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00034",
@@ -854,7 +939,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.350811,
     "Longitude": -74.490483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.24,
+    "NetEffectiveRentPSF": 4.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00036",
@@ -896,7 +985,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.205224,
     "Longitude": -74.5750751,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.47,
+    "NetEffectiveRentPSF": 3.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00037",
@@ -937,7 +1030,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.205224,
     "Longitude": -74.5750751,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.77,
+    "NetEffectiveRentPSF": 2.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00038",
@@ -980,7 +1077,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3254136,
     "Longitude": -74.4821548,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.51,
+    "NetEffectiveRentPSF": 3.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00039",
@@ -1023,7 +1124,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3242878,
     "Longitude": -74.505872,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.64,
+    "NetEffectiveRentPSF": 2.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00040",
@@ -1062,7 +1167,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.353356,
     "Longitude": -74.486363,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.28,
+    "NetEffectiveRentPSF": 2.28,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00042",
@@ -1105,7 +1214,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.691623,
     "Longitude": -74.196145,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.65,
+    "NetEffectiveRentPSF": 5.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00043",
@@ -1144,7 +1257,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3977137,
     "Longitude": -74.4499994,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.86,
+    "NetEffectiveRentPSF": 3.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00045",
@@ -1185,7 +1302,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.520754,
     "Longitude": -74.347219,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.95,
+    "NetEffectiveRentPSF": 3.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00046",
@@ -1229,7 +1350,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3126941,
     "Longitude": -74.5056114,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.41,
+    "NetEffectiveRentPSF": 4.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00047",
@@ -1272,7 +1397,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3889657,
     "Longitude": -74.4544304,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.18,
+    "NetEffectiveRentPSF": 3.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00055",
@@ -1315,7 +1444,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3237659,
     "Longitude": -74.5036506,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.13,
+    "NetEffectiveRentPSF": 3.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00058",
@@ -1356,7 +1489,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.29,
+    "NetEffectiveRentPSF": 3.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00059",
@@ -1397,7 +1534,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6248903,
     "Longitude": -74.2701013,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.88,
+    "NetEffectiveRentPSF": 3.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00064",
@@ -1439,7 +1580,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.34377,
     "Longitude": -74.507761,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.87,
+    "NetEffectiveRentPSF": 4.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00065",
@@ -1478,7 +1623,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.370654,
     "Longitude": -74.491414,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.1,
+    "NetEffectiveRentPSF": 2.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00066",
@@ -1521,7 +1670,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.353356,
     "Longitude": -74.486363,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.0,
+    "NetEffectiveRentPSF": 3.0,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00067",
@@ -1564,7 +1717,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.1343283,
     "Longitude": -75.8825954,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 1.89,
+    "NetEffectiveRentPSF": 1.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00070",
@@ -1605,7 +1762,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.52101,
     "Longitude": -74.3469003,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.27,
+    "NetEffectiveRentPSF": 4.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00071",
@@ -1647,7 +1808,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951874,
     "Longitude": -74.2278262,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.32,
+    "NetEffectiveRentPSF": 5.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00072",
@@ -1693,7 +1858,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5187939,
     "Longitude": -75.5926996,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.48,
+    "NetEffectiveRentPSF": 3.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00074",
@@ -1736,7 +1905,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951874,
     "Longitude": -74.2278262,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.93,
+    "NetEffectiveRentPSF": 4.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00075",
@@ -1775,7 +1948,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7155677,
     "Longitude": -74.1312865,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.67,
+    "NetEffectiveRentPSF": 3.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00076",
@@ -1817,7 +1994,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3767832,
     "Longitude": -74.4962741,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.67,
+    "NetEffectiveRentPSF": 2.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00079",
@@ -1860,7 +2041,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.57,
+    "NetEffectiveRentPSF": 2.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00080",
@@ -1897,7 +2082,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4981151,
     "Longitude": -74.3769485,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.73,
+    "NetEffectiveRentPSF": 3.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00084",
@@ -1940,7 +2129,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.341813,
     "Longitude": -74.505366,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.42,
+    "NetEffectiveRentPSF": 2.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00088",
@@ -1982,7 +2175,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.57984,
     "Longitude": -74.214461,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.13,
+    "NetEffectiveRentPSF": 7.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00091",
@@ -2025,7 +2222,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.38567,
     "Longitude": -74.4475401,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.92,
+    "NetEffectiveRentPSF": 2.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00093",
@@ -2067,7 +2268,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3984253,
     "Longitude": -74.5054237,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.29,
+    "NetEffectiveRentPSF": 8.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00095",
@@ -2109,7 +2314,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6820957,
     "Longitude": -74.0932042,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.66,
+    "NetEffectiveRentPSF": 4.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00096",
@@ -2152,7 +2361,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.53015,
     "Longitude": -74.401783,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.27,
+    "NetEffectiveRentPSF": 3.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00100",
@@ -2195,7 +2408,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325906,
     "Longitude": -74.454477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.52,
+    "NetEffectiveRentPSF": 2.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00101",
@@ -2234,7 +2451,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.364594,
     "Longitude": -74.48772,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.25,
+    "NetEffectiveRentPSF": 3.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00103",
@@ -2278,7 +2499,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.332657,
     "Longitude": -74.4538297,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.68,
+    "NetEffectiveRentPSF": 3.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00105",
@@ -2322,7 +2547,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2342414,
     "Longitude": -76.9971028,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.36,
+    "NetEffectiveRentPSF": 3.36,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00107",
@@ -2362,7 +2591,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2057501,
     "Longitude": -74.5793504,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.85,
+    "NetEffectiveRentPSF": 2.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00109",
@@ -2393,7 +2626,7 @@ const COMPS = [
     "TIValuePSF": 0.2,
     "Sublease": false,
     "BuildingClass": "A",
-    "Comments": "BTS expsnion and renegotiation of existing lease terms achieved immediate reduction of Â± $3.00/SF in first 7 months",
+    "Comments": "BTS expsnion and renegotiation of existing lease terms achieved immediate reduction of \u00c2\u00b1 $3.00/SF in first 7 months",
     "DataQualityScore": 10,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-08 to 12-31-13.csv",
@@ -2401,7 +2634,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3714087,
     "Longitude": -74.5049087,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.85,
+    "NetEffectiveRentPSF": 3.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00110",
@@ -2443,7 +2680,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325906,
     "Longitude": -74.454477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.45,
+    "NetEffectiveRentPSF": 2.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00111",
@@ -2484,7 +2725,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2057501,
     "Longitude": -74.5793504,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.71,
+    "NetEffectiveRentPSF": 2.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00112",
@@ -2526,7 +2771,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2057501,
     "Longitude": -74.5793504,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.04,
+    "NetEffectiveRentPSF": 3.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00114",
@@ -2568,7 +2817,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1976525,
     "Longitude": -74.5900443,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.58,
+    "NetEffectiveRentPSF": 2.58,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00121",
@@ -2608,7 +2861,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7024363,
     "Longitude": -74.1343497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.63,
+    "NetEffectiveRentPSF": 6.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00124",
@@ -2647,7 +2904,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4101566,
     "Longitude": -74.5115611,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.8,
+    "NetEffectiveRentPSF": 2.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00125",
@@ -2691,7 +2952,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0974352,
     "Longitude": -74.822427,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.59,
+    "NetEffectiveRentPSF": 4.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00127",
@@ -2736,7 +3001,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3293405,
     "Longitude": -74.4805214,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.21,
+    "NetEffectiveRentPSF": 3.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00128",
@@ -2775,7 +3044,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5704316,
     "Longitude": -74.2184783,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.52,
+    "NetEffectiveRentPSF": 3.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00130",
@@ -2816,7 +3089,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6781618,
     "Longitude": -74.089197,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.12,
+    "NetEffectiveRentPSF": 5.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00133",
@@ -2859,7 +3136,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.358312,
     "Longitude": -74.484562,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.25,
+    "NetEffectiveRentPSF": 3.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00134",
@@ -2902,7 +3183,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1976525,
     "Longitude": -74.5900443,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.77,
+    "NetEffectiveRentPSF": 2.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00135",
@@ -2946,7 +3231,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325906,
     "Longitude": -74.454477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.15,
+    "NetEffectiveRentPSF": 3.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00139",
@@ -2988,7 +3277,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.36526,
     "Longitude": -74.482375,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.88,
+    "NetEffectiveRentPSF": 2.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00142",
@@ -3032,7 +3325,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5889966,
     "Longitude": -74.252074,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.52,
+    "NetEffectiveRentPSF": 7.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00145",
@@ -3074,7 +3371,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5824287,
     "Longitude": -74.255559,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.05,
+    "NetEffectiveRentPSF": 7.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00147",
@@ -3118,7 +3419,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7340572,
     "Longitude": -74.0861778,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.54,
+    "NetEffectiveRentPSF": 8.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00148",
@@ -3160,7 +3465,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7340572,
     "Longitude": -74.0861778,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.93,
+    "NetEffectiveRentPSF": 8.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00150",
@@ -3203,7 +3512,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5153453,
     "Longitude": -74.3381356,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.27,
+    "NetEffectiveRentPSF": 4.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00151",
@@ -3242,7 +3555,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.371734,
     "Longitude": -74.468913,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.35,
+    "NetEffectiveRentPSF": 8.35,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00152",
@@ -3282,7 +3599,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1959537,
     "Longitude": -74.5653243,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.73,
+    "NetEffectiveRentPSF": 4.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00153",
@@ -3322,7 +3643,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5824287,
     "Longitude": -74.255559,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.02,
+    "NetEffectiveRentPSF": 7.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00154",
@@ -3362,7 +3687,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.327749,
     "Longitude": -74.459286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.78,
+    "NetEffectiveRentPSF": 2.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00165",
@@ -3403,7 +3732,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7335619,
     "Longitude": -74.1154153,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.53,
+    "NetEffectiveRentPSF": 6.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00168",
@@ -3442,7 +3775,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.500906,
     "Longitude": -74.380402,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.8,
+    "NetEffectiveRentPSF": 3.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00170",
@@ -3485,7 +3822,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0558928,
     "Longitude": -76.7455859,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.66,
+    "NetEffectiveRentPSF": 3.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00171",
@@ -3527,7 +3868,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3173867,
     "Longitude": -74.4998918,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.95,
+    "NetEffectiveRentPSF": 3.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00173",
@@ -3572,7 +3917,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3138438,
     "Longitude": -74.5001865,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.33,
+    "NetEffectiveRentPSF": 4.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00174",
@@ -3617,7 +3966,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3847246,
     "Longitude": -74.4506388,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.54,
+    "NetEffectiveRentPSF": 4.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00178",
@@ -3659,7 +4012,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2022943,
     "Longitude": -74.5734979,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.91,
+    "NetEffectiveRentPSF": 2.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00179",
@@ -3703,7 +4060,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5854206,
     "Longitude": -75.7007369,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.6,
+    "NetEffectiveRentPSF": 4.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00181",
@@ -3746,7 +4107,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0230338,
     "Longitude": -74.9795365,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.92,
+    "NetEffectiveRentPSF": 3.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00183",
@@ -3787,7 +4152,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3303033,
     "Longitude": -74.492181,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.43,
+    "NetEffectiveRentPSF": 4.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00184",
@@ -3832,7 +4201,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.196921,
     "Longitude": -74.656643,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.81,
+    "NetEffectiveRentPSF": 2.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00186",
@@ -3868,7 +4241,7 @@ const COMPS = [
     "LandlordBrokerage": "Resource Realty",
     "TenantBrokerage": "Binswanger",
     "Industry": "Retail",
-    "Comments": "Early Terminated Lease. Full space full term sublase included Â± $15MM worth of material handling equipment and mezzanines",
+    "Comments": "Early Terminated Lease. Full space full term sublase included \u00c2\u00b1 $15MM worth of material handling equipment and mezzanines",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-08 to 12-31-13.csv",
@@ -3876,7 +4249,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3977137,
     "Longitude": -74.4499994,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.73,
+    "NetEffectiveRentPSF": 3.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00188",
@@ -3914,7 +4291,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.733021,
     "Longitude": -74.045767,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 30.78,
+    "NetEffectiveRentPSF": 30.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00190",
@@ -3955,7 +4336,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.370654,
     "Longitude": -74.491414,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.13,
+    "NetEffectiveRentPSF": 2.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00192",
@@ -3997,7 +4382,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.478962,
     "Longitude": -74.472071,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.66,
+    "NetEffectiveRentPSF": 3.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00206",
@@ -4037,7 +4426,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2792713,
     "Longitude": -74.5483225,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.3,
+    "NetEffectiveRentPSF": 6.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00208",
@@ -4079,7 +4472,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366913,
     "Longitude": -74.485483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.94,
+    "NetEffectiveRentPSF": 2.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00209",
@@ -4117,7 +4514,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7170513,
     "Longitude": -74.1293922,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.47,
+    "NetEffectiveRentPSF": 4.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00210",
@@ -4156,7 +4557,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.500906,
     "Longitude": -74.380402,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.72,
+    "NetEffectiveRentPSF": 3.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00211",
@@ -4193,7 +4598,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3767832,
     "Longitude": -74.4962741,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.08,
+    "NetEffectiveRentPSF": 4.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00212",
@@ -4233,7 +4642,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6638813,
     "Longitude": -74.1899403,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.12,
+    "NetEffectiveRentPSF": 8.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00214",
@@ -4278,7 +4691,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.526669,
     "Longitude": -74.552499,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.39,
+    "NetEffectiveRentPSF": 2.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00217",
@@ -4323,7 +4740,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5489722,
     "Longitude": -74.4492062,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.09,
+    "NetEffectiveRentPSF": 6.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00219",
@@ -4361,7 +4782,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.770526,
     "Longitude": -75.339659,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.38,
+    "NetEffectiveRentPSF": 4.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00222",
@@ -4406,7 +4831,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517,
     "Longitude": -74.31475,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.88,
+    "NetEffectiveRentPSF": 5.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00223",
@@ -4451,7 +4880,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.617183,
     "Longitude": -75.349409,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.65,
+    "NetEffectiveRentPSF": 4.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00224",
@@ -4496,7 +4929,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3615135,
     "Longitude": -74.4624535,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.03,
+    "NetEffectiveRentPSF": 4.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00225",
@@ -4538,7 +4975,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2022943,
     "Longitude": -74.5734979,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.46,
+    "NetEffectiveRentPSF": 3.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00226",
@@ -4582,7 +5023,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7506582,
     "Longitude": -74.1379211,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.26,
+    "NetEffectiveRentPSF": 7.26,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00227",
@@ -4626,7 +5071,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7773598,
     "Longitude": -74.0786874,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.19,
+    "NetEffectiveRentPSF": 7.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00228",
@@ -4671,7 +5120,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5771693,
     "Longitude": -74.5946801,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.83,
+    "NetEffectiveRentPSF": 5.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00230",
@@ -4712,7 +5165,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517,
     "Longitude": -74.31475,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.8,
+    "NetEffectiveRentPSF": 5.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00232",
@@ -4755,7 +5212,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9113055,
     "Longitude": -77.6612502,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.23,
+    "NetEffectiveRentPSF": 3.23,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00234",
@@ -4796,7 +5257,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366848,
     "Longitude": -74.48957,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.42,
+    "NetEffectiveRentPSF": 3.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00235",
@@ -4836,7 +5301,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.494201,
     "Longitude": -74.386922,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.82,
+    "NetEffectiveRentPSF": 3.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00236",
@@ -4881,7 +5350,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.190643,
     "Longitude": -74.5672061,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.33,
+    "NetEffectiveRentPSF": 4.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00237",
@@ -4926,7 +5399,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5501204,
     "Longitude": -74.4464304,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.11,
+    "NetEffectiveRentPSF": 5.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00241",
@@ -4961,7 +5438,7 @@ const COMPS = [
     "BuildingClass": "B",
     "LandlordBrokerage": "Jones Lang LaSalle",
     "TenantBrokerage": "The Blau Berg Company",
-    "Comments": "$3 PSF TI. Most of this is going towards ESFR, adding 4 LDâs, building new shipping office and other work. Also activating existing rail line above and beyond that amount. Tenant has free rent until LL's work is complete and then only pays for 300k SF until 2/16",
+    "Comments": "$3 PSF TI. Most of this is going towards ESFR, adding 4 LD\u00e2\u0080\u0099s, building new shipping office and other work. Also activating existing rail line above and beyond that amount. Tenant has free rent until LL's work is complete and then only pays for 300k SF until 2/16",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-14 to 12-31-18.csv",
@@ -4969,7 +5446,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5187496,
     "Longitude": -74.3490772,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.46,
+    "NetEffectiveRentPSF": 4.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00244",
@@ -5011,7 +5492,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.34377,
     "Longitude": -74.507761,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.49,
+    "NetEffectiveRentPSF": 5.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00245",
@@ -5056,7 +5541,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5906769,
     "Longitude": -74.2509134,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.77,
+    "NetEffectiveRentPSF": 5.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00246",
@@ -5099,7 +5588,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.82,
+    "NetEffectiveRentPSF": 3.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00247",
@@ -5142,7 +5635,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5554525,
     "Longitude": -75.589164,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.11,
+    "NetEffectiveRentPSF": 5.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00248",
@@ -5180,7 +5677,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5791483,
     "Longitude": -74.2565996,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.46,
+    "NetEffectiveRentPSF": 16.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00249",
@@ -5218,7 +5719,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3315548,
     "Longitude": -74.4877576,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.14,
+    "NetEffectiveRentPSF": 5.14,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00251",
@@ -5260,7 +5765,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3443871,
     "Longitude": -74.5093762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.22,
+    "NetEffectiveRentPSF": 4.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00252",
@@ -5306,7 +5815,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5489722,
     "Longitude": -74.4492062,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.33,
+    "NetEffectiveRentPSF": 5.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00256",
@@ -5346,7 +5859,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.78,
+    "NetEffectiveRentPSF": 4.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00257",
@@ -5391,7 +5908,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0909998,
     "Longitude": -74.8318075,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.87,
+    "NetEffectiveRentPSF": 3.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00258",
@@ -5431,7 +5952,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8289506,
     "Longitude": -75.2082347,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.11,
+    "NetEffectiveRentPSF": 4.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00261",
@@ -5471,7 +5996,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.505113,
     "Longitude": -74.355066,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.34,
+    "NetEffectiveRentPSF": 5.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00265",
@@ -5512,7 +6041,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5589742,
     "Longitude": -74.5847812,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.04,
+    "NetEffectiveRentPSF": 3.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00266",
@@ -5550,7 +6083,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.733021,
     "Longitude": -74.045767,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 33.41,
+    "NetEffectiveRentPSF": 33.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00270",
@@ -5596,7 +6133,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7392599,
     "Longitude": -74.1381305,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.98,
+    "NetEffectiveRentPSF": 8.98,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00274",
@@ -5640,7 +6181,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7749925,
     "Longitude": -74.0688109,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.21,
+    "NetEffectiveRentPSF": 9.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00278",
@@ -5685,7 +6230,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.707892,
     "Longitude": -74.247982,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.63,
+    "NetEffectiveRentPSF": 7.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00279",
@@ -5723,7 +6272,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.109372,
     "Longitude": -74.794961,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.11,
+    "NetEffectiveRentPSF": 4.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00281",
@@ -5764,7 +6317,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9149746,
     "Longitude": -76.0795856,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.94,
+    "NetEffectiveRentPSF": 3.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00284",
@@ -5807,7 +6364,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3692038,
     "Longitude": -74.4625011,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.27,
+    "NetEffectiveRentPSF": 5.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00286",
@@ -5849,7 +6410,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7198337,
     "Longitude": -76.3339992,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.05,
+    "NetEffectiveRentPSF": 4.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00287",
@@ -5885,7 +6450,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.681437,
     "Longitude": -74.3123,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.57,
+    "NetEffectiveRentPSF": 4.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00289",
@@ -5930,7 +6499,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5769514,
     "Longitude": -74.2578227,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.59,
+    "NetEffectiveRentPSF": 5.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00292",
@@ -5975,7 +6548,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3220656,
     "Longitude": -74.4811092,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.0,
+    "NetEffectiveRentPSF": 8.0,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00294",
@@ -6015,7 +6592,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.23,
+    "NetEffectiveRentPSF": 4.23,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00295",
@@ -6061,7 +6642,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.303753,
     "Longitude": -74.506098,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.87,
+    "NetEffectiveRentPSF": 5.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00297",
@@ -6100,7 +6685,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.681437,
     "Longitude": -74.3123,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.87,
+    "NetEffectiveRentPSF": 5.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00298",
@@ -6145,7 +6734,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7615758,
     "Longitude": -77.7415699,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.11,
+    "NetEffectiveRentPSF": 4.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00302",
@@ -6189,7 +6782,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3352,
     "Longitude": -74.459767,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.54,
+    "NetEffectiveRentPSF": 4.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00303",
@@ -6231,7 +6828,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0151615,
     "Longitude": -74.8575097,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.65,
+    "NetEffectiveRentPSF": 4.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00304",
@@ -6276,7 +6877,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3876014,
     "Longitude": -74.4427871,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.91,
+    "NetEffectiveRentPSF": 4.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00305",
@@ -6318,7 +6923,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.38874,
     "Longitude": -74.449994,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.55,
+    "NetEffectiveRentPSF": 4.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00309",
@@ -6359,7 +6968,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3767832,
     "Longitude": -74.4962741,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.57,
+    "NetEffectiveRentPSF": 4.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00312",
@@ -6402,7 +7015,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3563577,
     "Longitude": -74.4606286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.22,
+    "NetEffectiveRentPSF": 5.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00314",
@@ -6446,7 +7063,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1237213,
     "Longitude": -74.7207489,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.25,
+    "NetEffectiveRentPSF": 4.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00315",
@@ -6491,7 +7112,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7643582,
     "Longitude": -74.0790901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.68,
+    "NetEffectiveRentPSF": 7.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00316",
@@ -6535,7 +7160,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.836975,
     "Longitude": -75.198304,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.99,
+    "NetEffectiveRentPSF": 3.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00317",
@@ -6579,7 +7208,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5654996,
     "Longitude": -74.2261391,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.03,
+    "NetEffectiveRentPSF": 7.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00319",
@@ -6623,7 +7256,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9139747,
     "Longitude": -76.0965513,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.06,
+    "NetEffectiveRentPSF": 4.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00327",
@@ -6668,7 +7305,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6105378,
     "Longitude": -74.2471274,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.96,
+    "NetEffectiveRentPSF": 7.96,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00328",
@@ -6712,7 +7353,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2265138,
     "Longitude": -77.0656067,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.13,
+    "NetEffectiveRentPSF": 4.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00331",
@@ -6754,7 +7399,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0230338,
     "Longitude": -74.9795365,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.87,
+    "NetEffectiveRentPSF": 3.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00333",
@@ -6799,7 +7448,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6840554,
     "Longitude": -75.3639238,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.02,
+    "NetEffectiveRentPSF": 5.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00335",
@@ -6840,7 +7493,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8351259,
     "Longitude": -75.2151674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.06,
+    "NetEffectiveRentPSF": 4.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00336",
@@ -6884,7 +7541,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3139267,
     "Longitude": -74.4851284,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.86,
+    "NetEffectiveRentPSF": 4.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00337",
@@ -6929,7 +7590,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5751439,
     "Longitude": -75.6399638,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.15,
+    "NetEffectiveRentPSF": 5.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00340",
@@ -6974,7 +7639,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0988913,
     "Longitude": -74.8193373,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.84,
+    "NetEffectiveRentPSF": 3.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00344",
@@ -7018,7 +7687,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8351259,
     "Longitude": -75.2151674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.88,
+    "NetEffectiveRentPSF": 3.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00347",
@@ -7058,7 +7731,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6153724,
     "Longitude": -74.2462785,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.07,
+    "NetEffectiveRentPSF": 9.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00349",
@@ -7100,7 +7777,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2022943,
     "Longitude": -74.5734979,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.03,
+    "NetEffectiveRentPSF": 5.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00351",
@@ -7145,7 +7826,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1087316,
     "Longitude": -74.7958875,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.3,
+    "NetEffectiveRentPSF": 4.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00353",
@@ -7189,7 +7874,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5283342,
     "Longitude": -74.3809321,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.65,
+    "NetEffectiveRentPSF": 7.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00355",
@@ -7235,7 +7924,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.582765,
     "Longitude": -74.2470193,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.88,
+    "NetEffectiveRentPSF": 7.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00356",
@@ -7275,7 +7968,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.499063,
     "Longitude": -74.353001,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.48,
+    "NetEffectiveRentPSF": 6.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00357",
@@ -7320,7 +8017,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7797737,
     "Longitude": -74.0768463,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.52,
+    "NetEffectiveRentPSF": 9.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00358",
@@ -7363,7 +8064,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3714087,
     "Longitude": -74.5049087,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.27,
+    "NetEffectiveRentPSF": 5.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00359",
@@ -7409,7 +8114,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.52704,
     "Longitude": -74.2544998,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.87,
+    "NetEffectiveRentPSF": 6.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00365",
@@ -7453,7 +8162,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7198337,
     "Longitude": -76.3339992,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.51,
+    "NetEffectiveRentPSF": 4.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00367",
@@ -7494,7 +8207,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5856356,
     "Longitude": -74.2493728,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.86,
+    "NetEffectiveRentPSF": 4.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00368",
@@ -7537,7 +8254,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3315548,
     "Longitude": -74.4877576,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.72,
+    "NetEffectiveRentPSF": 5.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00370",
@@ -7581,7 +8302,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7198337,
     "Longitude": -76.3339992,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.61,
+    "NetEffectiveRentPSF": 3.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00371",
@@ -7623,7 +8348,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.364594,
     "Longitude": -74.48772,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.08,
+    "NetEffectiveRentPSF": 4.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00373",
@@ -7665,7 +8394,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.87,
+    "NetEffectiveRentPSF": 4.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00374",
@@ -7708,7 +8441,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.32,
+    "NetEffectiveRentPSF": 5.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00376",
@@ -7752,7 +8489,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2046227,
     "Longitude": -74.6531633,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.22,
+    "NetEffectiveRentPSF": 5.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00381",
@@ -7793,7 +8534,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3237659,
     "Longitude": -74.5036506,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.52,
+    "NetEffectiveRentPSF": 5.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00386",
@@ -7838,7 +8583,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3315548,
     "Longitude": -74.4877576,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.07,
+    "NetEffectiveRentPSF": 5.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00387",
@@ -7879,7 +8628,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5329713,
     "Longitude": -74.5407944,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.44,
+    "NetEffectiveRentPSF": 4.44,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00388",
@@ -7921,7 +8674,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7645497,
     "Longitude": -75.3315388,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.78,
+    "NetEffectiveRentPSF": 4.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00389",
@@ -7963,7 +8720,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.1343283,
     "Longitude": -75.8825954,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.45,
+    "NetEffectiveRentPSF": 3.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00391",
@@ -8009,7 +8770,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5249326,
     "Longitude": -74.3246999,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.52,
+    "NetEffectiveRentPSF": 7.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00392",
@@ -8054,7 +8819,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.01,
+    "NetEffectiveRentPSF": 5.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00393",
@@ -8099,7 +8868,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6227424,
     "Longitude": -74.2504514,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.18,
+    "NetEffectiveRentPSF": 7.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00395",
@@ -8141,7 +8914,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0068619,
     "Longitude": -74.8569574,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.88,
+    "NetEffectiveRentPSF": 4.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00396",
@@ -8186,7 +8963,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517775,
     "Longitude": -74.417353,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.49,
+    "NetEffectiveRentPSF": 5.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00400",
@@ -8232,7 +9013,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3175224,
     "Longitude": -74.5041634,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.81,
+    "NetEffectiveRentPSF": 5.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00401",
@@ -8273,7 +9058,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.691623,
     "Longitude": -74.196145,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.75,
+    "NetEffectiveRentPSF": 8.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00402",
@@ -8315,7 +9104,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7507955,
     "Longitude": -74.0369609,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.89,
+    "NetEffectiveRentPSF": 8.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00404",
@@ -8359,7 +9152,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0174391,
     "Longitude": -74.8481311,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.07,
+    "NetEffectiveRentPSF": 3.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00405",
@@ -8405,7 +9202,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5589447,
     "Longitude": -74.4556723,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.14,
+    "NetEffectiveRentPSF": 6.14,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00406",
@@ -8449,7 +9250,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7571138,
     "Longitude": -75.3789777,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.57,
+    "NetEffectiveRentPSF": 4.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00407",
@@ -8491,7 +9296,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6646044,
     "Longitude": -74.1854675,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.78,
+    "NetEffectiveRentPSF": 7.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00409",
@@ -8532,7 +9341,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0068619,
     "Longitude": -74.8569574,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.96,
+    "NetEffectiveRentPSF": 4.96,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00410",
@@ -8578,7 +9391,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6153724,
     "Longitude": -74.2462785,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.68,
+    "NetEffectiveRentPSF": 7.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00411",
@@ -8624,7 +9441,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.573954,
     "Longitude": -74.259906,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.33,
+    "NetEffectiveRentPSF": 7.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00414",
@@ -8671,7 +9492,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7431936,
     "Longitude": -75.2701834,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.66,
+    "NetEffectiveRentPSF": 4.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00416",
@@ -8712,7 +9537,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9642618,
     "Longitude": -74.9663289,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.69,
+    "NetEffectiveRentPSF": 4.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00417",
@@ -8753,7 +9582,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0617614,
     "Longitude": -74.9377116,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.57,
+    "NetEffectiveRentPSF": 2.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00418",
@@ -8790,7 +9623,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6900236,
     "Longitude": -74.084147,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.7,
+    "NetEffectiveRentPSF": 5.7,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00420",
@@ -8831,7 +9668,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5297916,
     "Longitude": -74.3985155,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 0.99,
+    "NetEffectiveRentPSF": 0.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00425",
@@ -8877,7 +9718,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3714087,
     "Longitude": -74.5049087,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.85,
+    "NetEffectiveRentPSF": 4.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00426",
@@ -8920,7 +9765,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0617614,
     "Longitude": -74.9377116,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.4,
+    "NetEffectiveRentPSF": 2.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00427",
@@ -8963,7 +9812,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6646044,
     "Longitude": -74.1854675,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.75,
+    "NetEffectiveRentPSF": 7.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00428",
@@ -9003,7 +9856,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.366913,
     "Longitude": -74.485483,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.7,
+    "NetEffectiveRentPSF": 3.7,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00429",
@@ -9049,7 +9906,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3384497,
     "Longitude": -74.5034788,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.93,
+    "NetEffectiveRentPSF": 4.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00432",
@@ -9092,7 +9953,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3252239,
     "Longitude": -74.4661821,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.24,
+    "NetEffectiveRentPSF": 5.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00433",
@@ -9136,7 +10001,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0144205,
     "Longitude": -76.7202166,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.87,
+    "NetEffectiveRentPSF": 3.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00435",
@@ -9181,7 +10050,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5538107,
     "Longitude": -74.4783243,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.65,
+    "NetEffectiveRentPSF": 6.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00436",
@@ -9225,7 +10098,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3237659,
     "Longitude": -74.5036506,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.74,
+    "NetEffectiveRentPSF": 5.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00438",
@@ -9265,7 +10142,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.28,
+    "NetEffectiveRentPSF": 4.28,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00439",
@@ -9306,7 +10187,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3459023,
     "Longitude": -74.4877422,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.53,
+    "NetEffectiveRentPSF": 5.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00441",
@@ -9353,7 +10238,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2585563,
     "Longitude": -74.4995467,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.05,
+    "NetEffectiveRentPSF": 5.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00443",
@@ -9399,7 +10288,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1918453,
     "Longitude": -77.2335872,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.18,
+    "NetEffectiveRentPSF": 4.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00444",
@@ -9441,7 +10334,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9113055,
     "Longitude": -77.6612502,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.83,
+    "NetEffectiveRentPSF": 3.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00446",
@@ -9486,7 +10383,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6657325,
     "Longitude": -74.175293,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.63,
+    "NetEffectiveRentPSF": 9.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00448",
@@ -9531,7 +10432,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5874169,
     "Longitude": -74.2447051,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.89,
+    "NetEffectiveRentPSF": 8.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00451",
@@ -9573,7 +10478,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4222534,
     "Longitude": -74.5007891,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.82,
+    "NetEffectiveRentPSF": 4.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00452",
@@ -9616,7 +10525,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3170289,
     "Longitude": -74.5023139,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.89,
+    "NetEffectiveRentPSF": 5.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00456",
@@ -9659,7 +10572,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0414503,
     "Longitude": -74.8474932,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.15,
+    "NetEffectiveRentPSF": 4.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00457",
@@ -9703,7 +10620,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7230706,
     "Longitude": -75.2856822,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.85,
+    "NetEffectiveRentPSF": 4.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00458",
@@ -9742,7 +10663,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6227424,
     "Longitude": -74.2504514,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.6,
+    "NetEffectiveRentPSF": 7.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00460",
@@ -9788,7 +10713,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3044501,
     "Longitude": -74.5011435,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.88,
+    "NetEffectiveRentPSF": 5.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00461",
@@ -9831,7 +10760,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6657325,
     "Longitude": -74.175293,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.57,
+    "NetEffectiveRentPSF": 9.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00462",
@@ -9877,7 +10810,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.236863,
     "Longitude": -77.1187104,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.94,
+    "NetEffectiveRentPSF": 3.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00463",
@@ -9923,7 +10860,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0532613,
     "Longitude": -76.7437877,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.19,
+    "NetEffectiveRentPSF": 6.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00464",
@@ -9964,7 +10905,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.721794,
     "Longitude": -74.1104797,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.75,
+    "NetEffectiveRentPSF": 12.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00466",
@@ -10009,7 +10954,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4339759,
     "Longitude": -76.5145693,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.6,
+    "NetEffectiveRentPSF": 4.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00468",
@@ -10053,7 +11002,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5550442,
     "Longitude": -74.4532838,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.9,
+    "NetEffectiveRentPSF": 5.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00469",
@@ -10094,7 +11047,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5156801,
     "Longitude": -75.5959271,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.67,
+    "NetEffectiveRentPSF": 5.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00471",
@@ -10137,7 +11094,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5295563,
     "Longitude": -74.2603376,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.22,
+    "NetEffectiveRentPSF": 7.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00472",
@@ -10181,7 +11142,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3889657,
     "Longitude": -74.4544304,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.84,
+    "NetEffectiveRentPSF": 5.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00473",
@@ -10223,7 +11188,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7793692,
     "Longitude": -74.0742342,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.81,
+    "NetEffectiveRentPSF": 9.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00476",
@@ -10267,7 +11236,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6840554,
     "Longitude": -75.3639238,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.34,
+    "NetEffectiveRentPSF": 4.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00477",
@@ -10306,7 +11279,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7773598,
     "Longitude": -74.0786874,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.49,
+    "NetEffectiveRentPSF": 7.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00478",
@@ -10347,7 +11324,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1586368,
     "Longitude": -76.6429032,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.2,
+    "NetEffectiveRentPSF": 5.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00480",
@@ -10392,7 +11373,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5200434,
     "Longitude": -75.5768324,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.06,
+    "NetEffectiveRentPSF": 5.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00481",
@@ -10438,7 +11423,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.236499,
     "Longitude": -77.045113,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.57,
+    "NetEffectiveRentPSF": 3.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00482",
@@ -10481,7 +11470,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0863048,
     "Longitude": -74.8397401,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.32,
+    "NetEffectiveRentPSF": 5.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00485",
@@ -10524,7 +11517,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5771147,
     "Longitude": -75.6101571,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.94,
+    "NetEffectiveRentPSF": 4.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00486",
@@ -10567,7 +11564,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5939942,
     "Longitude": -74.2654117,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.45,
+    "NetEffectiveRentPSF": 7.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00489",
@@ -10612,7 +11613,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1884814,
     "Longitude": -77.2351469,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.1,
+    "NetEffectiveRentPSF": 4.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00490",
@@ -10653,7 +11658,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3654547,
     "Longitude": -74.4778221,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.81,
+    "NetEffectiveRentPSF": 5.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00494",
@@ -10698,7 +11707,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2657589,
     "Longitude": -75.4959981,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.46,
+    "NetEffectiveRentPSF": 3.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00495",
@@ -10740,7 +11753,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0982335,
     "Longitude": -74.832619,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.07,
+    "NetEffectiveRentPSF": 5.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00496",
@@ -10781,7 +11798,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517844,
     "Longitude": -74.329052,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.93,
+    "NetEffectiveRentPSF": 6.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00497",
@@ -10828,7 +11849,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5725303,
     "Longitude": -74.2605039,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.57,
+    "NetEffectiveRentPSF": 8.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00498",
@@ -10872,7 +11897,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1581371,
     "Longitude": -76.6517237,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.48,
+    "NetEffectiveRentPSF": 5.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00499",
@@ -10917,7 +11946,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5855588,
     "Longitude": -75.717279,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.78,
+    "NetEffectiveRentPSF": 4.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00501",
@@ -10960,7 +11993,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2367131,
     "Longitude": -76.7479367,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.77,
+    "NetEffectiveRentPSF": 3.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00502",
@@ -11002,7 +12039,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.68184,
     "Longitude": -74.0839073,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.15,
+    "NetEffectiveRentPSF": 9.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00503",
@@ -11045,7 +12086,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7731538,
     "Longitude": -74.0775049,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.63,
+    "NetEffectiveRentPSF": 8.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00504",
@@ -11091,7 +12136,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2361719,
     "Longitude": -77.0399326,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.45,
+    "NetEffectiveRentPSF": 4.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00505",
@@ -11134,7 +12183,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3615135,
     "Longitude": -74.4624535,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.71,
+    "NetEffectiveRentPSF": 5.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00508",
@@ -11179,7 +12232,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9222467,
     "Longitude": -76.048943,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.09,
+    "NetEffectiveRentPSF": 4.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00511",
@@ -11223,7 +12280,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3693515,
     "Longitude": -74.5022085,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.11,
+    "NetEffectiveRentPSF": 5.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00512",
@@ -11260,7 +12321,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.771967,
     "Longitude": -74.0594311,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 8.45
   },
   {
     "CompEventID": "COMP-00514",
@@ -11300,7 +12368,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8624643,
     "Longitude": -75.0450152,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.49,
+    "NetEffectiveRentPSF": 4.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00516",
@@ -11341,7 +12413,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6900236,
     "Longitude": -74.084147,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.94,
+    "NetEffectiveRentPSF": 6.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00517",
@@ -11381,7 +12457,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3706179,
     "Longitude": -74.4732166,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.42,
+    "NetEffectiveRentPSF": 5.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00519",
@@ -11426,7 +12506,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.341813,
     "Longitude": -74.505366,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.32,
+    "NetEffectiveRentPSF": 6.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00523",
@@ -11470,7 +12554,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7274899,
     "Longitude": -74.1137075,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.21,
+    "NetEffectiveRentPSF": 10.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00524",
@@ -11511,7 +12599,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3074757,
     "Longitude": -76.8909716,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.82,
+    "NetEffectiveRentPSF": 3.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00528",
@@ -11558,7 +12650,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6129568,
     "Longitude": -75.3116816,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.96,
+    "NetEffectiveRentPSF": 5.96,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00531",
@@ -11602,7 +12698,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.586686,
     "Longitude": -75.7114523,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.34,
+    "NetEffectiveRentPSF": 5.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00533",
@@ -11642,7 +12742,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3876014,
     "Longitude": -74.4427871,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.77,
+    "NetEffectiveRentPSF": 5.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00535",
@@ -11685,7 +12789,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517844,
     "Longitude": -74.329052,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.29,
+    "NetEffectiveRentPSF": 6.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00539",
@@ -11724,7 +12832,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5159367,
     "Longitude": -75.59095,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.68,
+    "NetEffectiveRentPSF": 5.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00540",
@@ -11768,7 +12880,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.23144,
     "Longitude": -77.072507,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.33,
+    "NetEffectiveRentPSF": 4.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00542",
@@ -11812,7 +12928,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1918453,
     "Longitude": -77.2335872,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.27,
+    "NetEffectiveRentPSF": 4.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00543",
@@ -11857,7 +12977,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2314608,
     "Longitude": -76.7413896,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.29,
+    "NetEffectiveRentPSF": 4.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00548",
@@ -11902,7 +13026,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.732595,
     "Longitude": -75.2808317,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.07,
+    "NetEffectiveRentPSF": 5.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00549",
@@ -11948,7 +13076,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5295563,
     "Longitude": -74.2603376,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.11,
+    "NetEffectiveRentPSF": 7.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00550",
@@ -11989,7 +13121,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.370654,
     "Longitude": -74.491414,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.9,
+    "NetEffectiveRentPSF": 4.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00551",
@@ -12029,7 +13165,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0407294,
     "Longitude": -76.4528022,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.53,
+    "NetEffectiveRentPSF": 3.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00552",
@@ -12066,7 +13206,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5336904,
     "Longitude": -74.270452,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.11,
+    "NetEffectiveRentPSF": 7.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00553",
@@ -12110,7 +13254,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5153453,
     "Longitude": -74.3381356,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.64,
+    "NetEffectiveRentPSF": 6.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00554",
@@ -12151,7 +13299,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5153453,
     "Longitude": -74.3381356,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.77,
+    "NetEffectiveRentPSF": 12.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00555",
@@ -12191,7 +13343,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3761969,
     "Longitude": -74.528069,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.61,
+    "NetEffectiveRentPSF": 6.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00557",
@@ -12235,7 +13391,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7690155,
     "Longitude": -75.3339982,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.94,
+    "NetEffectiveRentPSF": 4.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00558",
@@ -12279,7 +13439,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7690155,
     "Longitude": -75.3339982,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.79,
+    "NetEffectiveRentPSF": 4.79,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00559",
@@ -12325,7 +13489,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1951461,
     "Longitude": -76.9861377,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.72,
+    "NetEffectiveRentPSF": 4.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00560",
@@ -12370,7 +13538,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1718794,
     "Longitude": -76.8420707,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.34,
+    "NetEffectiveRentPSF": 4.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00561",
@@ -12413,7 +13585,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4101566,
     "Longitude": -74.5115611,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.13,
+    "NetEffectiveRentPSF": 4.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00563",
@@ -12458,7 +13634,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7457748,
     "Longitude": -75.2701342,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.61,
+    "NetEffectiveRentPSF": 5.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00564",
@@ -12498,7 +13678,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1586368,
     "Longitude": -76.6429032,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.2,
+    "NetEffectiveRentPSF": 5.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00567",
@@ -12541,7 +13725,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.691623,
     "Longitude": -74.196145,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 10.72
   },
   {
     "CompEventID": "COMP-00568",
@@ -12585,7 +13776,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7687058,
     "Longitude": -75.3869578,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.72,
+    "NetEffectiveRentPSF": 5.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00571",
@@ -12626,7 +13821,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6665015,
     "Longitude": -74.1067896,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.91,
+    "NetEffectiveRentPSF": 6.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00577",
@@ -12668,7 +13867,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3264672,
     "Longitude": -74.4897095,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.64,
+    "NetEffectiveRentPSF": 6.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00585",
@@ -12711,7 +13914,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0982335,
     "Longitude": -74.832619,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.37,
+    "NetEffectiveRentPSF": 5.37,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00586",
@@ -12756,7 +13963,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3267347,
     "Longitude": -74.4929771,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.6,
+    "NetEffectiveRentPSF": 6.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00588",
@@ -12800,7 +14011,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2260605,
     "Longitude": -76.9533535,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.64,
+    "NetEffectiveRentPSF": 4.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00590",
@@ -12844,7 +14059,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5560517,
     "Longitude": -74.5159712,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.09,
+    "NetEffectiveRentPSF": 8.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00591",
@@ -12886,7 +14105,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5113899,
     "Longitude": -74.3433279,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.05,
+    "NetEffectiveRentPSF": 8.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00592",
@@ -12931,7 +14154,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.372775,
     "Longitude": -74.474545,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.37,
+    "NetEffectiveRentPSF": 6.37,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00593",
@@ -12978,7 +14205,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.121503,
     "Longitude": -74.7170342,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.8,
+    "NetEffectiveRentPSF": 5.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00594",
@@ -13023,7 +14254,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3977137,
     "Longitude": -74.4499994,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.43,
+    "NetEffectiveRentPSF": 6.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00595",
@@ -13065,7 +14300,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.495668,
     "Longitude": -74.362497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.1,
+    "NetEffectiveRentPSF": 9.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00596",
@@ -13106,7 +14345,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.721794,
     "Longitude": -74.1104797,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.78,
+    "NetEffectiveRentPSF": 14.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00597",
@@ -13147,7 +14390,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0992599,
     "Longitude": -74.8140508,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.11,
+    "NetEffectiveRentPSF": 6.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00598",
@@ -13186,7 +14433,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.495668,
     "Longitude": -74.362497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.47,
+    "NetEffectiveRentPSF": 8.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00599",
@@ -13232,7 +14483,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.8297282,
     "Longitude": -75.3000228,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.92,
+    "NetEffectiveRentPSF": 4.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00601",
@@ -13277,7 +14532,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5159367,
     "Longitude": -75.59095,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.71,
+    "NetEffectiveRentPSF": 5.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00606",
@@ -13322,7 +14581,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5348458,
     "Longitude": -74.2770287,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.38,
+    "NetEffectiveRentPSF": 9.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00608",
@@ -13365,7 +14628,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5192732,
     "Longitude": -75.6246267,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.51,
+    "NetEffectiveRentPSF": 5.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00609",
@@ -13407,7 +14674,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5560517,
     "Longitude": -74.5159712,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.25,
+    "NetEffectiveRentPSF": 8.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00613",
@@ -13451,7 +14722,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5560517,
     "Longitude": -74.5159712,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.47,
+    "NetEffectiveRentPSF": 8.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00614",
@@ -13496,7 +14771,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7166138,
     "Longitude": -74.1755896,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.7,
+    "NetEffectiveRentPSF": 9.7,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00620",
@@ -13541,7 +14820,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3535963,
     "Longitude": -76.7392308,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.73,
+    "NetEffectiveRentPSF": 3.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00621",
@@ -13586,7 +14869,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3459023,
     "Longitude": -74.4877422,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.16,
+    "NetEffectiveRentPSF": 6.16,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00622",
@@ -13629,7 +14916,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5595963,
     "Longitude": -75.6167397,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.57,
+    "NetEffectiveRentPSF": 5.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00624",
@@ -13672,7 +14963,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.500906,
     "Longitude": -74.380402,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.55,
+    "NetEffectiveRentPSF": 7.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00626",
@@ -13715,7 +15010,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5467326,
     "Longitude": -74.4887742,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.49,
+    "NetEffectiveRentPSF": 9.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00627",
@@ -13758,7 +15057,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3533269,
     "Longitude": -76.7356801,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.1,
+    "NetEffectiveRentPSF": 4.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00628",
@@ -13804,7 +15107,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.094496,
     "Longitude": -74.8240794,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.41,
+    "NetEffectiveRentPSF": 5.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00631",
@@ -13851,7 +15158,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0992599,
     "Longitude": -74.8140508,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.56,
+    "NetEffectiveRentPSF": 5.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00639",
@@ -13897,7 +15208,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9639968,
     "Longitude": -74.9076053,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.71,
+    "NetEffectiveRentPSF": 4.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00640",
@@ -13941,7 +15256,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4621784,
     "Longitude": -76.3274308,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.97,
+    "NetEffectiveRentPSF": 4.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00642",
@@ -13985,7 +15304,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7287266,
     "Longitude": -75.2812071,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.29,
+    "NetEffectiveRentPSF": 5.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00643",
@@ -14028,7 +15351,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.527858,
     "Longitude": -75.972565,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.11,
+    "NetEffectiveRentPSF": 2.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00645",
@@ -14073,7 +15400,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.452435,
     "Longitude": -74.48559,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.26,
+    "NetEffectiveRentPSF": 6.26,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00646",
@@ -14112,7 +15443,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0631273,
     "Longitude": -76.7341319,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.49,
+    "NetEffectiveRentPSF": 4.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00648",
@@ -14158,7 +15493,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1991931,
     "Longitude": -74.5686695,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.12,
+    "NetEffectiveRentPSF": 6.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00650",
@@ -14199,7 +15538,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2100645,
     "Longitude": -76.0774071,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.19,
+    "NetEffectiveRentPSF": 4.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00651",
@@ -14238,7 +15581,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3138438,
     "Longitude": -74.5001865,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.72,
+    "NetEffectiveRentPSF": 6.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00652",
@@ -14280,7 +15627,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3748809,
     "Longitude": -74.4980637,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.24,
+    "NetEffectiveRentPSF": 6.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00653",
@@ -14324,7 +15675,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.364183,
     "Longitude": -74.4605781,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.92,
+    "NetEffectiveRentPSF": 6.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00655",
@@ -14367,7 +15722,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6056521,
     "Longitude": -74.2553745,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.6,
+    "NetEffectiveRentPSF": 7.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00658",
@@ -14412,7 +15771,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6866794,
     "Longitude": -75.3604362,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.78,
+    "NetEffectiveRentPSF": 5.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00661",
@@ -14455,7 +15818,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3615135,
     "Longitude": -74.4624535,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.3,
+    "NetEffectiveRentPSF": 6.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00662",
@@ -14499,7 +15866,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9639968,
     "Longitude": -74.9076053,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.69,
+    "NetEffectiveRentPSF": 4.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00663",
@@ -14544,7 +15915,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9323502,
     "Longitude": -76.0220834,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.25,
+    "NetEffectiveRentPSF": 4.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00665",
@@ -14583,7 +15958,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2954807,
     "Longitude": -75.75507,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.34,
+    "NetEffectiveRentPSF": 4.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00666",
@@ -14625,7 +16004,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6826942,
     "Longitude": -74.0857426,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.09,
+    "NetEffectiveRentPSF": 9.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00668",
@@ -14668,7 +16051,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.3,
+    "NetEffectiveRentPSF": 5.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00669",
@@ -14708,7 +16095,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6622204,
     "Longitude": -74.1641213,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.27,
+    "NetEffectiveRentPSF": 12.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00672",
@@ -14751,7 +16142,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9639968,
     "Longitude": -74.9076053,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.91,
+    "NetEffectiveRentPSF": 4.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00673",
@@ -14798,7 +16193,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3138438,
     "Longitude": -74.5001865,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.78,
+    "NetEffectiveRentPSF": 6.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00674",
@@ -14843,7 +16242,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3580225,
     "Longitude": -74.4794075,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.52,
+    "NetEffectiveRentPSF": 7.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00675",
@@ -14885,7 +16288,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5600315,
     "Longitude": -75.6322836,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.9,
+    "NetEffectiveRentPSF": 5.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00677",
@@ -14929,7 +16336,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6622204,
     "Longitude": -74.1641213,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.06,
+    "NetEffectiveRentPSF": 12.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00679",
@@ -14974,7 +16385,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.329148,
     "Longitude": -74.488276,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.57,
+    "NetEffectiveRentPSF": 7.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00680",
@@ -15019,7 +16434,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1328358,
     "Longitude": -77.3491089,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.48,
+    "NetEffectiveRentPSF": 2.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00681",
@@ -15065,7 +16484,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7442993,
     "Longitude": -75.227175,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.12,
+    "NetEffectiveRentPSF": 4.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00682",
@@ -15106,7 +16529,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4981151,
     "Longitude": -74.3769485,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.09,
+    "NetEffectiveRentPSF": 7.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00684",
@@ -15151,7 +16578,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5832327,
     "Longitude": -74.2528437,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.81,
+    "NetEffectiveRentPSF": 8.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00686",
@@ -15195,7 +16626,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5955214,
     "Longitude": -74.2660156,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.57,
+    "NetEffectiveRentPSF": 9.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00687",
@@ -15239,7 +16674,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3207652,
     "Longitude": -74.501113,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.42,
+    "NetEffectiveRentPSF": 7.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00688",
@@ -15279,7 +16718,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5663089,
     "Longitude": -74.2175268,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.18,
+    "NetEffectiveRentPSF": 13.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00694",
@@ -15323,7 +16766,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5736124,
     "Longitude": -75.6056303,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.88,
+    "NetEffectiveRentPSF": 5.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00696",
@@ -15367,7 +16814,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2258327,
     "Longitude": -77.1328464,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.46,
+    "NetEffectiveRentPSF": 4.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00700",
@@ -15412,7 +16863,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.29,
+    "NetEffectiveRentPSF": 6.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00701",
@@ -15451,7 +16906,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.554258,
     "Longitude": -74.46696,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.55,
+    "NetEffectiveRentPSF": 6.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00702",
@@ -15496,7 +16955,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.54592,
     "Longitude": -74.456406,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.28,
+    "NetEffectiveRentPSF": 7.28,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00703",
@@ -15538,7 +17001,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5303068,
     "Longitude": -75.9685694,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.61,
+    "NetEffectiveRentPSF": 3.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00705",
@@ -15578,7 +17045,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.230104,
     "Longitude": -76.9228477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.83,
+    "NetEffectiveRentPSF": 5.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00707",
@@ -15620,7 +17091,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.54592,
     "Longitude": -74.456406,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.57,
+    "NetEffectiveRentPSF": 7.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00712",
@@ -15660,7 +17135,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3352,
     "Longitude": -74.459767,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.07,
+    "NetEffectiveRentPSF": 7.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00713",
@@ -15703,7 +17182,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4808433,
     "Longitude": -74.4951518,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.22,
+    "NetEffectiveRentPSF": 7.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00714",
@@ -15744,7 +17227,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7250624,
     "Longitude": -75.2710385,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.25,
+    "NetEffectiveRentPSF": 5.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00715",
@@ -15788,7 +17275,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.34377,
     "Longitude": -74.507761,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.77,
+    "NetEffectiveRentPSF": 7.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00716",
@@ -15832,7 +17323,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0591164,
     "Longitude": -76.7515175,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.55,
+    "NetEffectiveRentPSF": 3.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00717",
@@ -15878,7 +17373,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1177879,
     "Longitude": -74.7187,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.99,
+    "NetEffectiveRentPSF": 6.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00718",
@@ -15924,7 +17423,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7150196,
     "Longitude": -74.1496968,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.54,
+    "NetEffectiveRentPSF": 12.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00719",
@@ -15970,7 +17473,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3177507,
     "Longitude": -74.4840691,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.07,
+    "NetEffectiveRentPSF": 7.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00720",
@@ -16015,7 +17522,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3177507,
     "Longitude": -74.4840691,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.03,
+    "NetEffectiveRentPSF": 8.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00721",
@@ -16057,7 +17568,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.09587,
     "Longitude": -74.8307,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.35,
+    "NetEffectiveRentPSF": 7.35,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00722",
@@ -16102,7 +17617,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1263169,
     "Longitude": -74.6914326,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.76,
+    "NetEffectiveRentPSF": 6.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00724",
@@ -16143,7 +17662,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.27,
+    "NetEffectiveRentPSF": 5.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00725",
@@ -16184,7 +17707,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6826942,
     "Longitude": -74.0857426,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.13,
+    "NetEffectiveRentPSF": 10.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00726",
@@ -16224,7 +17751,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.728346,
     "Longitude": -75.264028,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.04,
+    "NetEffectiveRentPSF": 6.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00727",
@@ -16266,7 +17797,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0695941,
     "Longitude": -76.773884,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.31,
+    "NetEffectiveRentPSF": 5.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00729",
@@ -16309,7 +17844,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7594761,
     "Longitude": -75.3691238,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.54,
+    "NetEffectiveRentPSF": 5.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00730",
@@ -16354,7 +17893,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6654777,
     "Longitude": -75.4590972,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.39,
+    "NetEffectiveRentPSF": 5.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00731",
@@ -16398,7 +17941,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.043722,
     "Longitude": -76.3673924,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.41,
+    "NetEffectiveRentPSF": 5.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00734",
@@ -16443,7 +17990,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7196878,
     "Longitude": -74.1162477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.32,
+    "NetEffectiveRentPSF": 12.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00735",
@@ -16486,7 +18037,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.836208,
     "Longitude": -75.19254,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.11,
+    "NetEffectiveRentPSF": 5.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00736",
@@ -16529,7 +18084,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3315548,
     "Longitude": -74.4877576,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.09,
+    "NetEffectiveRentPSF": 8.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00740",
@@ -16571,7 +18130,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6153724,
     "Longitude": -74.2462785,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.84,
+    "NetEffectiveRentPSF": 9.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00741",
@@ -16612,7 +18175,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0016703,
     "Longitude": -74.8630561,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.39,
+    "NetEffectiveRentPSF": 5.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00742",
@@ -16650,7 +18217,7 @@ const COMPS = [
     "LandlordBrokerage": "CBRE, Inc.",
     "TenantBrokerage": "Cushman & Wakefield",
     "Industry": "Retail",
-    "Comments": "68,000 SF at 20'; 65 car spaces; 95 trailer spaces; additional Â±4 acres of parking",
+    "Comments": "68,000 SF at 20'; 65 car spaces; 95 trailer spaces; additional \u00c2\u00b14 acres of parking",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-19 to 12-31-22.csv",
@@ -16658,7 +18225,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.609273,
     "Longitude": -74.253166,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.85,
+    "NetEffectiveRentPSF": 9.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00744",
@@ -16699,7 +18270,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7672372,
     "Longitude": -74.126363,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.12,
+    "NetEffectiveRentPSF": 14.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00748",
@@ -16742,7 +18317,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0949859,
     "Longitude": -74.8039985,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.86,
+    "NetEffectiveRentPSF": 6.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00749",
@@ -16783,7 +18362,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.770526,
     "Longitude": -75.339659,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.43,
+    "NetEffectiveRentPSF": 6.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00750",
@@ -16827,7 +18410,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.363581,
     "Longitude": -74.483973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.08,
+    "NetEffectiveRentPSF": 7.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00752",
@@ -16871,7 +18458,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3136033,
     "Longitude": -74.5023411,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.22,
+    "NetEffectiveRentPSF": 8.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00753",
@@ -16913,7 +18504,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.049753,
     "Longitude": -74.9320358,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.03,
+    "NetEffectiveRentPSF": 9.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00754",
@@ -16952,7 +18547,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3175224,
     "Longitude": -74.5041634,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.43,
+    "NetEffectiveRentPSF": 8.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00757",
@@ -16993,7 +18592,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8288171,
     "Longitude": -75.2130732,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.53,
+    "NetEffectiveRentPSF": 5.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00762",
@@ -17035,7 +18638,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6032011,
     "Longitude": -74.7106949,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.76,
+    "NetEffectiveRentPSF": 9.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00763",
@@ -17075,7 +18682,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7078645,
     "Longitude": -74.0660827,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.13,
+    "NetEffectiveRentPSF": 3.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00764",
@@ -17117,7 +18728,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1195838,
     "Longitude": -74.7121735,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.35,
+    "NetEffectiveRentPSF": 7.35,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00767",
@@ -17160,7 +18775,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2361719,
     "Longitude": -77.0399326,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.09,
+    "NetEffectiveRentPSF": 4.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00768",
@@ -17201,7 +18820,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7818435,
     "Longitude": -75.364313,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.37,
+    "NetEffectiveRentPSF": 6.37,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00769",
@@ -17242,7 +18865,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.754645,
     "Longitude": -75.374794,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.94,
+    "NetEffectiveRentPSF": 5.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00772",
@@ -17285,7 +18912,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6592293,
     "Longitude": -75.5940781,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.87,
+    "NetEffectiveRentPSF": 5.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00773",
@@ -17329,7 +18960,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6634575,
     "Longitude": -75.5966743,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.87,
+    "NetEffectiveRentPSF": 5.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00774",
@@ -17374,7 +19009,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6592293,
     "Longitude": -75.5940781,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.87,
+    "NetEffectiveRentPSF": 5.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00775",
@@ -17417,7 +19056,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.542768,
     "Longitude": -74.5578958,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.13,
+    "NetEffectiveRentPSF": 9.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00776",
@@ -17459,7 +19102,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0642636,
     "Longitude": -77.4806133,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.95,
+    "NetEffectiveRentPSF": 3.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00779",
@@ -17499,7 +19146,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1889671,
     "Longitude": -77.2257217,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.34,
+    "NetEffectiveRentPSF": 4.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00780",
@@ -17542,7 +19193,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2590367,
     "Longitude": -74.5027184,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.63,
+    "NetEffectiveRentPSF": 6.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00781",
@@ -17587,7 +19242,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8091798,
     "Longitude": -75.2625478,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.42,
+    "NetEffectiveRentPSF": 5.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00783",
@@ -17628,7 +19287,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0032614,
     "Longitude": -74.8538446,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.3,
+    "NetEffectiveRentPSF": 6.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00787",
@@ -17670,7 +19333,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3928259,
     "Longitude": -74.4471127,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.91,
+    "NetEffectiveRentPSF": 7.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00788",
@@ -17712,7 +19379,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2057441,
     "Longitude": -75.96461,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.07,
+    "NetEffectiveRentPSF": 4.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00789",
@@ -17751,7 +19422,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0944805,
     "Longitude": -74.8197724,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.34,
+    "NetEffectiveRentPSF": 7.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00792",
@@ -17794,7 +19469,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9145101,
     "Longitude": -76.0925301,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.29,
+    "NetEffectiveRentPSF": 4.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00793",
@@ -17838,7 +19517,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1982883,
     "Longitude": -74.5790158,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.87,
+    "NetEffectiveRentPSF": 8.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00795",
@@ -17880,7 +19563,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4640747,
     "Longitude": -76.3243649,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 2.98,
+    "NetEffectiveRentPSF": 2.98,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00796",
@@ -17923,7 +19610,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.341813,
     "Longitude": -74.505366,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.31,
+    "NetEffectiveRentPSF": 9.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00797",
@@ -17965,7 +19656,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4787767,
     "Longitude": -76.2511445,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.77,
+    "NetEffectiveRentPSF": 4.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00798",
@@ -18008,7 +19703,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7664106,
     "Longitude": -74.1246582,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 25.66,
+    "NetEffectiveRentPSF": 25.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00800",
@@ -18053,7 +19752,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1106534,
     "Longitude": -74.7885674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.87,
+    "NetEffectiveRentPSF": 6.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00801",
@@ -18093,7 +19796,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.902841,
     "Longitude": -74.980973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.92,
+    "NetEffectiveRentPSF": 4.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00802",
@@ -18133,7 +19840,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5137014,
     "Longitude": -74.429656,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.39,
+    "NetEffectiveRentPSF": 11.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00805",
@@ -18172,7 +19883,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2057441,
     "Longitude": -75.96461,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.75,
+    "NetEffectiveRentPSF": 3.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00806",
@@ -18214,7 +19929,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7262775,
     "Longitude": -74.1259225,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.9,
+    "NetEffectiveRentPSF": 16.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00808",
@@ -18255,7 +19974,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5356571,
     "Longitude": -74.2700733,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.06,
+    "NetEffectiveRentPSF": 12.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00809",
@@ -18299,7 +20022,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7252741,
     "Longitude": -75.2662866,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.92,
+    "NetEffectiveRentPSF": 5.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00810",
@@ -18338,7 +20065,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1200517,
     "Longitude": -74.8194763,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.46,
+    "NetEffectiveRentPSF": 7.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00812",
@@ -18381,7 +20112,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2626746,
     "Longitude": -75.4987916,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.38,
+    "NetEffectiveRentPSF": 5.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00813",
@@ -18425,7 +20160,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1235412,
     "Longitude": -74.8207082,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.52,
+    "NetEffectiveRentPSF": 7.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00814",
@@ -18469,7 +20208,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.613573,
     "Longitude": -74.2122468,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.91,
+    "NetEffectiveRentPSF": 11.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00815",
@@ -18513,7 +20256,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.13,
+    "NetEffectiveRentPSF": 9.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00817",
@@ -18560,7 +20307,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1165642,
     "Longitude": -74.8224801,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.75,
+    "NetEffectiveRentPSF": 7.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00818",
@@ -18602,7 +20353,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0944805,
     "Longitude": -74.8197724,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.24,
+    "NetEffectiveRentPSF": 7.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00819",
@@ -18646,7 +20401,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7686058,
     "Longitude": -76.2260399,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.22,
+    "NetEffectiveRentPSF": 3.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00821",
@@ -18687,7 +20446,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0377019,
     "Longitude": -76.7498977,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.42,
+    "NetEffectiveRentPSF": 4.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00822",
@@ -18730,7 +20493,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5988556,
     "Longitude": -75.5773309,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.44,
+    "NetEffectiveRentPSF": 5.44,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00823",
@@ -18772,7 +20539,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7651087,
     "Longitude": -75.3721591,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.34,
+    "NetEffectiveRentPSF": 6.34,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00824",
@@ -18816,7 +20587,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5148466,
     "Longitude": -75.6144944,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.48,
+    "NetEffectiveRentPSF": 6.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00825",
@@ -18859,7 +20634,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6125648,
     "Longitude": -74.207722,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.04,
+    "NetEffectiveRentPSF": 10.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00827",
@@ -18901,7 +20680,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.8267419,
     "Longitude": -75.3061398,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.2,
+    "NetEffectiveRentPSF": 5.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00828",
@@ -18943,7 +20726,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2368847,
     "Longitude": -76.9040698,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.24,
+    "NetEffectiveRentPSF": 4.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00830",
@@ -18986,7 +20773,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.535416,
     "Longitude": -74.391505,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.59,
+    "NetEffectiveRentPSF": 6.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00832",
@@ -19028,7 +20819,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1897862,
     "Longitude": -77.2208078,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.99,
+    "NetEffectiveRentPSF": 4.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00834",
@@ -19068,7 +20863,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.78275,
     "Longitude": -75.344174,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 0.66,
+    "NetEffectiveRentPSF": 0.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00836",
@@ -19110,7 +20909,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2363111,
     "Longitude": -76.7351152,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.74,
+    "NetEffectiveRentPSF": 3.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00837",
@@ -19153,7 +20956,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1951461,
     "Longitude": -76.9861377,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.99,
+    "NetEffectiveRentPSF": 4.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00838",
@@ -19196,7 +21003,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.231476,
     "Longitude": -77.00198,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.76,
+    "NetEffectiveRentPSF": 3.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00839",
@@ -19240,7 +21051,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0440911,
     "Longitude": -76.7352881,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.32,
+    "NetEffectiveRentPSF": 5.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00842",
@@ -19286,7 +21101,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6929993,
     "Longitude": -75.1499338,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.78,
+    "NetEffectiveRentPSF": 7.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00843",
@@ -19324,7 +21143,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7666882,
     "Longitude": -75.3792398,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.19,
+    "NetEffectiveRentPSF": 5.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00844",
@@ -19365,7 +21188,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.535416,
     "Longitude": -74.391505,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.05,
+    "NetEffectiveRentPSF": 10.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00846",
@@ -19404,7 +21231,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.526328,
     "Longitude": -74.55845,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.77,
+    "NetEffectiveRentPSF": 7.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00847",
@@ -19448,7 +21279,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5153334,
     "Longitude": -75.6101689,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.78,
+    "NetEffectiveRentPSF": 5.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00848",
@@ -19488,7 +21323,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3876014,
     "Longitude": -74.4427871,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.22,
+    "NetEffectiveRentPSF": 11.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00849",
@@ -19531,7 +21370,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.712465,
     "Longitude": -74.1396049,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 18.73,
+    "NetEffectiveRentPSF": 18.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00851",
@@ -19570,7 +21413,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0874658,
     "Longitude": -74.8224356,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.57,
+    "NetEffectiveRentPSF": 7.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00852",
@@ -19612,7 +21459,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.525456,
     "Longitude": -74.3660503,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.63,
+    "NetEffectiveRentPSF": 10.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00853",
@@ -19656,7 +21507,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3876014,
     "Longitude": -74.4427871,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.69,
+    "NetEffectiveRentPSF": 9.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00854",
@@ -19698,7 +21553,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6645925,
     "Longitude": -75.517133,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.16,
+    "NetEffectiveRentPSF": 6.16,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00856",
@@ -19740,7 +21599,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.496445,
     "Longitude": -74.36802,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.53,
+    "NetEffectiveRentPSF": 10.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00858",
@@ -19779,7 +21642,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4169036,
     "Longitude": -74.509127,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.07,
+    "NetEffectiveRentPSF": 10.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00859",
@@ -19820,7 +21687,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3666959,
     "Longitude": -76.4723787,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.56,
+    "NetEffectiveRentPSF": 12.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00865",
@@ -19863,7 +21734,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7611461,
     "Longitude": -75.3129862,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.76,
+    "NetEffectiveRentPSF": 7.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00867",
@@ -19902,7 +21777,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6594736,
     "Longitude": -74.0975039,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.81,
+    "NetEffectiveRentPSF": 12.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00868",
@@ -19946,7 +21825,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7718264,
     "Longitude": -75.3370189,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.88,
+    "NetEffectiveRentPSF": 6.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00869",
@@ -19982,7 +21865,7 @@ const COMPS = [
     "BuildingClass": "B",
     "OwnerLandlord": "LBA Realty LLC",
     "Industry": "Transportation",
-    "Comments": "New lease, $0.50 TI in addition to make ready work, 24â clear, non-ESFR, 19 docks, 6 drive-ins. This is a Class B asset",
+    "Comments": "New lease, $0.50 TI in addition to make ready work, 24\u00e2\u0080\u0099 clear, non-ESFR, 19 docks, 6 drive-ins. This is a Class B asset",
     "ConcessionsNotes": "$0.50 TI in addition to make ready work",
     "DataQualityScore": 13,
     "DuplicateGroupSize": 1,
@@ -19991,7 +21874,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.367604,
     "Longitude": -74.480212,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.67,
+    "NetEffectiveRentPSF": 10.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00870",
@@ -20030,7 +21917,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.1265103,
     "Longitude": -75.8987687,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.93,
+    "NetEffectiveRentPSF": 4.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00875",
@@ -20074,7 +21965,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3293405,
     "Longitude": -74.4805214,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.56,
+    "NetEffectiveRentPSF": 9.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00876",
@@ -20118,7 +22013,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1976525,
     "Longitude": -74.5900443,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.57,
+    "NetEffectiveRentPSF": 9.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00877",
@@ -20152,7 +22051,7 @@ const COMPS = [
     "Sublease": true,
     "BuildingClass": "B",
     "OwnerLandlord": "Heitman LLC",
-    "Comments": "Sublandlord BEST Logistics 15 month sublease, as-is, racking included. 36â clear",
+    "Comments": "Sublandlord BEST Logistics 15 month sublease, as-is, racking included. 36\u00e2\u0080\u0099 clear",
     "DataQualityScore": 10,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-19 to 12-31-22.csv",
@@ -20160,7 +22059,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3650513,
     "Longitude": -74.4922299,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.23,
+    "NetEffectiveRentPSF": 12.23,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00882",
@@ -20205,7 +22108,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.236499,
     "Longitude": -77.045113,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.68,
+    "NetEffectiveRentPSF": 5.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00883",
@@ -20246,7 +22153,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.33764,
     "Longitude": -74.506866,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.33,
+    "NetEffectiveRentPSF": 9.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00886",
@@ -20289,7 +22200,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9773069,
     "Longitude": -75.0651749,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.26,
+    "NetEffectiveRentPSF": 6.26,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00887",
@@ -20329,7 +22244,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.987726,
     "Longitude": -75.0428857,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.49,
+    "NetEffectiveRentPSF": 6.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00889",
@@ -20372,7 +22291,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7749925,
     "Longitude": -74.0688109,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 25.38,
+    "NetEffectiveRentPSF": 25.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00890",
@@ -20415,7 +22338,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7640767,
     "Longitude": -75.3881123,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.3,
+    "NetEffectiveRentPSF": 7.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00891",
@@ -20459,7 +22386,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7868369,
     "Longitude": -75.344901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.24,
+    "NetEffectiveRentPSF": 8.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00892",
@@ -20505,7 +22436,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5760527,
     "Longitude": -75.6058933,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.32,
+    "NetEffectiveRentPSF": 7.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00895",
@@ -20545,7 +22480,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0944805,
     "Longitude": -74.8197724,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.45,
+    "NetEffectiveRentPSF": 9.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00897",
@@ -20589,7 +22528,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2057501,
     "Longitude": -74.5793504,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.26,
+    "NetEffectiveRentPSF": 11.26,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00900",
@@ -20634,7 +22577,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7643582,
     "Longitude": -74.0790901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.25,
+    "NetEffectiveRentPSF": 17.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00902",
@@ -20677,7 +22624,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7643582,
     "Longitude": -74.0790901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.41,
+    "NetEffectiveRentPSF": 17.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00905",
@@ -20721,7 +22672,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7125585,
     "Longitude": -74.1614695,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 34.49,
+    "NetEffectiveRentPSF": 34.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00906",
@@ -20764,7 +22719,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5919,
     "Longitude": -75.613179,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.99,
+    "NetEffectiveRentPSF": 5.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00907",
@@ -20808,7 +22767,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3074757,
     "Longitude": -76.8909716,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.72,
+    "NetEffectiveRentPSF": 4.72,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00911",
@@ -20854,7 +22817,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3563577,
     "Longitude": -74.4606286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.12,
+    "NetEffectiveRentPSF": 13.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00912",
@@ -20894,7 +22861,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0599214,
     "Longitude": -77.4701632,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.03,
+    "NetEffectiveRentPSF": 4.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00913",
@@ -20938,7 +22909,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.682705,
     "Longitude": -75.3715602,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.92,
+    "NetEffectiveRentPSF": 8.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00914",
@@ -20982,7 +22957,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.773785,
     "Longitude": -75.3400919,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.54,
+    "NetEffectiveRentPSF": 7.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00916",
@@ -21022,7 +23001,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3443871,
     "Longitude": -74.5093762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.45,
+    "NetEffectiveRentPSF": 13.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00917",
@@ -21062,7 +23045,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7125585,
     "Longitude": -74.1614695,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 30.15,
+    "NetEffectiveRentPSF": 30.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00920",
@@ -21108,7 +23095,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1797133,
     "Longitude": -77.2279487,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.25,
+    "NetEffectiveRentPSF": 5.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00921",
@@ -21151,7 +23142,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1751252,
     "Longitude": -77.2422305,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.75,
+    "NetEffectiveRentPSF": 5.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00924",
@@ -21195,7 +23190,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2258327,
     "Longitude": -77.1328464,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.07,
+    "NetEffectiveRentPSF": 6.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00925",
@@ -21239,7 +23238,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0944805,
     "Longitude": -74.8197724,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.89,
+    "NetEffectiveRentPSF": 10.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00926",
@@ -21284,7 +23287,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3170289,
     "Longitude": -74.5023139,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.73,
+    "NetEffectiveRentPSF": 13.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00928",
@@ -21329,7 +23336,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6886048,
     "Longitude": -75.3607171,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.91,
+    "NetEffectiveRentPSF": 8.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00930",
@@ -21374,7 +23385,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.8279678,
     "Longitude": -75.3096248,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.37,
+    "NetEffectiveRentPSF": 7.37,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00931",
@@ -21418,7 +23433,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5727561,
     "Longitude": -75.6402023,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.21,
+    "NetEffectiveRentPSF": 7.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00932",
@@ -21461,7 +23480,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7701381,
     "Longitude": -77.7347945,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.61,
+    "NetEffectiveRentPSF": 4.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00933",
@@ -21504,7 +23527,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5273766,
     "Longitude": -75.9661017,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.61,
+    "NetEffectiveRentPSF": 5.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00934",
@@ -21548,7 +23575,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7701381,
     "Longitude": -77.7347945,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.33,
+    "NetEffectiveRentPSF": 5.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00935",
@@ -21589,7 +23620,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.773785,
     "Longitude": -75.3400919,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 3.15,
+    "NetEffectiveRentPSF": 3.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00937",
@@ -21633,7 +23668,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.685338,
     "Longitude": -75.347973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.67,
+    "NetEffectiveRentPSF": 8.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00938",
@@ -21676,7 +23715,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7394785,
     "Longitude": -75.2751642,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.87,
+    "NetEffectiveRentPSF": 6.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00939",
@@ -21719,7 +23762,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5814703,
     "Longitude": -75.6947353,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.67,
+    "NetEffectiveRentPSF": 8.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00940",
@@ -21760,7 +23807,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5325214,
     "Longitude": -74.5448674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.3,
+    "NetEffectiveRentPSF": 17.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00942",
@@ -21805,7 +23856,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5325214,
     "Longitude": -74.5448674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.24,
+    "NetEffectiveRentPSF": 15.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00943",
@@ -21848,7 +23903,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.685338,
     "Longitude": -75.347973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.35,
+    "NetEffectiveRentPSF": 8.35,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00946",
@@ -21895,7 +23954,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.009204,
     "Longitude": -76.7133992,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.78,
+    "NetEffectiveRentPSF": 5.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00948",
@@ -21937,7 +24000,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5542417,
     "Longitude": -74.4469417,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.15,
+    "NetEffectiveRentPSF": 13.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00950",
@@ -21981,7 +24048,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1071568,
     "Longitude": -74.8134519,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.07,
+    "NetEffectiveRentPSF": 11.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00953",
@@ -22024,7 +24095,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.517793,
     "Longitude": -75.583039,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.24,
+    "NetEffectiveRentPSF": 8.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00955",
@@ -22067,7 +24142,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.473187,
     "Longitude": -76.319058,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.71,
+    "NetEffectiveRentPSF": 5.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00957",
@@ -22110,7 +24189,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1234817,
     "Longitude": -77.3412132,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.48,
+    "NetEffectiveRentPSF": 4.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00958",
@@ -22155,7 +24238,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1234817,
     "Longitude": -77.3412132,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 4.65,
+    "NetEffectiveRentPSF": 4.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00959",
@@ -22199,7 +24286,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6633867,
     "Longitude": -75.4388772,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.27,
+    "NetEffectiveRentPSF": 7.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00960",
@@ -22242,7 +24333,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.371734,
     "Longitude": -74.468913,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 20.31,
+    "NetEffectiveRentPSF": 20.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00962",
@@ -22286,7 +24381,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1313185,
     "Longitude": -74.7215784,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.23,
+    "NetEffectiveRentPSF": 11.23,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00967",
@@ -22328,7 +24427,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.462399,
     "Longitude": -74.393903,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.47,
+    "NetEffectiveRentPSF": 15.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00968",
@@ -22370,7 +24473,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.462399,
     "Longitude": -74.393903,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.38,
+    "NetEffectiveRentPSF": 14.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00969",
@@ -22416,7 +24523,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.717291,
     "Longitude": -75.2962727,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.99,
+    "NetEffectiveRentPSF": 7.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00970",
@@ -22457,7 +24568,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.347569,
     "Longitude": -74.483602,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.83,
+    "NetEffectiveRentPSF": 11.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00971",
@@ -22499,7 +24614,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.617024,
     "Longitude": -74.2072336,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 19.62,
+    "NetEffectiveRentPSF": 19.62,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00973",
@@ -22544,7 +24663,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6921698,
     "Longitude": -75.1692569,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.8,
+    "NetEffectiveRentPSF": 10.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00974",
@@ -22587,7 +24710,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8091798,
     "Longitude": -75.2625478,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.57,
+    "NetEffectiveRentPSF": 16.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00975",
@@ -22630,7 +24757,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8091798,
     "Longitude": -75.2625478,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.99,
+    "NetEffectiveRentPSF": 13.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00976",
@@ -22675,7 +24806,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.473187,
     "Longitude": -76.319058,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.01,
+    "NetEffectiveRentPSF": 6.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00977",
@@ -22719,7 +24854,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.495668,
     "Longitude": -74.362497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.73,
+    "NetEffectiveRentPSF": 16.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00979",
@@ -22760,7 +24899,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.987726,
     "Longitude": -75.0428857,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.96,
+    "NetEffectiveRentPSF": 6.96,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00980",
@@ -22802,7 +24945,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0157733,
     "Longitude": -74.8490651,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.31,
+    "NetEffectiveRentPSF": 11.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00982",
@@ -22847,7 +24994,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7459652,
     "Longitude": -74.0724912,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 23.82,
+    "NetEffectiveRentPSF": 23.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00985",
@@ -22890,7 +25041,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3714087,
     "Longitude": -74.5049087,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.75,
+    "NetEffectiveRentPSF": 14.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00986",
@@ -22933,7 +25088,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6634403,
     "Longitude": -75.4568509,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.95,
+    "NetEffectiveRentPSF": 6.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00987",
@@ -22974,7 +25133,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1806031,
     "Longitude": -74.7347103,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.82,
+    "NetEffectiveRentPSF": 11.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00988",
@@ -23015,7 +25178,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3742863,
     "Longitude": -74.4536762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.16,
+    "NetEffectiveRentPSF": 13.16,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00990",
@@ -23058,7 +25225,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5538107,
     "Longitude": -74.4783243,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.67,
+    "NetEffectiveRentPSF": 16.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00991",
@@ -23103,7 +25274,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6634403,
     "Longitude": -75.4568509,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.42,
+    "NetEffectiveRentPSF": 9.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00992",
@@ -23144,7 +25319,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6633872,
     "Longitude": -74.1036911,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 21.24,
+    "NetEffectiveRentPSF": 21.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00995",
@@ -23185,7 +25364,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5874581,
     "Longitude": -75.6166553,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.01,
+    "NetEffectiveRentPSF": 9.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00996",
@@ -23227,7 +25410,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8113496,
     "Longitude": -75.2641597,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.03,
+    "NetEffectiveRentPSF": 12.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00997",
@@ -23268,7 +25455,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7629147,
     "Longitude": -74.0525693,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.85,
+    "NetEffectiveRentPSF": 17.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-00998",
@@ -23310,7 +25501,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.727841,
     "Longitude": -74.115364,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 22.27,
+    "NetEffectiveRentPSF": 22.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01000",
@@ -23351,7 +25546,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5595963,
     "Longitude": -75.6167397,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.08,
+    "NetEffectiveRentPSF": 9.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01001",
@@ -23392,7 +25591,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7709382,
     "Longitude": -74.3653028,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.29,
+    "NetEffectiveRentPSF": 14.29,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01003",
@@ -23436,7 +25639,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.573954,
     "Longitude": -74.259906,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 18.97,
+    "NetEffectiveRentPSF": 18.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01004",
@@ -23476,7 +25683,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2024535,
     "Longitude": -76.7109166,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.71,
+    "NetEffectiveRentPSF": 9.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01006",
@@ -23515,7 +25726,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.56982,
     "Longitude": -75.61109,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.49,
+    "NetEffectiveRentPSF": 10.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01007",
@@ -23554,7 +25769,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.23144,
     "Longitude": -77.072507,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.42,
+    "NetEffectiveRentPSF": 7.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01008",
@@ -23597,7 +25816,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0719739,
     "Longitude": -76.745168,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.22,
+    "NetEffectiveRentPSF": 8.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01009",
@@ -23638,7 +25861,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.554258,
     "Longitude": -74.46696,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.03,
+    "NetEffectiveRentPSF": 15.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01010",
@@ -23681,7 +25908,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5781945,
     "Longitude": -74.4198259,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.95,
+    "NetEffectiveRentPSF": 17.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01011",
@@ -23722,7 +25953,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5781945,
     "Longitude": -74.4198259,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.8,
+    "NetEffectiveRentPSF": 15.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01014",
@@ -23768,7 +26003,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8099431,
     "Longitude": -75.2554023,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.89,
+    "NetEffectiveRentPSF": 9.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01015",
@@ -23810,7 +26049,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.327749,
     "Longitude": -74.459286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.92,
+    "NetEffectiveRentPSF": 14.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01016",
@@ -23849,7 +26092,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.554258,
     "Longitude": -74.46696,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.89,
+    "NetEffectiveRentPSF": 11.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01017",
@@ -23892,7 +26139,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5300719,
     "Longitude": -74.5449223,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.11,
+    "NetEffectiveRentPSF": 15.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01019",
@@ -23939,7 +26190,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6104073,
     "Longitude": -74.2130528,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.81,
+    "NetEffectiveRentPSF": 14.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01020",
@@ -23981,7 +26236,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1788489,
     "Longitude": -74.730266,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.64,
+    "NetEffectiveRentPSF": 11.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01021",
@@ -24025,7 +26284,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1788489,
     "Longitude": -74.730266,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.67,
+    "NetEffectiveRentPSF": 11.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01022",
@@ -24069,7 +26332,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.568584,
     "Longitude": -75.606822,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.96,
+    "NetEffectiveRentPSF": 10.96,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01023",
@@ -24110,7 +26377,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5659669,
     "Longitude": -75.6069728,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.0,
+    "NetEffectiveRentPSF": 11.0,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01024",
@@ -24156,7 +26427,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.364594,
     "Longitude": -74.48772,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.76,
+    "NetEffectiveRentPSF": 12.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01025",
@@ -24195,7 +26470,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5659669,
     "Longitude": -75.6069728,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.2,
+    "NetEffectiveRentPSF": 10.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01028",
@@ -24239,7 +26518,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6104073,
     "Longitude": -74.2130528,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.64,
+    "NetEffectiveRentPSF": 14.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01029",
@@ -24283,7 +26566,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6116046,
     "Longitude": -74.2503386,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.39,
+    "NetEffectiveRentPSF": 17.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01031",
@@ -24325,7 +26612,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4378079,
     "Longitude": -76.5167657,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.75,
+    "NetEffectiveRentPSF": 7.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01035",
@@ -24366,7 +26657,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7035583,
     "Longitude": -75.4709619,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 6.39
   },
   {
     "CompEventID": "COMP-01036",
@@ -24406,7 +26704,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6866794,
     "Longitude": -75.3604362,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.98,
+    "NetEffectiveRentPSF": 9.98,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01037",
@@ -24449,7 +26751,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6866794,
     "Longitude": -75.3604362,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.75,
+    "NetEffectiveRentPSF": 10.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01041",
@@ -24491,7 +26797,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5325214,
     "Longitude": -74.5448674,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.54,
+    "NetEffectiveRentPSF": 16.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01042",
@@ -24531,7 +26841,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5190582,
     "Longitude": -75.5983523,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.2,
+    "NetEffectiveRentPSF": 10.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01043",
@@ -24575,7 +26889,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5190582,
     "Longitude": -75.5983523,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.08,
+    "NetEffectiveRentPSF": 10.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01048",
@@ -24621,7 +26939,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4665949,
     "Longitude": -76.32862,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.22,
+    "NetEffectiveRentPSF": 6.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01050",
@@ -24662,7 +26984,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2811877,
     "Longitude": -74.5478675,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.56,
+    "NetEffectiveRentPSF": 14.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01051",
@@ -24704,7 +27030,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0459517,
     "Longitude": -74.8292554,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.63,
+    "NetEffectiveRentPSF": 13.63,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01052",
@@ -24744,7 +27074,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7018183,
     "Longitude": -75.4204021,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.56,
+    "NetEffectiveRentPSF": 8.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01053",
@@ -24785,7 +27119,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.987726,
     "Longitude": -75.0428857,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.52,
+    "NetEffectiveRentPSF": 10.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01054",
@@ -24829,7 +27167,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0456371,
     "Longitude": -74.8247943,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.12,
+    "NetEffectiveRentPSF": 13.12,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01055",
@@ -24872,7 +27214,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3139267,
     "Longitude": -74.4851284,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.18,
+    "NetEffectiveRentPSF": 15.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01057",
@@ -24912,7 +27258,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5207582,
     "Longitude": -75.6182044,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.48,
+    "NetEffectiveRentPSF": 10.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01060",
@@ -24954,7 +27304,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3737394,
     "Longitude": -74.4824402,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.74,
+    "NetEffectiveRentPSF": 14.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01062",
@@ -24997,7 +27351,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5201754,
     "Longitude": -75.6144945,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.45,
+    "NetEffectiveRentPSF": 10.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01064",
@@ -25040,7 +27398,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.535416,
     "Longitude": -74.391505,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.14,
+    "NetEffectiveRentPSF": 16.14,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01065",
@@ -25082,7 +27444,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.525456,
     "Longitude": -74.3660503,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.33,
+    "NetEffectiveRentPSF": 15.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01066",
@@ -25112,7 +27478,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.4,
     "EstimatedStartingRentTodayPSF": 8.56,
-    "NetEffectiveRentPSF": 10.09,
+    "NetEffectiveRentPSF": 7.68,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -25127,7 +27493,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1696904,
     "Longitude": -76.6416887,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.09,
+    "CalculatedNERPSF": 7.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 120,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01067",
@@ -25172,7 +27544,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6105762,
     "Longitude": -74.2152592,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 20.02,
+    "NetEffectiveRentPSF": 20.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01068",
@@ -25213,7 +27589,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7786032,
     "Longitude": -75.376889,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.42,
+    "NetEffectiveRentPSF": 9.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01070",
@@ -25256,7 +27636,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.329148,
     "Longitude": -74.488276,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.73,
+    "NetEffectiveRentPSF": 15.73,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01072",
@@ -25302,7 +27686,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2096229,
     "Longitude": -76.751058,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.05,
+    "NetEffectiveRentPSF": 7.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01073",
@@ -25344,7 +27732,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7018183,
     "Longitude": -75.4204021,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.45,
+    "NetEffectiveRentPSF": 9.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01074",
@@ -25389,7 +27781,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.596895,
     "Longitude": -74.2157912,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.95,
+    "NetEffectiveRentPSF": 15.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01075",
@@ -25430,7 +27826,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4577643,
     "Longitude": -74.4881176,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.33,
+    "NetEffectiveRentPSF": 16.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01076",
@@ -25471,7 +27871,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.493135,
     "Longitude": -74.379513,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.19,
+    "NetEffectiveRentPSF": 15.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01077",
@@ -25512,7 +27916,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6696928,
     "Longitude": -74.186697,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 26.14,
+    "NetEffectiveRentPSF": 26.14,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01079",
@@ -25557,7 +27965,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7690155,
     "Longitude": -75.3339982,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.1,
+    "NetEffectiveRentPSF": 11.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01083",
@@ -25597,7 +28009,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0936301,
     "Longitude": -74.8304122,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.79,
+    "NetEffectiveRentPSF": 10.79,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01086",
@@ -25642,7 +28058,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.691623,
     "Longitude": -74.196145,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 23.77,
+    "NetEffectiveRentPSF": 23.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01087",
@@ -25684,7 +28104,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5658585,
     "Longitude": -74.2362904,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 18.49,
+    "NetEffectiveRentPSF": 18.49,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01088",
@@ -25726,7 +28150,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5674041,
     "Longitude": -74.2389211,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 18.4,
+    "NetEffectiveRentPSF": 18.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01089",
@@ -25756,7 +28184,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 9.75,
     "EstimatedStartingRentTodayPSF": 8.2,
-    "NetEffectiveRentPSF": 8.86,
+    "NetEffectiveRentPSF": 6.21,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -25773,7 +28201,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5303068,
     "Longitude": -75.9685694,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 8.86,
+    "CalculatedNERPSF": 6.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 84,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01091",
@@ -25818,7 +28252,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0936301,
     "Longitude": -74.8304122,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.56,
+    "NetEffectiveRentPSF": 12.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01092",
@@ -25862,7 +28300,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0645789,
     "Longitude": -76.7549947,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.84,
+    "NetEffectiveRentPSF": 6.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01094",
@@ -25909,7 +28351,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7459652,
     "Longitude": -74.0724912,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 19.74,
+    "NetEffectiveRentPSF": 19.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01097",
@@ -25951,7 +28397,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5198136,
     "Longitude": -75.9673607,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.59,
+    "NetEffectiveRentPSF": 9.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01098",
@@ -25991,7 +28441,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1788489,
     "Longitude": -74.730266,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.1,
+    "NetEffectiveRentPSF": 13.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01101",
@@ -26035,7 +28489,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.456129,
     "Longitude": -74.489448,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.23,
+    "NetEffectiveRentPSF": 13.23,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01102",
@@ -26075,7 +28533,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.43,
+    "NetEffectiveRentPSF": 10.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01104",
@@ -26116,7 +28578,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.456129,
     "Longitude": -74.489448,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.01,
+    "NetEffectiveRentPSF": 12.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01105",
@@ -26160,7 +28626,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3037817,
     "Longitude": -74.5095394,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.75,
+    "NetEffectiveRentPSF": 12.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01106",
@@ -26202,7 +28672,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6810157,
     "Longitude": -75.35571,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.47,
+    "NetEffectiveRentPSF": 11.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01107",
@@ -26246,7 +28720,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9183503,
     "Longitude": -76.0760062,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.04,
+    "NetEffectiveRentPSF": 6.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01109",
@@ -26287,7 +28765,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2287275,
     "Longitude": -77.0720332,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.37,
+    "NetEffectiveRentPSF": 8.37,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01111",
@@ -26332,7 +28814,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0784874,
     "Longitude": -76.7733386,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.86,
+    "NetEffectiveRentPSF": 5.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01112",
@@ -26375,7 +28861,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5955214,
     "Longitude": -74.2660156,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.86,
+    "NetEffectiveRentPSF": 17.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01113",
@@ -26405,7 +28895,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.25,
     "EstimatedStartingRentTodayPSF": 8.05,
-    "NetEffectiveRentPSF": 9.33,
+    "NetEffectiveRentPSF": 7.05,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 5,
@@ -26421,7 +28911,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4361956,
     "Longitude": -75.9385307,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.33,
+    "CalculatedNERPSF": 7.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 120,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01116",
@@ -26467,7 +28963,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.015754,
     "Longitude": -74.9718944,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.27,
+    "NetEffectiveRentPSF": 8.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01117",
@@ -26512,7 +29012,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5943898,
     "Longitude": -74.2565203,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.48,
+    "NetEffectiveRentPSF": 15.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01118",
@@ -26552,7 +29056,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5608344,
     "Longitude": -75.6090369,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.4,
+    "NetEffectiveRentPSF": 10.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01119",
@@ -26590,7 +29098,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1082648,
     "Longitude": -74.8103106,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.67,
+    "NetEffectiveRentPSF": 10.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01120",
@@ -26633,7 +29145,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.412819,
     "Longitude": -74.307843,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.01,
+    "NetEffectiveRentPSF": 14.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01122",
@@ -26675,7 +29191,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3741649,
     "Longitude": -74.487415,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.36,
+    "NetEffectiveRentPSF": 12.36,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01123",
@@ -26717,7 +29237,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7651087,
     "Longitude": -75.3721591,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.58,
+    "NetEffectiveRentPSF": 12.58,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01125",
@@ -26760,7 +29284,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7939772,
     "Longitude": -75.347754,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.57,
+    "NetEffectiveRentPSF": 11.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01127",
@@ -26805,7 +29333,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.567573,
     "Longitude": -74.2416217,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.65,
+    "NetEffectiveRentPSF": 12.65,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01128",
@@ -26847,7 +29379,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 41.2039225,
     "Longitude": -75.9296279,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.02,
+    "NetEffectiveRentPSF": 8.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01132",
@@ -26891,7 +29427,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5649793,
     "Longitude": -75.6266019,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.18,
+    "NetEffectiveRentPSF": 10.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01133",
@@ -26937,7 +29477,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1921466,
     "Longitude": -77.2254334,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.26,
+    "NetEffectiveRentPSF": 8.26,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01134",
@@ -26981,7 +29525,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.09587,
     "Longitude": -74.8307,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.06,
+    "NetEffectiveRentPSF": 12.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01135",
@@ -27027,7 +29575,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0806406,
     "Longitude": -74.760983,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.0,
+    "NetEffectiveRentPSF": 11.0,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01136",
@@ -27073,7 +29625,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1913998,
     "Longitude": -76.6721173,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.89,
+    "NetEffectiveRentPSF": 7.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01140",
@@ -27116,7 +29672,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.03,
+    "NetEffectiveRentPSF": 16.03,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01141",
@@ -27157,7 +29717,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.370994,
     "Longitude": -74.46667,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.75,
+    "NetEffectiveRentPSF": 14.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01142",
@@ -27200,7 +29764,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325479,
     "Longitude": -74.460061,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.42,
+    "NetEffectiveRentPSF": 13.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01144",
@@ -27240,7 +29808,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6153724,
     "Longitude": -74.2462785,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 19.69,
+    "NetEffectiveRentPSF": 19.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01145",
@@ -27284,7 +29856,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7760685,
     "Longitude": -74.1540349,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 19.87,
+    "NetEffectiveRentPSF": 19.87,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01146",
@@ -27328,7 +29904,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7760685,
     "Longitude": -74.1540349,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 19.39,
+    "NetEffectiveRentPSF": 19.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01148",
@@ -27371,7 +29951,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2020147,
     "Longitude": -76.9763822,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.06,
+    "NetEffectiveRentPSF": 8.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01149",
@@ -27416,7 +30000,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.571618,
     "Longitude": -75.6108989,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.82,
+    "NetEffectiveRentPSF": 10.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01150",
@@ -27456,7 +30044,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1125702,
     "Longitude": -74.758493,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.86,
+    "NetEffectiveRentPSF": 11.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01151",
@@ -27497,7 +30089,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.570596,
     "Longitude": -75.648726,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.56,
+    "NetEffectiveRentPSF": 10.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01152",
@@ -27527,7 +30123,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.35,
     "EstimatedStartingRentTodayPSF": 10.83,
-    "NetEffectiveRentPSF": 12.13,
+    "NetEffectiveRentPSF": 10.3,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 1,
@@ -27546,7 +30142,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6792522,
     "Longitude": -75.347117,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.13,
+    "CalculatedNERPSF": 10.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01153",
@@ -27588,7 +30190,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.726019,
     "Longitude": -75.303973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.58,
+    "NetEffectiveRentPSF": 8.58,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01155",
@@ -27633,7 +30239,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1026653,
     "Longitude": -74.8122762,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.66,
+    "NetEffectiveRentPSF": 10.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01156",
@@ -27671,7 +30281,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7406904,
     "Longitude": -74.1093986,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.47,
+    "NetEffectiveRentPSF": 15.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01161",
@@ -27713,7 +30327,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.358312,
     "Longitude": -74.484562,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.48,
+    "NetEffectiveRentPSF": 14.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01164",
@@ -27758,7 +30376,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2741025,
     "Longitude": -74.5007988,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.61,
+    "NetEffectiveRentPSF": 10.61,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01165",
@@ -27802,7 +30424,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0193821,
     "Longitude": -76.7078914,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.42,
+    "NetEffectiveRentPSF": 6.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01166",
@@ -27846,7 +30472,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1993201,
     "Longitude": -76.707242,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.51,
+    "NetEffectiveRentPSF": 6.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01167",
@@ -27887,7 +30517,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0264053,
     "Longitude": -74.9791954,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.27,
+    "NetEffectiveRentPSF": 10.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01168",
@@ -27928,7 +30562,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7725172,
     "Longitude": -74.0840186,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.51,
+    "NetEffectiveRentPSF": 15.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01170",
@@ -27972,7 +30610,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1148224,
     "Longitude": -76.469482,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.93,
+    "NetEffectiveRentPSF": 6.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01180",
@@ -28014,7 +30656,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5824287,
     "Longitude": -74.255559,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.79,
+    "NetEffectiveRentPSF": 16.79,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01181",
@@ -28057,7 +30703,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2264196,
     "Longitude": -77.0908615,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.97,
+    "NetEffectiveRentPSF": 7.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01183",
@@ -28101,7 +30751,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3178799,
     "Longitude": -76.5518335,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.51,
+    "NetEffectiveRentPSF": 7.51,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01184",
@@ -28143,7 +30797,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3254136,
     "Longitude": -74.4821548,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.69,
+    "NetEffectiveRentPSF": 14.69,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01185",
@@ -28184,7 +30842,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.617024,
     "Longitude": -74.2072336,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.27,
+    "NetEffectiveRentPSF": 14.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01187",
@@ -28227,7 +30889,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3661295,
     "Longitude": -74.4634497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.8,
+    "NetEffectiveRentPSF": 13.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01191",
@@ -28270,7 +30936,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2792713,
     "Longitude": -74.5483225,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.7,
+    "NetEffectiveRentPSF": 10.7,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01192",
@@ -28310,7 +30980,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0806406,
     "Longitude": -74.760983,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.19,
+    "NetEffectiveRentPSF": 12.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01194",
@@ -28352,7 +31026,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2068181,
     "Longitude": -76.7463049,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.99,
+    "NetEffectiveRentPSF": 6.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01196",
@@ -28395,7 +31073,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0791667,
     "Longitude": -76.419227,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.88,
+    "NetEffectiveRentPSF": 6.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01197",
@@ -28438,7 +31120,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7647231,
     "Longitude": -75.3091449,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.32,
+    "NetEffectiveRentPSF": 13.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01198",
@@ -28480,7 +31166,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8235539,
     "Longitude": -75.2085629,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.21,
+    "NetEffectiveRentPSF": 10.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01199",
@@ -28524,7 +31214,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5980425,
     "Longitude": -75.3263793,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.52,
+    "NetEffectiveRentPSF": 9.52,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01201",
@@ -28565,7 +31259,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3563577,
     "Longitude": -74.4606286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.06,
+    "NetEffectiveRentPSF": 13.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01202",
@@ -28608,7 +31306,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.582765,
     "Longitude": -74.2470193,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.74,
+    "NetEffectiveRentPSF": 12.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01203",
@@ -28651,7 +31353,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0854407,
     "Longitude": -74.7464367,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.92,
+    "NetEffectiveRentPSF": 9.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01204",
@@ -28694,7 +31400,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7254877,
     "Longitude": -75.3526132,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.81,
+    "NetEffectiveRentPSF": 7.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01206",
@@ -28724,7 +31434,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 13.05,
     "EstimatedStartingRentTodayPSF": 11.79,
-    "NetEffectiveRentPSF": 14.23,
+    "NetEffectiveRentPSF": 11.09,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 5,
@@ -28741,7 +31451,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1102561,
     "Longitude": -74.8212865,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.23,
+    "CalculatedNERPSF": 11.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 92,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01208",
@@ -28783,7 +31499,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7643582,
     "Longitude": -74.0790901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.39,
+    "NetEffectiveRentPSF": 17.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01212",
@@ -28825,7 +31545,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7766871,
     "Longitude": -75.3838487,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.07,
+    "NetEffectiveRentPSF": 11.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01213",
@@ -28868,7 +31592,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951874,
     "Longitude": -74.2278262,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 17.97,
+    "NetEffectiveRentPSF": 17.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01215",
@@ -28915,7 +31643,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3183891,
     "Longitude": -74.5022539,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.19,
+    "NetEffectiveRentPSF": 14.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01216",
@@ -28956,7 +31688,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.566627,
     "Longitude": -74.222703,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.9,
+    "NetEffectiveRentPSF": 16.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01218",
@@ -28986,7 +31722,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.25,
     "EstimatedStartingRentTodayPSF": 10.23,
-    "NetEffectiveRentPSF": 11.83,
+    "NetEffectiveRentPSF": 9.97,
     "RentType": "Net",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 1,
@@ -29005,7 +31741,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.607168,
     "Longitude": -75.334802,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.83,
+    "CalculatedNERPSF": 9.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01219",
@@ -29050,7 +31792,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.566627,
     "Longitude": -74.222703,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.85,
+    "NetEffectiveRentPSF": 14.85,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01220",
@@ -29091,7 +31837,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6840554,
     "Longitude": -75.3639238,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.93,
+    "NetEffectiveRentPSF": 11.93,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01221",
@@ -29134,7 +31884,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2567059,
     "Longitude": -74.406219,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.4,
+    "NetEffectiveRentPSF": 12.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01222",
@@ -29174,7 +31928,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4530655,
     "Longitude": -74.4824629,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.45,
+    "NetEffectiveRentPSF": 13.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01224",
@@ -29216,7 +31974,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4604899,
     "Longitude": -74.4344908,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.78,
+    "NetEffectiveRentPSF": 13.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01225",
@@ -29254,7 +32016,14 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4935006,
     "Longitude": -74.3673385,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 4,
+    "LeaseTermInferred": true,
+    "LeaseTermInferenceSource": "ExecutionDate to ExpirationDate due commencement/expiration date conflict",
+    "NetEffectiveRentPSF": 13.05
   },
   {
     "CompEventID": "COMP-01227",
@@ -29298,7 +32067,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7340572,
     "Longitude": -74.0861778,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 20.9,
+    "NetEffectiveRentPSF": 20.9,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01230",
@@ -29342,7 +32115,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4530655,
     "Longitude": -74.4824629,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.45,
+    "NetEffectiveRentPSF": 13.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01231",
@@ -29382,7 +32159,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2567059,
     "Longitude": -74.406219,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.4,
+    "NetEffectiveRentPSF": 12.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01233",
@@ -29426,7 +32207,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.41013,
     "Longitude": -74.316016,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.24,
+    "NetEffectiveRentPSF": 16.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01234",
@@ -29468,7 +32253,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5661752,
     "Longitude": -74.2158934,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.3,
+    "NetEffectiveRentPSF": 15.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01235",
@@ -29508,7 +32297,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4975616,
     "Longitude": -74.3831996,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.08,
+    "NetEffectiveRentPSF": 13.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01239",
@@ -29555,7 +32348,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5325909,
     "Longitude": -74.2623689,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.18,
+    "NetEffectiveRentPSF": 14.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01242",
@@ -29599,7 +32396,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.495668,
     "Longitude": -74.362497,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.53,
+    "NetEffectiveRentPSF": 10.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01246",
@@ -29633,7 +32434,7 @@ const COMPS = [
     "Sublease": false,
     "BuildingClass": "A",
     "Industry": "Transportation",
-    "Comments": "TI: “As-Is” - No TI Allowance provided",
+    "Comments": "TI: \u201cAs-Is\u201d - No TI Allowance provided",
     "ConcessionsNotes": "As-is",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
@@ -29642,7 +32443,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5832327,
     "Longitude": -74.2528437,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.47,
+    "NetEffectiveRentPSF": 13.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01247",
@@ -29676,7 +32481,7 @@ const COMPS = [
     "Sublease": false,
     "BuildingClass": "A",
     "Industry": "Business, Professional, and Consulting Services (except Financial and Legal) - Including Accounting",
-    "Comments": "TI: “As-Is” - No TI Allowance provided",
+    "Comments": "TI: \u201cAs-Is\u201d - No TI Allowance provided",
     "ConcessionsNotes": "As-is",
     "DataQualityScore": 11,
     "DuplicateGroupSize": 1,
@@ -29685,7 +32490,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5316962,
     "Longitude": -74.536987,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.66,
+    "NetEffectiveRentPSF": 13.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01248",
@@ -29727,7 +32536,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3350077,
     "Longitude": -74.4575615,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.76,
+    "NetEffectiveRentPSF": 10.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01250",
@@ -29774,7 +32587,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5669261,
     "Longitude": -74.2319376,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.86,
+    "NetEffectiveRentPSF": 14.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01252",
@@ -29817,7 +32634,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5325909,
     "Longitude": -74.2623689,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.33,
+    "NetEffectiveRentPSF": 15.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01253",
@@ -29862,7 +32683,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3746803,
     "Longitude": -74.4764459,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.94,
+    "NetEffectiveRentPSF": 12.94,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01255",
@@ -29905,7 +32730,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7444401,
     "Longitude": -74.069716,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 20.41,
+    "NetEffectiveRentPSF": 20.41,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01256",
@@ -29950,7 +32779,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7053334,
     "Longitude": -75.4780358,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.8,
+    "NetEffectiveRentPSF": 9.8,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01258",
@@ -29993,7 +32826,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7338687,
     "Longitude": -75.2749688,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.45,
+    "NetEffectiveRentPSF": 9.45,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01259",
@@ -30034,7 +32871,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3046182,
     "Longitude": -76.8900506,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.08,
+    "NetEffectiveRentPSF": 8.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01260",
@@ -30075,7 +32916,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.766268,
     "Longitude": -75.330881,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.38,
+    "NetEffectiveRentPSF": 10.38,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01262",
@@ -30113,7 +32958,7 @@ const COMPS = [
     "LandlordBrokerage": "Cushman & Wakefield",
     "TenantBrokerage": "Savills Inc (North America)",
     "Industry": "Transportation",
-    "Comments": "TI $860K + $535K “move allowance”. One (1) Renewal Option for an additional 5 years. Written notice 12 months prior to expiration.",
+    "Comments": "TI $860K + $535K \u201cmove allowance\u201d. One (1) Renewal Option for an additional 5 years. Written notice 12 months prior to expiration.",
     "ConcessionsNotes": "TI $860K + $535K move allowance.",
     "DataQualityScore": 13,
     "DuplicateGroupSize": 1,
@@ -30122,7 +32967,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.596895,
     "Longitude": -74.2157912,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.54,
+    "NetEffectiveRentPSF": 13.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01263",
@@ -30168,7 +33017,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6128148,
     "Longitude": -74.2193419,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.2,
+    "NetEffectiveRentPSF": 14.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01264",
@@ -30211,7 +33064,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6790329,
     "Longitude": -75.3537798,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.59,
+    "NetEffectiveRentPSF": 10.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01265",
@@ -30249,7 +33106,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.230104,
     "Longitude": -76.9228477,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 6.92,
+    "NetEffectiveRentPSF": 6.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01266",
@@ -30291,7 +33152,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.689326,
     "Longitude": -75.356566,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.97,
+    "NetEffectiveRentPSF": 11.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01268",
@@ -30333,7 +33198,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.176198,
     "Longitude": -77.2305418,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.56,
+    "NetEffectiveRentPSF": 8.56,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01272",
@@ -30376,7 +33245,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951078,
     "Longitude": -75.6182555,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.16,
+    "NetEffectiveRentPSF": 10.16,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01273",
@@ -30416,7 +33289,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6115872,
     "Longitude": -74.2179022,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.89,
+    "NetEffectiveRentPSF": 16.89,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01274",
@@ -30459,7 +33336,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5617144,
     "Longitude": -75.6192221,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.42,
+    "NetEffectiveRentPSF": 11.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01276",
@@ -30501,7 +33382,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7690155,
     "Longitude": -75.3339982,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.5,
+    "NetEffectiveRentPSF": 10.5,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01277",
@@ -30542,7 +33427,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1069156,
     "Longitude": -74.8274206,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.43,
+    "NetEffectiveRentPSF": 11.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01278",
@@ -30587,7 +33476,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0196558,
     "Longitude": -74.9825439,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.06,
+    "NetEffectiveRentPSF": 8.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01279",
@@ -30628,7 +33521,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2032753,
     "Longitude": -77.240436,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.43,
+    "NetEffectiveRentPSF": 7.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01280",
@@ -30674,7 +33571,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9357652,
     "Longitude": -75.9482313,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.86,
+    "NetEffectiveRentPSF": 5.86,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01282",
@@ -30717,7 +33618,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5727561,
     "Longitude": -75.6402023,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.21,
+    "NetEffectiveRentPSF": 10.21,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01286",
@@ -30762,7 +33667,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5329713,
     "Longitude": -74.5407944,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.13,
+    "NetEffectiveRentPSF": 15.13,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01289",
@@ -30806,7 +33715,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0440911,
     "Longitude": -76.7352881,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 7.5,
+    "NetEffectiveRentPSF": 7.5,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01290",
@@ -30845,7 +33758,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6115872,
     "Longitude": -74.2179022,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.06,
+    "NetEffectiveRentPSF": 15.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01291",
@@ -30888,7 +33805,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.34377,
     "Longitude": -74.507761,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.1,
+    "NetEffectiveRentPSF": 15.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01292",
@@ -30931,7 +33852,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.323795,
     "Longitude": -74.456721,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.17,
+    "NetEffectiveRentPSF": 14.17,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01293",
@@ -30972,7 +33897,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.334571,
     "Longitude": -74.45387,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.39,
+    "NetEffectiveRentPSF": 13.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01295",
@@ -31013,7 +33942,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951874,
     "Longitude": -74.2278262,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 18.75,
+    "NetEffectiveRentPSF": 18.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01297",
@@ -31056,7 +33989,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8064646,
     "Longitude": -75.2611661,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.02,
+    "NetEffectiveRentPSF": 9.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01298",
@@ -31100,7 +34037,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2022943,
     "Longitude": -74.5734979,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.15,
+    "NetEffectiveRentPSF": 9.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01299",
@@ -31141,7 +34082,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5560517,
     "Longitude": -74.5159712,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.59,
+    "NetEffectiveRentPSF": 9.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01301",
@@ -31186,7 +34131,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7491529,
     "Longitude": -74.1419812,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 20.04,
+    "NetEffectiveRentPSF": 20.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01302",
@@ -31226,7 +34175,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6153724,
     "Longitude": -74.2462785,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.75,
+    "NetEffectiveRentPSF": 16.75,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01303",
@@ -31270,7 +34223,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5982618,
     "Longitude": -74.2174278,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.88,
+    "NetEffectiveRentPSF": 8.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01305",
@@ -31311,7 +34268,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6825042,
     "Longitude": -74.2424863,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.15,
+    "NetEffectiveRentPSF": 13.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01308",
@@ -31351,7 +34312,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7085562,
     "Longitude": -75.4724436,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.53,
+    "NetEffectiveRentPSF": 9.53,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01310",
@@ -31394,7 +34359,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.190643,
     "Longitude": -74.5672061,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.22,
+    "NetEffectiveRentPSF": 11.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01311",
@@ -31435,7 +34404,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.529619,
     "Longitude": -74.395668,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.05,
+    "NetEffectiveRentPSF": 12.05,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01312",
@@ -31478,7 +34451,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7373504,
     "Longitude": -74.0834936,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.83,
+    "NetEffectiveRentPSF": 12.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01314",
@@ -31521,7 +34498,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.409564,
     "Longitude": -74.311824,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.57,
+    "NetEffectiveRentPSF": 13.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01315",
@@ -31562,7 +34543,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.462399,
     "Longitude": -74.393903,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.25,
+    "NetEffectiveRentPSF": 14.25,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01316",
@@ -31605,7 +34590,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.53015,
     "Longitude": -74.401783,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.68,
+    "NetEffectiveRentPSF": 15.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01317",
@@ -31647,7 +34636,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.53015,
     "Longitude": -74.401783,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.18,
+    "NetEffectiveRentPSF": 16.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01318",
@@ -31688,7 +34681,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4538838,
     "Longitude": -74.3342125,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.98,
+    "NetEffectiveRentPSF": 14.98,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01319",
@@ -31732,7 +34729,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.493135,
     "Longitude": -74.379513,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.66,
+    "NetEffectiveRentPSF": 12.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01320",
@@ -31772,7 +34773,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1185659,
     "Longitude": -74.7051921,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.06,
+    "NetEffectiveRentPSF": 12.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01322",
@@ -31813,7 +34818,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.4166355,
     "Longitude": -74.3004018,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.2,
+    "NetEffectiveRentPSF": 13.2,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01323",
@@ -31853,7 +34862,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7643582,
     "Longitude": -74.0790901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.43,
+    "NetEffectiveRentPSF": 14.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01324",
@@ -31895,7 +34908,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3748809,
     "Longitude": -74.4980637,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 13.1,
+    "NetEffectiveRentPSF": 13.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01325",
@@ -31939,7 +34956,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2741025,
     "Longitude": -74.5007988,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.46,
+    "NetEffectiveRentPSF": 8.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01327",
@@ -31980,7 +35001,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2554703,
     "Longitude": -74.4103951,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.66,
+    "NetEffectiveRentPSF": 9.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01330",
@@ -32023,7 +35048,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3282371,
     "Longitude": -74.465426,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.78,
+    "NetEffectiveRentPSF": 10.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01331",
@@ -32063,7 +35092,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.685338,
     "Longitude": -75.347973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.62,
+    "NetEffectiveRentPSF": 11.62,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01332",
@@ -32105,7 +35138,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3847246,
     "Longitude": -74.4506388,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.97,
+    "NetEffectiveRentPSF": 12.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01333",
@@ -32147,7 +35184,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.407477,
     "Longitude": -74.315538,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.46,
+    "NetEffectiveRentPSF": 14.46,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01334",
@@ -32190,7 +35231,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5659669,
     "Longitude": -75.6069728,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.82,
+    "NetEffectiveRentPSF": 10.82,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01335",
@@ -32232,7 +35277,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5659669,
     "Longitude": -75.6069728,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.14,
+    "NetEffectiveRentPSF": 11.14,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01336",
@@ -32274,7 +35323,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5674041,
     "Longitude": -74.2389211,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.55,
+    "NetEffectiveRentPSF": 11.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01338",
@@ -32308,7 +35361,7 @@ const COMPS = [
     "Sublease": false,
     "BuildingClass": "A",
     "OwnerLandlord": "Clarion Partners",
-    "Comments": "40â clear spec cross-dock construction delivered in 2024; Tax/Opex is $1.65 psf + mgt fee",
+    "Comments": "40\u00e2\u0080\u0099 clear spec cross-dock construction delivered in 2024; Tax/Opex is $1.65 psf + mgt fee",
     "DataQualityScore": 12,
     "DuplicateGroupSize": 1,
     "MergedSources": "Savills CSV / Savills Comps - Industrial - PHI-PAC-NNJ - 1-1-23 to 5-30-26.csv",
@@ -32316,7 +35369,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0456371,
     "Longitude": -74.8247943,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 12.01,
+    "NetEffectiveRentPSF": 12.01,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01339",
@@ -32359,7 +35416,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5200434,
     "Longitude": -75.5768324,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.15,
+    "NetEffectiveRentPSF": 10.15,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01340",
@@ -32401,7 +35462,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0415549,
     "Longitude": -74.8261677,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 11.09,
+    "NetEffectiveRentPSF": 11.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01341",
@@ -32443,7 +35508,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.407477,
     "Longitude": -74.315538,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 15.17,
+    "NetEffectiveRentPSF": 15.17,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01345",
@@ -32487,7 +35556,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7373504,
     "Longitude": -74.0834936,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.91,
+    "NetEffectiveRentPSF": 14.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01346",
@@ -32529,7 +35602,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3847246,
     "Longitude": -74.4506388,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.36,
+    "NetEffectiveRentPSF": 14.36,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01347",
@@ -32571,7 +35648,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.9308811,
     "Longitude": -76.0712948,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 5.99,
+    "NetEffectiveRentPSF": 5.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01348",
@@ -32614,7 +35695,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8288171,
     "Longitude": -75.2130732,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.22,
+    "NetEffectiveRentPSF": 9.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01350",
@@ -32654,7 +35739,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3767832,
     "Longitude": -74.4962741,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 9.07,
+    "NetEffectiveRentPSF": 9.07,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01354",
@@ -32698,7 +35787,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3630847,
     "Longitude": -74.4702314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 8.09,
+    "NetEffectiveRentPSF": 8.09,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01356",
@@ -32741,7 +35834,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9639968,
     "Longitude": -74.9076053,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.74,
+    "NetEffectiveRentPSF": 10.74,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01357",
@@ -32787,7 +35884,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.38567,
     "Longitude": -74.4475401,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 14.95,
+    "NetEffectiveRentPSF": 14.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01359",
@@ -32831,7 +35932,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5658388,
     "Longitude": -74.2291536,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.31,
+    "NetEffectiveRentPSF": 16.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01360",
@@ -32876,7 +35981,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.76546,
     "Longitude": -74.05724,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 23.48,
+    "NetEffectiveRentPSF": 23.48,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01361",
@@ -32922,7 +36031,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.36526,
     "Longitude": -74.482375,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.64,
+    "NetEffectiveRentPSF": 10.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01362",
@@ -32964,7 +36077,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5295232,
     "Longitude": -74.3878443,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 16.79,
+    "NetEffectiveRentPSF": 16.79,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01364",
@@ -33005,7 +36122,11 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9970419,
     "Longitude": -75.0401395,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "CalculatedNERPSF": 10.1,
+    "NetEffectiveRentPSF": 10.1,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction"
   },
   {
     "CompEventID": "COMP-01370",
@@ -33035,7 +36156,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 18.1,
     "EstimatedStartingRentTodayPSF": 18.09,
-    "NetEffectiveRentPSF": 19.31,
+    "NetEffectiveRentPSF": 16.55,
     "RentType": "NNN",
     "RentEscalation": "$19.31 (Annual)",
     "TIValuePSF": 1,
@@ -33053,7 +36174,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5489722,
     "Longitude": -74.4492062,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 19.31,
+    "CalculatedNERPSF": 16.55,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01372",
@@ -33083,7 +36210,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 18.5,
     "EstimatedStartingRentTodayPSF": 18.57,
-    "NetEffectiveRentPSF": 20.21,
+    "NetEffectiveRentPSF": 15.33,
     "RentType": "NNN",
     "RentEscalation": "3.00% per year",
     "FreeRentMonths": 3,
@@ -33099,7 +36226,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.538445,
     "Longitude": -74.5347116,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 20.21,
+    "CalculatedNERPSF": 15.33,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 124,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01374",
@@ -33129,7 +36262,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 17.5,
     "EstimatedStartingRentTodayPSF": 20.85,
-    "NetEffectiveRentPSF": 17.02,
+    "NetEffectiveRentPSF": 13.77,
     "RentType": "NNN",
     "RentEscalation": "$17.50/1y, $18.50/1y,",
     "FreeRentMonths": 3,
@@ -33146,7 +36279,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6115872,
     "Longitude": -74.2179022,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 17.02,
+    "CalculatedNERPSF": 13.77,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01375",
@@ -33176,7 +36315,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.5,
     "EstimatedStartingRentTodayPSF": 11.63,
-    "NetEffectiveRentPSF": 11.63,
+    "NetEffectiveRentPSF": 8.64,
     "RentType": "3.50% per year",
     "RentEscalation": "TI",
     "FreeRentMonths": 13.47,
@@ -33195,7 +36334,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5812497,
     "Longitude": -75.7040652,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.63,
+    "CalculatedNERPSF": 8.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 121,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01376",
@@ -33225,7 +36370,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.25,
     "EstimatedStartingRentTodayPSF": 11.25,
-    "NetEffectiveRentPSF": 11.25,
+    "NetEffectiveRentPSF": 7.62,
     "RentType": "3.50% per year",
     "RentEscalation": "TI",
     "FreeRentMonths": 11.87,
@@ -33243,7 +36388,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.73522,
     "Longitude": -75.2787859,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.25,
+    "CalculatedNERPSF": 7.62,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01378",
@@ -33273,7 +36424,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 7.55,
     "EstimatedStartingRentTodayPSF": 7.06,
-    "NetEffectiveRentPSF": 7.06,
+    "NetEffectiveRentPSF": 5.68,
     "RentType": "3.50% per year",
     "RentEscalation": "No",
     "FreeRentMonths": 8.09,
@@ -33290,7 +36441,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0599214,
     "Longitude": -77.4701632,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 7.06,
+    "CalculatedNERPSF": 5.68,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01379",
@@ -33319,7 +36476,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 18.5,
     "EstimatedStartingRentTodayPSF": 19.44,
-    "NetEffectiveRentPSF": 18.25,
+    "NetEffectiveRentPSF": 16.18,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 2,
@@ -33337,7 +36494,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5295232,
     "Longitude": -74.3878443,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 18.25,
+    "CalculatedNERPSF": 16.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 39,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01380",
@@ -33366,7 +36529,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.55,
     "EstimatedStartingRentTodayPSF": 11.27,
-    "NetEffectiveRentPSF": 11.27,
+    "NetEffectiveRentPSF": 8.81,
     "RentType": "1m",
     "RentEscalation": "$11.27 (Annual)",
     "TIValuePSF": 10,
@@ -33383,7 +36546,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.682124,
     "Longitude": -75.360991,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.27,
+    "CalculatedNERPSF": 8.81,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01381",
@@ -33413,7 +36582,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.5,
     "EstimatedStartingRentTodayPSF": 10.55,
-    "NetEffectiveRentPSF": 12.03,
+    "NetEffectiveRentPSF": 10.31,
     "RentType": "0m",
     "RentEscalation": "$12.03 (Annual)",
     "TIValuePSF": 1.5,
@@ -33431,7 +36600,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5740217,
     "Longitude": -75.6480314,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.03,
+    "CalculatedNERPSF": 10.31,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01382",
@@ -33460,7 +36635,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 22,
     "EstimatedStartingRentTodayPSF": 20.25,
-    "NetEffectiveRentPSF": 22,
+    "NetEffectiveRentPSF": 20.4,
     "RentType": "NNN",
     "RentEscalation": "$22.00 (Annual)",
     "FreeRentMonths": 0,
@@ -33477,7 +36652,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5283342,
     "Longitude": -74.3809321,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 22.0,
+    "CalculatedNERPSF": 20.4,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01385",
@@ -33506,7 +36687,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.25,
     "EstimatedStartingRentTodayPSF": 10.98,
-    "NetEffectiveRentPSF": 10.98,
+    "NetEffectiveRentPSF": 9.27,
     "RentType": "5m",
     "RentEscalation": "$10.98 (Annual)",
     "TIValuePSF": 6,
@@ -33523,7 +36704,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6877588,
     "Longitude": -75.3559703,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.98,
+    "CalculatedNERPSF": 9.27,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01387",
@@ -33552,7 +36739,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 10.75,
     "EstimatedStartingRentTodayPSF": 0,
-    "NetEffectiveRentPSF": 12.01,
+    "NetEffectiveRentPSF": 9.32,
     "RentType": "NNN",
     "RentEscalation": "3.00% per year",
     "FreeRentMonths": 4,
@@ -33568,7 +36755,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2634984,
     "Longitude": -75.3428317,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.01,
+    "CalculatedNERPSF": 9.32,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 123,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01388",
@@ -33598,7 +36791,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 10.75,
     "EstimatedStartingRentTodayPSF": 11.97,
-    "NetEffectiveRentPSF": 12.28,
+    "NetEffectiveRentPSF": 9.83,
     "RentType": "0m",
     "RentEscalation": "$12.28 (Annual)",
     "BuildingClass": "A",
@@ -33614,7 +36807,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6886048,
     "Longitude": -75.3607171,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.28,
+    "CalculatedNERPSF": 9.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 118,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01391",
@@ -33644,7 +36843,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.4,
     "EstimatedStartingRentTodayPSF": 9.83,
-    "NetEffectiveRentPSF": 11.79,
+    "NetEffectiveRentPSF": 9.43,
     "RentType": "NNN",
     "RentEscalation": "2.00% per year",
     "FreeRentMonths": 2,
@@ -33663,7 +36862,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6779222,
     "Longitude": -75.3613617,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.79,
+    "CalculatedNERPSF": 9.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 120,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01392",
@@ -33693,7 +36898,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.75,
     "EstimatedStartingRentTodayPSF": 11.62,
-    "NetEffectiveRentPSF": 11.75,
+    "NetEffectiveRentPSF": 7.99,
     "RentType": "3.50% per year",
     "RentEscalation": "No",
     "FreeRentMonths": 12.6,
@@ -33710,7 +36915,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.685338,
     "Longitude": -75.347973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.75,
+    "CalculatedNERPSF": 7.99,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01393",
@@ -33740,7 +36951,7 @@ const COMPS = [
     "TransactionType": "Renewal/Expansion",
     "StartingRentPSF": 16.75,
     "EstimatedStartingRentTodayPSF": 16.64,
-    "NetEffectiveRentPSF": 17.96,
+    "NetEffectiveRentPSF": 15.54,
     "RentType": "NNN",
     "RentEscalation": "$16.75",
     "FreeRentMonths": 0,
@@ -33757,7 +36968,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.526328,
     "Longitude": -74.55845,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 17.96,
+    "CalculatedNERPSF": 15.54,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01398",
@@ -33786,7 +37003,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.58,
     "EstimatedStartingRentTodayPSF": 8.58,
-    "NetEffectiveRentPSF": 8.93,
+    "NetEffectiveRentPSF": 7.91,
     "RentType": "4m",
     "RentEscalation": "$8.93 (Annual)",
     "BuildingClass": "A",
@@ -33801,7 +37018,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0575158,
     "Longitude": -76.2384789,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 8.93,
+    "CalculatedNERPSF": 7.91,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01399",
@@ -33831,7 +37054,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 14.95,
     "EstimatedStartingRentTodayPSF": 11.62,
-    "NetEffectiveRentPSF": 17.15,
+    "NetEffectiveRentPSF": 13.02,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 2,
@@ -33851,7 +37074,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0667375,
     "Longitude": -75.5573048,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 17.15,
+    "CalculatedNERPSF": 13.02,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 122,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01400",
@@ -33881,7 +37110,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 13.75,
     "EstimatedStartingRentTodayPSF": 16.47,
-    "NetEffectiveRentPSF": 13.4,
+    "NetEffectiveRentPSF": 10.78,
     "RentType": "NNN",
     "RentEscalation": "Net",
     "FreeRentMonths": 8,
@@ -33899,7 +37128,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3282371,
     "Longitude": -74.465426,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 13.4,
+    "CalculatedNERPSF": 10.78,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 68,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01401",
@@ -33929,7 +37164,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 12.25,
     "EstimatedStartingRentTodayPSF": 10.66,
-    "NetEffectiveRentPSF": 12.7,
+    "NetEffectiveRentPSF": 11.42,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 0,
@@ -33945,7 +37180,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5617144,
     "Longitude": -75.6192221,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.7,
+    "CalculatedNERPSF": 11.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 36,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01403",
@@ -33975,7 +37216,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 12,
     "EstimatedStartingRentTodayPSF": 11.55,
-    "NetEffectiveRentPSF": 9.49,
+    "NetEffectiveRentPSF": 7.83,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 3,
@@ -33994,7 +37235,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0196558,
     "Longitude": -74.9825439,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.49,
+    "CalculatedNERPSF": 7.83,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 36,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01404",
@@ -34023,7 +37270,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 10.83,
     "EstimatedStartingRentTodayPSF": 9.73,
-    "NetEffectiveRentPSF": 11.3,
+    "NetEffectiveRentPSF": 9.71,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 1,
@@ -34042,7 +37289,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5727561,
     "Longitude": -75.6402023,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.3,
+    "CalculatedNERPSF": 9.71,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01405",
@@ -34072,7 +37325,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.65,
     "EstimatedStartingRentTodayPSF": 11.12,
-    "NetEffectiveRentPSF": 12.31,
+    "NetEffectiveRentPSF": 10.16,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 2,
@@ -34089,7 +37342,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5951078,
     "Longitude": -75.6182555,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.31,
+    "CalculatedNERPSF": 10.16,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 72,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01407",
@@ -34118,7 +37377,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 13.35,
     "EstimatedStartingRentTodayPSF": 11.56,
-    "NetEffectiveRentPSF": 14.38,
+    "NetEffectiveRentPSF": 11.62,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 3,
@@ -34138,7 +37397,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.8482695,
     "Longitude": -75.4025366,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.38,
+    "CalculatedNERPSF": 11.62,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 88,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01408",
@@ -34168,7 +37433,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.55,
     "EstimatedStartingRentTodayPSF": 9.44,
-    "NetEffectiveRentPSF": 12.35,
+    "NetEffectiveRentPSF": 10.59,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 0,
@@ -34184,7 +37449,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6790329,
     "Longitude": -75.3537798,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.35,
+    "CalculatedNERPSF": 10.59,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01412",
@@ -34214,7 +37485,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 12,
     "EstimatedStartingRentTodayPSF": 10.89,
-    "NetEffectiveRentPSF": 12.96,
+    "NetEffectiveRentPSF": 11.08,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -34230,7 +37501,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6840554,
     "Longitude": -75.3639238,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.96,
+    "CalculatedNERPSF": 11.08,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01414",
@@ -34260,7 +37537,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 9.48,
     "EstimatedStartingRentTodayPSF": 10.62,
-    "NetEffectiveRentPSF": 10.39,
+    "NetEffectiveRentPSF": 7.39,
     "RentType": "NNN",
     "RentEscalation": "$10.00",
     "FreeRentMonths": 8,
@@ -34278,7 +37555,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7254877,
     "Longitude": -75.3526132,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.39,
+    "CalculatedNERPSF": 7.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 129,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01415",
@@ -34308,7 +37591,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 14,
     "EstimatedStartingRentTodayPSF": 18.71,
-    "NetEffectiveRentPSF": 14.53,
+    "NetEffectiveRentPSF": 13.06,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 0,
@@ -34326,7 +37609,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.3563577,
     "Longitude": -74.4606286,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.53,
+    "CalculatedNERPSF": 13.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 36,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01416",
@@ -34356,7 +37645,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 9.85,
     "EstimatedStartingRentTodayPSF": 11.24,
-    "NetEffectiveRentPSF": 10.24,
+    "NetEffectiveRentPSF": 9.18,
     "RentType": "NNN",
     "RentEscalation": "$10.24 (Annual)",
     "BuildingClass": "A",
@@ -34372,7 +37661,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5980425,
     "Longitude": -75.3263793,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.24,
+    "CalculatedNERPSF": 9.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 38,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01419",
@@ -34402,7 +37697,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.75,
     "EstimatedStartingRentTodayPSF": 10.47,
-    "NetEffectiveRentPSF": 9.69,
+    "NetEffectiveRentPSF": 6.88,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 4,
@@ -34419,7 +37714,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0791667,
     "Longitude": -76.419227,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.69,
+    "CalculatedNERPSF": 6.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 125,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01420",
@@ -34449,7 +37750,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 12,
     "EstimatedStartingRentTodayPSF": 9.98,
-    "NetEffectiveRentPSF": 12.48,
+    "NetEffectiveRentPSF": 6.64,
     "RentType": "4.00% per year",
     "RentEscalation": "As-Is",
     "FreeRentMonths": 12.49,
@@ -34464,7 +37765,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.7442993,
     "Longitude": -75.227175,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.48,
+    "CalculatedNERPSF": 6.64,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 37,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01422",
@@ -34494,7 +37801,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 15.25,
     "EstimatedStartingRentTodayPSF": 15.82,
-    "NetEffectiveRentPSF": 15.04,
+    "NetEffectiveRentPSF": 12.3,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 4,
@@ -34512,7 +37819,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.9955048,
     "Longitude": -75.068901,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 15.04,
+    "CalculatedNERPSF": 12.3,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 64,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01423",
@@ -34542,7 +37855,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.7,
     "EstimatedStartingRentTodayPSF": 8.52,
-    "NetEffectiveRentPSF": 13.48,
+    "NetEffectiveRentPSF": 10.62,
     "RentType": "2m",
     "RentEscalation": "$13.48 (Annual)",
     "TIValuePSF": 0.5,
@@ -34557,7 +37870,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5854687,
     "Longitude": -75.7034783,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 13.48,
+    "CalculatedNERPSF": 10.62,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 121,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01424",
@@ -34587,7 +37906,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 8.75,
     "EstimatedStartingRentTodayPSF": 8.37,
-    "NetEffectiveRentPSF": 9.26,
+    "NetEffectiveRentPSF": 7.97,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 0,
@@ -34604,7 +37923,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2264196,
     "Longitude": -77.0908615,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.26,
+    "CalculatedNERPSF": 7.97,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01426",
@@ -34634,7 +37959,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 18.5,
     "EstimatedStartingRentTodayPSF": 19.82,
-    "NetEffectiveRentPSF": 19.67,
+    "NetEffectiveRentPSF": 16.79,
     "RentType": "NNN",
     "RentEscalation": "Net",
     "FreeRentMonths": 1,
@@ -34652,7 +37977,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5824287,
     "Longitude": -74.255559,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 19.67,
+    "CalculatedNERPSF": 16.79,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 62,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01427",
@@ -34682,7 +38013,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 11.07,
     "EstimatedStartingRentTodayPSF": 10.06,
-    "NetEffectiveRentPSF": 12.75,
+    "NetEffectiveRentPSF": 10.04,
     "RentType": "2m",
     "RentEscalation": "$12.75 (Annual)",
     "TIValuePSF": 0.5,
@@ -34697,7 +38028,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5854206,
     "Longitude": -75.7007369,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.75,
+    "CalculatedNERPSF": 10.04,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 121,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01428",
@@ -34727,7 +38064,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.7,
     "EstimatedStartingRentTodayPSF": 8.64,
-    "NetEffectiveRentPSF": 8.6,
+    "NetEffectiveRentPSF": 6.43,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 4,
@@ -34744,7 +38081,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0193821,
     "Longitude": -76.7078914,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 8.6,
+    "CalculatedNERPSF": 6.43,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 88,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01429",
@@ -34774,7 +38117,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.7,
     "EstimatedStartingRentTodayPSF": 8.41,
-    "NetEffectiveRentPSF": 9.32,
+    "NetEffectiveRentPSF": 6.5,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 3,
@@ -34791,7 +38134,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1993201,
     "Longitude": -76.707242,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.32,
+    "CalculatedNERPSF": 6.5,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 121,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01430",
@@ -34821,7 +38170,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 10,
     "EstimatedStartingRentTodayPSF": 10.62,
-    "NetEffectiveRentPSF": 11.28,
+    "NetEffectiveRentPSF": 9.22,
     "RentType": "NNN",
     "RentEscalation": "$11.28 (Annual)",
     "BuildingClass": "B",
@@ -34837,7 +38186,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0264053,
     "Longitude": -74.9791954,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.28,
+    "CalculatedNERPSF": 9.22,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01434",
@@ -34867,7 +38222,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.85,
     "EstimatedStartingRentTodayPSF": 10.92,
-    "NetEffectiveRentPSF": 12.96,
+    "NetEffectiveRentPSF": 10.39,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 1,
@@ -34885,7 +38240,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.570596,
     "Longitude": -75.648726,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.96,
+    "CalculatedNERPSF": 10.39,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01435",
@@ -34915,7 +38276,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.6,
     "EstimatedStartingRentTodayPSF": 10.96,
-    "NetEffectiveRentPSF": 10.78,
+    "NetEffectiveRentPSF": 8.6,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 6,
@@ -34932,7 +38293,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.726019,
     "Longitude": -75.303973,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.78,
+    "CalculatedNERPSF": 8.6,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 67,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01436",
@@ -34961,7 +38328,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 13,
     "EstimatedStartingRentTodayPSF": 14.06,
-    "NetEffectiveRentPSF": 13.49,
+    "NetEffectiveRentPSF": 10.47,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 3,
@@ -34979,7 +38346,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.114389,
     "Longitude": -74.84399,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 13.49,
+    "CalculatedNERPSF": 10.47,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 84,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01437",
@@ -35009,7 +38382,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 11.75,
     "EstimatedStartingRentTodayPSF": 10.61,
-    "NetEffectiveRentPSF": 12.13,
+    "NetEffectiveRentPSF": 10.19,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 1,
@@ -35025,7 +38398,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5649793,
     "Longitude": -75.6266019,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.13,
+    "CalculatedNERPSF": 10.19,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01438",
@@ -35055,7 +38434,7 @@ const COMPS = [
     "TransactionType": "Early Renewal",
     "StartingRentPSF": 14.75,
     "EstimatedStartingRentTodayPSF": 14.9,
-    "NetEffectiveRentPSF": 15.68,
+    "NetEffectiveRentPSF": 13.42,
     "RentType": "NNN",
     "RentEscalation": "$15.68 (Annual)",
     "TIValuePSF": 1.09,
@@ -35073,7 +38452,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.325479,
     "Longitude": -74.460061,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 15.68,
+    "CalculatedNERPSF": 13.42,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01441",
@@ -35103,7 +38488,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 13.2,
     "EstimatedStartingRentTodayPSF": 13.73,
-    "NetEffectiveRentPSF": 14.3,
+    "NetEffectiveRentPSF": 12.24,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -35122,7 +38507,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.09587,
     "Longitude": -74.8307,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.3,
+    "CalculatedNERPSF": 12.24,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01442",
@@ -35151,7 +38542,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 7.95,
     "EstimatedStartingRentTodayPSF": 8.65,
-    "NetEffectiveRentPSF": 9.03,
+    "NetEffectiveRentPSF": 6.76,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 0,
@@ -35168,7 +38559,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1913998,
     "Longitude": -76.6721173,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.03,
+    "CalculatedNERPSF": 6.76,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 124,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01445",
@@ -35198,7 +38595,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 7.5,
     "EstimatedStartingRentTodayPSF": 8.29,
-    "NetEffectiveRentPSF": 7.06,
+    "NetEffectiveRentPSF": 5.11,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 7,
@@ -35217,7 +38614,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0784874,
     "Longitude": -76.7733386,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 7.06,
+    "CalculatedNERPSF": 5.11,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 91,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01446",
@@ -35247,7 +38650,7 @@ const COMPS = [
     "TransactionType": "Renewal/Expansion",
     "StartingRentPSF": 11.75,
     "EstimatedStartingRentTodayPSF": 10.76,
-    "NetEffectiveRentPSF": 12.69,
+    "NetEffectiveRentPSF": 10.66,
     "RentType": "NNN",
     "RentEscalation": "3.50% per year",
     "FreeRentMonths": 1,
@@ -35264,7 +38667,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.6810157,
     "Longitude": -75.35571,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 12.69,
+    "CalculatedNERPSF": 10.66,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 73,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01447",
@@ -35293,7 +38702,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 8.5,
     "EstimatedStartingRentTodayPSF": 7.65,
-    "NetEffectiveRentPSF": 9.71,
+    "NetEffectiveRentPSF": 7.06,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 6,
@@ -35313,7 +38722,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.2287275,
     "Longitude": -77.0720332,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 9.71,
+    "CalculatedNERPSF": 7.06,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 120,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01448",
@@ -35343,7 +38758,7 @@ const COMPS = [
     "TransactionType": "Relet",
     "StartingRentPSF": 12.65,
     "EstimatedStartingRentTodayPSF": 15.37,
-    "NetEffectiveRentPSF": 14.56,
+    "NetEffectiveRentPSF": 11.67,
     "RentType": "NNN",
     "RentEscalation": "$12.65/6m, $13.12/1y,",
     "FreeRentMonths": 0,
@@ -35361,7 +38776,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.1788489,
     "Longitude": -74.730266,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.56,
+    "CalculatedNERPSF": 11.67,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 81,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01449",
@@ -35391,7 +38812,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 9.65,
     "EstimatedStartingRentTodayPSF": 9.43,
-    "NetEffectiveRentPSF": 10.4,
+    "NetEffectiveRentPSF": 8.95,
     "RentType": "NNN",
     "RentEscalation": "3.75% per year",
     "FreeRentMonths": 0,
@@ -35406,7 +38827,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5198136,
     "Longitude": -75.9673607,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.4,
+    "CalculatedNERPSF": 8.95,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01450",
@@ -35436,7 +38863,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 7.85,
     "EstimatedStartingRentTodayPSF": 8.36,
-    "NetEffectiveRentPSF": 8.28,
+    "NetEffectiveRentPSF": 6.84,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 3,
@@ -35453,7 +38880,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0645789,
     "Longitude": -76.7549947,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 8.28,
+    "CalculatedNERPSF": 6.84,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 68,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01455",
@@ -35482,7 +38915,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 9.3,
     "EstimatedStartingRentTodayPSF": 8.56,
-    "NetEffectiveRentPSF": 10.34,
+    "NetEffectiveRentPSF": 8.57,
     "RentType": "NNN",
     "RentEscalation": "$10.34 (Annual)",
     "BuildingClass": "B",
@@ -35498,7 +38931,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 39.7786032,
     "Longitude": -75.376889,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 10.34,
+    "CalculatedNERPSF": 8.57,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 85,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01456",
@@ -35528,7 +38967,7 @@ const COMPS = [
     "TransactionType": "Renewal",
     "StartingRentPSF": 10.66,
     "EstimatedStartingRentTodayPSF": 10.17,
-    "NetEffectiveRentPSF": 11.32,
+    "NetEffectiveRentPSF": 9.88,
     "RentType": "NNN",
     "RentEscalation": "3.00% per year",
     "FreeRentMonths": 0,
@@ -35546,7 +38985,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.5201754,
     "Longitude": -75.6144945,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 11.32,
+    "CalculatedNERPSF": 9.88,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 61,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01457",
@@ -35576,7 +39021,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 15.5,
     "EstimatedStartingRentTodayPSF": 15.27,
-    "NetEffectiveRentPSF": 17.2,
+    "NetEffectiveRentPSF": 13.92,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -35595,7 +39040,13 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0223442,
     "Longitude": -75.0311826,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 17.2,
+    "CalculatedNERPSF": 13.92,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 84,
+    "LeaseTermInferred": true
   },
   {
     "CompEventID": "COMP-01459",
@@ -35625,7 +39076,7 @@ const COMPS = [
     "TransactionType": "New Lease",
     "StartingRentPSF": 13.65,
     "EstimatedStartingRentTodayPSF": 12.26,
-    "NetEffectiveRentPSF": 14.36,
+    "NetEffectiveRentPSF": 12.18,
     "RentType": "NNN",
     "RentEscalation": "4.00% per year",
     "FreeRentMonths": 0,
@@ -35644,6 +39095,12 @@ const COMPS = [
     "BuildingProfileEnrichment": true,
     "Latitude": 40.0456371,
     "Longitude": -74.8247943,
-    "CoordinateConfidence": "Matched master building coordinate"
+    "CoordinateConfidence": "Matched master building coordinate",
+    "OriginalNetEffectiveRentPSF": 14.36,
+    "CalculatedNERPSF": 12.18,
+    "NERCalcSource": "Template-derived dashboard calculation",
+    "NERCalculationNotes": "Calculated from NER template logic: starting rent, escalation, free rent, TI, 8% discount rate, 6% commission, NNN/no OPEX deduction Lease term inferred from available dates.",
+    "LeaseTermMonths": 60,
+    "LeaseTermInferred": true
   }
 ];
