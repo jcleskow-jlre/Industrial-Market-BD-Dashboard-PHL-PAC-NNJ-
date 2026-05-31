@@ -1,12 +1,11 @@
-# v65 Market AI summary layout QA
+# v66 lease-event landlord card + mobile attribution fix
 
 Single-file GitHub package plus responsive splash images.
 
-Updates:
-- Refines the top Market AI summary card layout across desktop, iPad and mobile.
-- Prevents rent/vacancy/comp rent numbers from colliding on iPad/tablet widths.
-- Keeps the three core market summary cards and all existing dashboard functionality.
-- No data changes from v64.
+Updates from v65:
+- Adds Landlord to mobile lease-event cards using matched-building fallback logic.
+- Hides Leaflet attribution on mobile so it does not appear over the filter drawer.
+- No data changes.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
