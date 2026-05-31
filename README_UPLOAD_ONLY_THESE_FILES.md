@@ -1,18 +1,11 @@
-# v53 Market AI NER metric cleanup
+# v54 dropdown option readability fix
 
 Single-file GitHub package.
 
 Updates:
-- Removed the confusing “Starting rent vs. NER spread” metric from Market AI.
-- Replaced it with “Average NER / PSF” in:
-  - Market-wide annualized concessions
-  - Submarket-level concession analysis
-- Kept the more defensible apples-to-apples concession metrics:
-  - Free rent / lease year
-  - TI / PSF / year
-  - Total concession / PSF / year
-  - Average NER / PSF
-- No data count changes from v52.
+- Fixes desktop dropdown option lists showing white/unreadable text/background.
+- Applies dark option styling to sidebar filters and mobile sort dropdown.
+- No data or layout changes from v53.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
