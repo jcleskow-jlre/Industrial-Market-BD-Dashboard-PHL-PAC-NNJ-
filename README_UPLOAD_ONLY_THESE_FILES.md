@@ -1,14 +1,12 @@
-# v64 Market AI top summary update
+# v65 Market AI summary layout QA
 
 Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Replaces the combined top Market AI metrics with three clear core-market summary cards.
-- Each Market AI summary card now shows:
-  - Savills Q1 2026 asking rent
-  - Vacancy
-  - Average matched comp rent
-- Keeps the rest of the Market AI section, annualized concessions, landlord fallback and active leases filter intact.
+- Refines the top Market AI summary card layout across desktop, iPad and mobile.
+- Prevents rent/vacancy/comp rent numbers from colliding on iPad/tablet widths.
+- Keeps the three core market summary cards and all existing dashboard functionality.
+- No data changes from v64.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
