@@ -1,13 +1,11 @@
-# v48 mobile Market AI and comp economics clarification
+# v50 definitive mobile Market AI fix
 
 Single-file GitHub package.
 
 Updates:
-- Fixed mobile Market AI tab so it clears stale comp cards and renders the correct Market AI content.
-- Removed calculated-current-rent from mobile comp cards to avoid confusing it with NER.
-- Desktop comp table keeps escalated-rent-today as a separate sortable field.
-- Renamed calc current rent label to “Escalated rent today.”
-- Added clearer language that NER represents average lease economics, not today’s escalated rent.
+- Restores missing Market AI chart helper functions.
+- Fixes mobile Market AI tab rendering so the analysis cards display instead of stopping after the section header.
+- Keeps password gate, calculated current rent, sortable tables, mobile filters and annualized concessions intact.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
