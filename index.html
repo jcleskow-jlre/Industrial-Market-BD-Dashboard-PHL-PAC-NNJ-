@@ -10,6 +10,39 @@
   .card{text-align:center;padding:32px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.04)}
   .logo{width:70px;height:70px;margin:0 auto 18px;border-radius:10px;background:#FFDF00;color:#c90c0f;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;text-transform:lowercase}
   a{color:#FFDF00;font-weight:800}
+
+/* v43 submarket economics market AI section */
+.ai-econ-section{margin-top:18px}
+.ai-econ-market-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ai-econ-market{background:rgba(10,18,50,.55);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px}
+.ai-econ-market h4{margin:0 0 8px;font-size:1.45rem;line-height:1.1}
+.ai-econ-market p{margin:0 0 12px;color:#aeb7d1}
+.ai-econ-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.ai-econ-chip{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;color:#d8def0;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.ai-econ-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ai-econ-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:14px}
+.ai-econ-card h5{margin:0 0 4px;font-size:1.2rem}
+.ai-econ-card p{margin:0 0 12px;color:#aeb7d1;font-size:.92rem;line-height:1.35}
+.ai-econ-row{display:grid;grid-template-columns:minmax(0,110px) 1fr auto;gap:10px;align-items:center;margin-bottom:10px}
+.ai-econ-row:last-child{margin-bottom:0}
+.ai-econ-name{font-size:.92rem;color:#f1f4ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ai-econ-bar{height:12px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
+.ai-econ-bar > span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ffdf00 0%, #8ad06c 55%, #4aa7b8 100%)}
+.ai-econ-value{font-size:.92rem;font-weight:800;white-space:nowrap;color:#f8fbff}
+.ai-econ-empty{padding:8px 0;color:#aeb7d1;font-size:.95rem}
+@media (max-width: 1200px){
+  .ai-econ-market-grid{grid-template-columns:1fr}
+}
+@media (max-width: 980px){
+  .ai-econ-grid{grid-template-columns:1fr}
+}
+@media (max-width: 760px){
+  .cards .ai-econ-market-grid{grid-template-columns:1fr!important}
+  .cards .ai-econ-grid{grid-template-columns:1fr!important}
+  .cards .ai-econ-market{padding:16px!important}
+  .cards .ai-econ-card{padding:14px!important}
+}
+
 </style>
 </head>
 <body>
@@ -20,4 +53,61 @@
     <p><a href="dashboard.html">Open dashboard</a></p>
   </div>
 </body>
-</html>
+</html
+function cleanSubmarketName(raw){
+  const s=String(raw||'').trim();
+  if(!s || s==='...' || s==='Overall') return null;
+  if(s.length>38) return null;
+  if(/\b20\d{2}\b/.test(s) || /\bQ[1-4]\b/i.test(s)) return null;
+  if(/rent schedule|specialties|power control|shipbob|pattern|geodis|turn5|veho|united states of america/i.test(s)) return null;
+  return s;
+}
+function submarketEconomicsSeries(regionKey){
+  const bySub={};
+  COMPS.forEach(c=>{
+    const row=cleanCompEconomicsForCharts(c);
+    if(row.region!==regionKey) return;
+    const sub=cleanSubmarketName(c.Submarket||c.SubMarket||c.Sub_Market||c.SubmarketName);
+    if(!sub) return;
+    bySub[sub] ||= {name:sub,count:0,free:[],ti:[],ner:[]};
+    bySub[sub].count += 1;
+    if(row.free!==null) bySub[sub].free.push(row.free);
+    if(row.ti!==null) bySub[sub].ti.push(row.ti);
+    if(row.ner!==null) bySub[sub].ner.push(row.ner);
+  });
+  const valid = Object.values(bySub).filter(x=>x.count>=3).map(x=>({
+    name:x.name,
+    count:x.count,
+    free:avg(x.free),
+    ti:avg(x.ti),
+    ner:avg(x.ner)
+  })).sort((a,b)=>b.count-a.count || String(a.name).localeCompare(String(b.name)));
+  return valid.slice(0,5);
+}
+function econMetricCard(metric,title,desc,rows){
+  const cleanRows=rows.filter(x=>typeof x[metric]==='number' && !isNaN(x[metric]));
+  if(!cleanRows.length){
+    return '<div class="ai-econ-card"><h5>'+title+'</h5><p>'+desc+'</p><div class="ai-econ-empty">Insufficient clean comp economics in this market.</div></div>';
+  }
+  const max=Math.max(...cleanRows.map(x=>x[metric]),1);
+  return '<div class="ai-econ-card"><h5>'+title+'</h5><p>'+desc+'</p>'+cleanRows.map(r=>{
+    const width=Math.max(12, (r[metric]/max)*100);
+    return '<div class="ai-econ-row"><div class="ai-econ-name">'+esc(r.name)+'</div><div class="ai-econ-bar"><span style="width:'+width+'%"></span></div><div class="ai-econ-value">'+metricFmt(metric, r[metric])+'</div></div>';
+  }).join('')+'</div>';
+}
+function submarketEconomicsCard(regionKey,d){
+  const rows=submarketEconomicsSeries(regionKey);
+  const visibleMetrics=['free','ti','ner'].map(m=>rows.filter(x=>typeof x[m]==='number' && !isNaN(x[m])).length);
+  return '<div class="ai-econ-market"><h4>'+esc(d.title)+'</h4><p>Matched Savills comp-economics read by submarket. Graphics summarize the average free-rent package, TI allowance and NER across the submarkets with the most clean comp evidence.</p><div class="ai-econ-meta"><span class="ai-econ-chip">'+fmt(rows.length)+' visible submarkets</span><span class="ai-econ-chip">'+fmt((d.database&&d.database.matched_comps)||0)+' matched comps</span></div><div class="ai-econ-grid">'+
+    econMetricCard('free','Free rent','Average free-rent package by submarket.',rows)+
+    econMetricCard('ti','TI / PSF','Average tenant-improvement allowance by submarket.',rows)+
+    econMetricCard('ner','NER','Average net effective rent by submarket.',rows)+
+  '</div></div>';
+}
+function renderSubmarketEconomics(){
+  const data=marketInsightData();
+  const keys=['NNJ','PA I-81/78','PHL/SNJ'];
+  return '<div class="ai-panel ai-econ-section"><h3>Submarket concessions and NER analysis</h3><p>Average free rent, TI / PSF and NER by submarket using matched Savills comp records with clean economics fields only. This sits alongside Savills research, which remains the core market-rent benchmark.</p><div class="ai-econ-market-grid">'+keys.map(k=>data[k]?submarketEconomicsCard(k,data[k]):'').join('')+'</div></div>';
+}
+
+>

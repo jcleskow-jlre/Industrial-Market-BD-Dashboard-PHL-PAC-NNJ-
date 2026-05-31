@@ -1,15 +1,16 @@
-# v41 comp evidence table QA fix
+# v43 Market AI submarket comp-economics expansion
 
 Single-file GitHub package.
 
 Updates:
-- Removed long rent escalation/comment-style fields from the main Comp evidence table.
-- Cleaned comp economics display logic so raw shifted values do not fall back into Free rent.
-- Suppressed suspect free-rent values from visible table/cards while preserving them in RawFreeRentField.
-- Confirmed Behr Paints and GEODIS suspect free-rent values are suppressed.
-- Sortable table headers preserved.
-
-Suppressed suspect raw free-rent fields: 6
+- Added a new Market AI section: **Submarket concessions and NER analysis**
+- For each of the 3 core markets, the dashboard now shows submarket-level bar graphics for:
+  - Free rent
+  - TI / PSF
+  - NER
+- Uses matched Savills comp records with clean economics fields only.
+- Keeps Savills research as the core market-rent benchmark.
+- Preserves existing mobile Market AI rendering from v42.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
