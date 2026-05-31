@@ -1,12 +1,12 @@
-# v62 All active leases filter
+# v63 landlord fallback display fix
 
 Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Adds “All active leases” to the Expiration Window filter.
-- Active lease logic includes lease events/comps with expiration dates today or later.
-- Existing expiration window filters remain unchanged.
-- Preserves laptop density, mobile density, header wrap, password gate, splash images, mobile filters/sort, and desktop sortable tables.
+- Adds matched-building landlord fallback display logic.
+- If a lease event or comp record landlord is blank, dashboard now falls back to matched building owner/landlord fields.
+- Applies to record details, mobile comp cards, table-derived landlord fields and email prompt context.
+- No data structure changes from v62.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
