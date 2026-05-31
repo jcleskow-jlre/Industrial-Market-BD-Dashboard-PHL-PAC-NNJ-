@@ -1,11 +1,12 @@
-# v54 dropdown option readability fix
+# v55 intro splash
 
 Single-file GitHub package.
 
 Updates:
-- Fixes desktop dropdown option lists showing white/unreadable text/background.
-- Applies dark option styling to sidebar filters and mobile sort dropdown.
-- No data or layout changes from v53.
+- Adds a polished Savills Industrial Market Intelligence landing splash.
+- Splash appears for approximately 3 seconds on every page refresh.
+- Works on desktop, iPad and mobile.
+- Keeps the existing password gate and dashboard behavior intact.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
