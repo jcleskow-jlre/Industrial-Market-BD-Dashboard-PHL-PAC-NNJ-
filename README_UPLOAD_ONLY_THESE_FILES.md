@@ -1,12 +1,12 @@
-# v60 laptop density pass
+# v62 All active leases filter
 
 Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Makes the desktop/laptop dashboard less zoomed-in at 100% browser zoom.
-- Reduces header height, title size, sidebar width, KPI card height and map height.
-- Improves fit for smaller laptop screens while preserving mobile/iPad behavior.
-- Keeps the simple responsive image splash.
+- Adds “All active leases” to the Expiration Window filter.
+- Active lease logic includes lease events/comps with expiration dates today or later.
+- Existing expiration window filters remain unchanged.
+- Preserves laptop density, mobile density, header wrap, password gate, splash images, mobile filters/sort, and desktop sortable tables.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
