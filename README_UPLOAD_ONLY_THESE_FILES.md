@@ -1,17 +1,13 @@
-# v56 rendering-style intro splash
+# v58 mobile splash fix
 
 Single-file GitHub package.
 
 Updates:
-- Reworked the 3-second splash to more closely match the original premium rendering:
-  - dark satellite / network-map feel
-  - Savills Industrial Market Intelligence brand block
-  - PHI-PAC-NNJ hero headline
-  - KPI intelligence cards
-  - right-side welcome/loading panel
-  - bottom feature strip
-- Works on desktop, iPad and mobile.
+- Fixes the mobile intro splash layout.
+- Mobile now uses a clean Savills loading card instead of the desktop split-panel hero.
+- Desktop/iPad splash remains cinematic.
 - Password gate and dashboard behavior remain intact.
+- No data changes from v57.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
