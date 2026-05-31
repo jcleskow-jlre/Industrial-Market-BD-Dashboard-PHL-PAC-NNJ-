@@ -1,11 +1,18 @@
-# v50 definitive mobile Market AI fix
+# v53 Market AI NER metric cleanup
 
 Single-file GitHub package.
 
 Updates:
-- Restores missing Market AI chart helper functions.
-- Fixes mobile Market AI tab rendering so the analysis cards display instead of stopping after the section header.
-- Keeps password gate, calculated current rent, sortable tables, mobile filters and annualized concessions intact.
+- Removed the confusing “Starting rent vs. NER spread” metric from Market AI.
+- Replaced it with “Average NER / PSF” in:
+  - Market-wide annualized concessions
+  - Submarket-level concession analysis
+- Kept the more defensible apples-to-apples concession metrics:
+  - Free rent / lease year
+  - TI / PSF / year
+  - Total concession / PSF / year
+  - Average NER / PSF
+- No data count changes from v52.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
