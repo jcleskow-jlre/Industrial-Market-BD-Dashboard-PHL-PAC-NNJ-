@@ -1,12 +1,17 @@
-# v55 intro splash
+# v56 rendering-style intro splash
 
 Single-file GitHub package.
 
 Updates:
-- Adds a polished Savills Industrial Market Intelligence landing splash.
-- Splash appears for approximately 3 seconds on every page refresh.
+- Reworked the 3-second splash to more closely match the original premium rendering:
+  - dark satellite / network-map feel
+  - Savills Industrial Market Intelligence brand block
+  - PHI-PAC-NNJ hero headline
+  - KPI intelligence cards
+  - right-side welcome/loading panel
+  - bottom feature strip
 - Works on desktop, iPad and mobile.
-- Keeps the existing password gate and dashboard behavior intact.
+- Password gate and dashboard behavior remain intact.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
