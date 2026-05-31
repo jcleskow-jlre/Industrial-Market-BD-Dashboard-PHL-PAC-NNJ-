@@ -1,16 +1,17 @@
-# v43 Market AI submarket comp-economics expansion
+# v44 Annualized concession analytics
 
 Single-file GitHub package.
 
 Updates:
-- Added a new Market AI section: **Submarket concessions and NER analysis**
-- For each of the 3 core markets, the dashboard now shows submarket-level bar graphics for:
-  - Free rent
-  - TI / PSF
-  - NER
-- Uses matched Savills comp records with clean economics fields only.
-- Keeps Savills research as the core market-rent benchmark.
-- Preserves existing mobile Market AI rendering from v42.
+- Market AI concessions now use annualized apples-to-apples metrics:
+  - Free rent months per lease year
+  - TI / PSF / year of lease term
+  - Total concession value / PSF / year
+  - Starting rent vs. NER spread
+- Added submarket-level analysis for each of the 3 core markets.
+- Updated market-wide concession bar cards to use annualized metrics.
+- Keeps raw free rent and raw TI in the comp evidence table, but uses annualized metrics in Market AI analysis.
+- Savills research remains the core market-rent benchmark.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
