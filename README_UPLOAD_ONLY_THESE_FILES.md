@@ -1,16 +1,17 @@
-# v58 mobile splash fix
+# v60 laptop density pass
 
-Single-file GitHub package.
+Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Fixes the mobile intro splash layout.
-- Mobile now uses a clean Savills loading card instead of the desktop split-panel hero.
-- Desktop/iPad splash remains cinematic.
-- Password gate and dashboard behavior remain intact.
-- No data changes from v57.
+- Makes the desktop/laptop dashboard less zoomed-in at 100% browser zoom.
+- Reduces header height, title size, sidebar width, KPI card height and map height.
+- Improves fit for smaller laptop screens while preserving mobile/iPad behavior.
+- Keeps the simple responsive image splash.
 
-Upload these four files into `/Claude-Dashboard/`:
+Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
 - index.html
 - .nojekyll
 - README_UPLOAD_ONLY_THESE_FILES.md
+- splash-desktop.png
+- splash-mobile.png
