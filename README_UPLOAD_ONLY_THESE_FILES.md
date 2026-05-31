@@ -1,13 +1,13 @@
-# v46 calculated current rent
+# v48 mobile Market AI and comp economics clarification
 
 Single-file GitHub package.
 
 Updates:
-- Adds best-effort calculated current rent for comps and lease events.
-- Uses commencement date, starting rent, lease expiration, and readable rent escalations.
-- Supports readable rent schedules, annual percent bumps and annual dollar bumps.
-- Leaves unclear formats as starting rent instead of inventing complex economics.
-- Expired leases return blank for calculated current rent.
+- Fixed mobile Market AI tab so it clears stale comp cards and renders the correct Market AI content.
+- Removed calculated-current-rent from mobile comp cards to avoid confusing it with NER.
+- Desktop comp table keeps escalated-rent-today as a separate sortable field.
+- Renamed calc current rent label to “Escalated rent today.”
+- Added clearer language that NER represents average lease economics, not today’s escalated rent.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
