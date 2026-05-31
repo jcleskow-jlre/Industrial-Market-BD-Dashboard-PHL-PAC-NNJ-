@@ -1,13 +1,13 @@
-# v45 Mobile filters, sorting and client-facing cleanup
+# v46 calculated current rent
 
 Single-file GitHub package.
 
 Updates:
-- Added mobile filter drawer access for the same filters used on desktop.
-- Added mobile sort controls for the active view.
-- Renamed “Comp evidence” to “Comps.”
-- Removed internal/data-source explanatory language from the client-facing interface.
-- Preserved sortable desktop table headers and all Market AI analytics.
+- Adds best-effort calculated current rent for comps and lease events.
+- Uses commencement date, starting rent, lease expiration, and readable rent escalations.
+- Supports readable rent schedules, annual percent bumps and annual dollar bumps.
+- Leaves unclear formats as starting rent instead of inventing complex economics.
+- Expired leases return blank for calculated current rent.
 
 Upload these four files into `/Claude-Dashboard/`:
 - dashboard.html
