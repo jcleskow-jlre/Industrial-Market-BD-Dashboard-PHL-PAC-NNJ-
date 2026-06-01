@@ -1,18 +1,18 @@
-# v72 Comp table filters and formatting cleanup
+# v74 Top KPI leverage gauge update
 
 Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Reordered comp table columns to:
-  Street Address, City, State, Square Feet, Commenced, Expires, Starting Rent, Annual Escalation, Free Rent, TI, NER.
-- Removed Tenant, Rent Type, Executed Date, Term, Transaction Type and Landlord columns from the comp table.
-- Square footage now shows full numbers rather than KSF.
-- Annual Escalation no longer says “annually”; values display as % or PSF/YR.
-- Added comp table filters for:
-  - Submarket
-  - Sublease
-  - Size range
-- Preserved sortable table headers.
+- Top KPI boxes now show:
+  1. BD lease events
+  2. Total inventory in MSF, with building count below
+  3. Comps in database
+  4. Landlord leverage score gauge
+- Gauge runs 1-100:
+  - 1 = strongest tenant leverage / green
+  - 100 = strongest landlord leverage / red
+- Score considers vacancy, availability, direct vacancy and recent comp rent vs. Savills research asking-rent benchmarks.
+- No underlying data changes from v73.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
