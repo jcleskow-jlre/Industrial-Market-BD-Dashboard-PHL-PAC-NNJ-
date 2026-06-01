@@ -1,14 +1,13 @@
-# v78 Building owner and comp submarket display cleanup
+# v81 Email prompt update
 
 Single-file GitHub package plus responsive splash images.
 
-Updates from v77:
-- Building inventory table now uses an explicit OwnerDisplay field so owner/landlord names appear reliably.
-- OwnerDisplay is populated from building owner fields, then developer/leasing fallback where needed.
-- Comp table now uses a cleaned CompSubmarketDisplay field.
-- Bad shifted comp submarket artifacts are replaced with the matched building submarket where available.
-- Comp submarket filter now uses the cleaned submarket values.
-- No record counts changed.
+Updates from v80:
+- Rewrote the dashboard email prompt system for both copied email versions.
+- Version 1 now follows a concise captive-tenant / credible-competition CTA structure.
+- Version 2 now follows a longer strategic due-diligence structure.
+- Prompt context still pulls tenant, address, lease expiration, SF, submarket/corridor, landlord/owner, rent position, market context, building data, and same-building comps.
+- The same prompt logic is used from desktop, iPad, and mobile because all copy buttons call the shared copyPrompt() function.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
