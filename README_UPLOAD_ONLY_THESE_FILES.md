@@ -1,17 +1,22 @@
-# v82 Short email prompt refinement
+# v83 Email prompts and owner display fix
 
 Single-file GitHub package plus responsive splash images.
 
-Update from v81:
-- Refined the Version 1 / short CTA email prompt to generate emails more closely matching the preferred structure:
-  - recent large industrial tenant proof point
+Updates:
+- Revised the shared email prompt system based on the latest Version 1 and Version 2 example emails.
+- Version 1 now follows the concise renewal-leverage model with:
+  - renewal window trigger
+  - captive-tenant risk
+  - recent large industrial tenant restructure proof point
+  - landlord belief in credible alternatives
+  - initial leverage-read CTA
+- Version 2 now follows the strategic due-diligence model with:
+  - formal negotiation timing
+  - captive-tenant framing
   - credible market competition
-  - early restructure / rent increase / concessions protection
-  - vacancy/corridor trigger
-  - tenant lease expiration and address
-  - CTA around learning more about the approach and creating leverage
-- Version 2 strategic due-diligence prompt remains unchanged.
-- The shared copyPrompt() function applies across desktop, iPad and mobile.
+  - pressure-test bullets
+  - same-building / corridor comp context
+- Also hard-fixed the building inventory owner/landlord table display using a dedicated OwnerTableDisplay field in the building records.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
