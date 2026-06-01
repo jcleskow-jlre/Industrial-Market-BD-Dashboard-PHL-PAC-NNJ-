@@ -1,13 +1,19 @@
-# v88 Profile label emphasis and owner runtime backfill
+# v89 Remove owner column from building inventory table
 
 Single-file GitHub package plus responsive splash images.
 
-Updates from v87:
-- Profile field labels are now bold and Savills yellow so each data segment is easier to scan.
-- Adds a runtime owner/landlord normalization step before the dashboard renders.
-- Owner values are copied into all expected owner/landlord fields across buildings, lease events and comps before tables are drawn.
-- Building inventory table is forced to use OwnerTableDisplay.
-- This keeps the cleaned-up profile layout from v87 and strengthens the owner table display path.
+Update from v88:
+- Removed Owner / landlord from the building inventory table.
+- Owner / landlord remains in the building profile/detail view.
+- Building inventory table now focuses on sortable inventory fields:
+  - Street Address
+  - City
+  - State
+  - RBA
+  - Direct Vacant SF
+  - Available SF
+  - Submarket
+- No data removed.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
