@@ -1,17 +1,18 @@
-# v71 Comp rent escalation standardization
+# v72 Comp table filters and formatting cleanup
 
 Single-file GitHub package plus responsive splash images.
 
 Updates:
-- Standardized comp rent escalation values for table and calculation use.
-- Visible comp table now shows the normalized Annual Escalation field instead of raw escalation text.
-- Parsed formats include:
-  - Annual percent bumps, e.g. 3.50% annually
-  - Annual dollar/PSF bumps, e.g. $0.10 PSF annually
-  - Step rent schedules, normalized to avg. annual PSF step
-- Shifted/bad values such as TI, rent type values, or annual rent amounts are suppressed from the visible escalation field.
-- Raw rent escalation text is retained only behind the scenes for current-rent calculation where needed.
-- No building, lease-event, or comp count changes.
+- Reordered comp table columns to:
+  Street Address, City, State, Square Feet, Commenced, Expires, Starting Rent, Annual Escalation, Free Rent, TI, NER.
+- Removed Tenant, Rent Type, Executed Date, Term, Transaction Type and Landlord columns from the comp table.
+- Square footage now shows full numbers rather than KSF.
+- Annual Escalation no longer says “annually”; values display as % or PSF/YR.
+- Added comp table filters for:
+  - Submarket
+  - Sublease
+  - Size range
+- Preserved sortable table headers.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
