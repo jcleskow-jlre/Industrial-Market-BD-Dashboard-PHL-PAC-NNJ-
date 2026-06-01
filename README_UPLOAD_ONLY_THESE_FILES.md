@@ -1,13 +1,17 @@
-# v81 Email prompt update
+# v82 Short email prompt refinement
 
 Single-file GitHub package plus responsive splash images.
 
-Updates from v80:
-- Rewrote the dashboard email prompt system for both copied email versions.
-- Version 1 now follows a concise captive-tenant / credible-competition CTA structure.
-- Version 2 now follows a longer strategic due-diligence structure.
-- Prompt context still pulls tenant, address, lease expiration, SF, submarket/corridor, landlord/owner, rent position, market context, building data, and same-building comps.
-- The same prompt logic is used from desktop, iPad, and mobile because all copy buttons call the shared copyPrompt() function.
+Update from v81:
+- Refined the Version 1 / short CTA email prompt to generate emails more closely matching the preferred structure:
+  - recent large industrial tenant proof point
+  - credible market competition
+  - early restructure / rent increase / concessions protection
+  - vacancy/corridor trigger
+  - tenant lease expiration and address
+  - CTA around learning more about the approach and creating leverage
+- Version 2 strategic due-diligence prompt remains unchanged.
+- The shared copyPrompt() function applies across desktop, iPad and mobile.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
