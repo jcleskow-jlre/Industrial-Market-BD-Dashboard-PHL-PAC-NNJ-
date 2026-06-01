@@ -1,12 +1,14 @@
-# v77 Comp submarket filter cleanup
+# v78 Building owner and comp submarket display cleanup
 
 Single-file GitHub package plus responsive splash images.
 
-Updates from v76:
-- Cleans the comp-table Submarket filter dropdown.
-- Excludes shifted/bad values that were appearing as submarkets, including tenant/company/date artifacts.
-- Does not remove or change underlying comp records.
-- No data count changes.
+Updates from v77:
+- Building inventory table now uses an explicit OwnerDisplay field so owner/landlord names appear reliably.
+- OwnerDisplay is populated from building owner fields, then developer/leasing fallback where needed.
+- Comp table now uses a cleaned CompSubmarketDisplay field.
+- Bad shifted comp submarket artifacts are replaced with the matched building submarket where available.
+- Comp submarket filter now uses the cleaned submarket values.
+- No record counts changed.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
