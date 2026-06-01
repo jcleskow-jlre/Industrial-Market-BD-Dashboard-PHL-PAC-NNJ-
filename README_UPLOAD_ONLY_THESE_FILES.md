@@ -1,18 +1,15 @@
-# v74 Top KPI leverage gauge update
+# v75 Gauge, comp filters and map overlay cleanup
 
 Single-file GitHub package plus responsive splash images.
 
-Updates:
-- Top KPI boxes now show:
-  1. BD lease events
-  2. Total inventory in MSF, with building count below
-  3. Comps in database
-  4. Landlord leverage score gauge
-- Gauge runs 1-100:
-  - 1 = strongest tenant leverage / green
-  - 100 = strongest landlord leverage / red
-- Score considers vacancy, availability, direct vacancy and recent comp rent vs. Savills research asking-rent benchmarks.
-- No underlying data changes from v73.
+Updates from v74:
+- Fixed leverage gauge needle math so the needle matches the score.
+- Removed the map overlay stat boxes.
+- Added comp filters to mobile, not just desktop.
+- Added Submarket after State in the comp table.
+- Added Lease Type before Square Feet in the comp table.
+- Removed the confusing Direct / non-sublease lease-type option.
+- Kept sortable comp table headers and standardized escalation formatting.
 
 Upload all files into `/Claude-Dashboard/`:
 - dashboard.html
