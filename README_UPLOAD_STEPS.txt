@@ -1,20 +1,19 @@
-# GitHub upload instructions
+V93 upload package - fixed comp table display/search
 
-Upload the CONTENTS of this folder into the GitHub repository folder used for the dashboard. Do not upload the zip file itself.
+Upload the CONTENTS of this folder to GitHub:
+- .nojekyll
+- index.html
+- dashboard.html
+- savills-logo.png
+- favicon.png
+- data/buildings.js
+- data/bd_opportunities.js
+- data/comps.js
+- data/market_rents.js
 
-Core files to upload/replace:
-- `index.html`
-- `dashboard.html`
-- `.nojekyll`
-- `data/buildings.js`
-- `data/bd_opportunities.js`
-- `data/comps.js`
-- `data/market_rents.js`
-- `savills-logo.png`
-- `splash-desktop.png`
-- `splash-mobile.png`
-- `favicon.png`
-
-Optional QA/source-control files are included for review and can be uploaded too.
-
-This version externalizes the large datasets into the `/data/` folder to avoid a heavy single HTML file and browser crashes during GitHub Pages loading.
+Fixes in this version:
+- Tenant is now the first column in the Comps table.
+- Comps are initially sorted to show records with rent/NER economics first, then by execution/commencement date.
+- NER display uses CalculatedNERPSF first, then source NER as fallback.
+- Comp table count uses calculated NER logic.
+- Comp search no longer re-renders after every keystroke in a way that forces you to re-click the search box.
