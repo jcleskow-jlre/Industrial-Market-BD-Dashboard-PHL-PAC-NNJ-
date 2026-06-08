@@ -1,0 +1,21 @@
+{
+  "package": "v95 fresh GitHub upload",
+  "source": "cleaned consolidated comp workbook data from prior rebuild, regenerated into data/comps.js",
+  "total_comp_records_after_exact_dedupe": 1409,
+  "exact_duplicate_rows_removed": 0,
+  "comps_with_starting_rent": 1409,
+  "comps_with_NER": 1385,
+  "comps_matched_to_building_id": 778,
+  "required_live_files": [
+    ".nojekyll",
+    "index.html",
+    "dashboard.html",
+    "favicon.png",
+    "savills-logo.png",
+    "data/buildings.js",
+    "data/bd_opportunities.js",
+    "data/comps.js",
+    "data/market_rents.js"
+  ],
+  "notes": "No COMPS_REBUILD_QA PDF/JSON is required for dashboard operation. Comp data now loads from data/comps.js only with v95 cache-busting."
+}

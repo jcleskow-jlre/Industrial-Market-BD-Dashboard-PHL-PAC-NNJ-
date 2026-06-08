@@ -1,11 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Industrial Market Intelligence & BD Dashboard (PHL-PAC-NNJ)</title>
-<meta http-equiv="refresh" content="0; url=dashboard.html">
-<style>html,body{margin:0;height:100%;background:#08101d;color:#fff;font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center}.card{text-align:center;padding:32px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.04)}.logo{width:70px;height:70px;margin:0 auto 18px;border-radius:10px;background:#FFDF00;color:#c90c0f;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;text-transform:lowercase}a{color:#FFDF00;font-weight:800}</style>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+
+*{box-sizing:border-box}
+:root{
+  --yellow:#FFDF00;
+  --yellow-2:#f2c300;
+  --navy:#0c1020;
+  --navy-2:#12182a;
+  --navy-3:#171f35;
+  --panel:#0f1528;
+  --panel-2:#111a30;
+  --panel-3:#18223b;
+  --line:rgba(255,255,255,.09);
+  --line-soft:rgba(255,255,255,.06);
+  --text:#f4f7ff;
+  --muted:#97a4bd;
+  --muted-2:#6f7b92;
+  --bg:#08101d;
+  --bg-2:#0d1526;
+  --red:#d94a4a;
+  --green:#2ec27e;
+  --shadow:0 18px 42px rgba(0,0,0,.28);
+}
+html,body{margin:0;padding:0;background:
+  radial-gradient(circle at 20% -10%, rgba(255,223,0,.12), transparent 28%),
+  radial-gradient(circle at 85% 0%, rgba(35,130,145,.11), transparent 30%),
+  linear-gradient(180deg, #08101d 0%, #0b1222 38%, #09101d 100%);
+  color:var(--text); font-family:Arial,'Segoe UI',sans-serif; min-height:100%;}
+a{color:inherit}
+button,input,select{font:inherit}
+.app{min-height:100vh}
+.topbar{position:sticky;top:0;z-index:800;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,11,20,.84);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.brand-cluster{display:flex;align-items:center;gap:18px;min-width:0}
+.logo{width:62px;height:62px;display:block;object-fit:contain;flex:0 0 auto;border-radius:10px;box-shadow:0 10px 24px rgba(255,223,0,.14)}.logo-wrap{width:62px;height:62px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.brand-copy{min-width:0}
+.kicker{font-size:12px;font-weight:800;color:var(--yellow);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:3px}
+.title{font-size:34px;line-height:1.05;font-weight:900;letter-spacing:-.7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.subtitle{display:none}
+.topnav{display:flex;gap:8px;align-items:center;justify-content:flex-start;min-width:0;overflow:auto;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.nav-link{border:1px solid transparent;background:transparent;color:var(--muted);padding:10px 12px;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer;white-space:nowrap;transition:.2s}
+.nav-link:hover{color:#fff;border-color:var(--line)}
+.nav-link.active{background:rgba(255,223,0,.12);color:var(--yellow);border-color:rgba(255,223,0,.28)}
+.toolbar{display:flex;align-items:center;gap:12px}
+.toolbar-search{display:flex;align-items:center;gap:10px;padding:0 14px;height:48px;min-width:360px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 0 rgba(255,255,255,.02)}
+.toolbar-search span{color:var(--muted);font-size:15px}
+.toolbar-search input{width:100%;background:transparent;border:0;outline:none;color:#fff;font-size:14px}
+.toolbar-search input::placeholder{color:#8090ab}
+.status-chip{padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#d5dded;font-size:12px;font-weight:800;white-space:nowrap}
+.filter-btn{background:var(--yellow);color:#111;border:0;border-radius:14px;padding:12px 18px;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(255,223,0,.14)}
+.drawer-backdrop{display:none}
+.wrap{display:grid;grid-template-columns:280px minmax(0,1fr);gap:16px;padding:16px;max-width:1780px;margin:0 auto}
+.filters{background:linear-gradient(180deg, rgba(19,27,49,.97), rgba(10,16,31,.98));border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);height:max-content;position:sticky;top:95px}
+.sidebar-header{padding:4px 2px 16px;border-bottom:1px solid var(--line-soft);margin-bottom:16px}
+.sidebar-title{font-size:14px;letter-spacing:1.8px;text-transform:uppercase;color:#eef3ff;font-weight:900;margin-bottom:8px}
+.sidebar-note{font-size:12px;line-height:1.5;color:var(--muted)}
+.sidebar-caption{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#7885a1;font-weight:800;margin-bottom:10px}
+.nav-stack{display:grid;gap:8px;margin-bottom:18px}
+.sidebar-link{display:flex;align-items:center;gap:10px;width:100%;border:1px solid transparent;background:rgba(255,255,255,.03);color:#d9e2f3;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer;text-align:left;transition:.18s}
+.sidebar-link:hover{border-color:var(--line)}
+.sidebar-link.active{background:rgba(255,223,0,.1);color:var(--yellow);border-color:rgba(255,223,0,.24)}
+.filters h3{margin:18px 0 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#93a0ba}
+.field{margin-bottom:12px}
+.field label{display:block;margin:0 0 7px;font-size:10px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;color:#90a0bb}
+.field input,.field select{width:100%;height:46px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:0 12px;font-size:14px;background:rgba(255,255,255,.04);color:#fff;outline:none}
+.field input::placeholder{color:#7f8ca6}
+.field input:focus,.field select:focus,.toolbar-search input:focus{box-shadow:0 0 0 3px rgba(255,223,0,.11)}
+.reset{width:100%;height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:12px;font-weight:900;color:#d7dfef;cursor:pointer;margin-top:4px}
+.sidebar-footer{margin-top:18px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:11px;line-height:1.45;color:#7f8ca4}
+.main{min-width:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+.kpi{position:relative;overflow:hidden;background:linear-gradient(180deg, rgba(18,24,42,.98), rgba(12,18,33,.98));border:1px solid var(--line);border-radius:20px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+.kpi:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--yellow), rgba(255,223,0,0))}
+.kpi:after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle, rgba(255,223,0,.11), transparent 66%)}
+.kpi .label{font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;color:#97a4bd;position:relative;z-index:1}
+.kpi .value{font-size:40px;font-weight:950;line-height:1.02;letter-spacing:-1px;margin-top:8px;position:relative;z-index:1}
+.kpi .sub{font-size:13px;font-weight:800;color:#7fd48f;margin-top:5px;position:relative;z-index:1}
+.kpi:nth-child(2) .sub,.kpi:nth-child(3) .sub,.kpi:nth-child(4) .sub{color:#97a4bd}
+.map-card{position:relative;background:linear-gradient(180deg, rgba(17,22,38,.97), rgba(12,18,32,.97));border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);height:560px;margin-bottom:16px}
+.map-card:before{content:'';position:absolute;left:0;right:0;top:0;height:82px;background:linear-gradient(180deg, rgba(7,11,20,.38), rgba(7,11,20,0));pointer-events:none;z-index:410}
+.map{height:100%;width:100%;background:#0e1528}
+.map-options{position:absolute;right:18px;top:18px;z-index:450}
+.map-options>button{background:var(--yellow);border:0;border-radius:999px;padding:12px 18px;font-weight:950;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer}
+.map-menu{display:none;position:absolute;right:0;top:54px;background:rgba(11,16,29,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:14px;min-width:260px;box-shadow:0 18px 42px rgba(0,0,0,.34)}
+.map-menu.open{display:block}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#dbe4f5;border-radius:999px;padding:10px 12px;font-weight:800;cursor:pointer}
+.pill.active{background:rgba(255,223,0,.15);border-color:rgba(255,223,0,.28);color:var(--yellow)}
+.map-stats{position:absolute;left:18px;right:18px;bottom:16px;z-index:440;display:flex;gap:10px;pointer-events:none}
+.map-stat{background:rgba(11,17,31,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:10px 14px;min-width:148px;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.map-stat.primary{background:rgba(255,223,0,.95);color:#111}
+.map-stat span{display:block;font-size:10px;font-weight:950;letter-spacing:1px;text-transform:uppercase;color:#8f9bb2}
+.map-stat.primary span{color:#30313a}
+.map-stat strong{font-size:24px;font-weight:950;letter-spacing:-.4px}
+.mobile-intro{display:none}
+.data-card{background:linear-gradient(180deg, rgba(18,24,42,.98), rgba(12,18,33,.98));border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:16px;border-bottom:1px solid var(--line)}
+.tab{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);color:#dbe4f5;border-radius:999px;padding:13px 14px;font-weight:900;font-size:15px;cursor:pointer;transition:.18s}
+.tab.active{background:var(--yellow);border-color:var(--yellow);color:#121212}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.section-head h2{margin:0;font-size:36px;letter-spacing:-.8px}
+.section-head p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.table-wrap{overflow:auto;max-height:620px}
+.table{width:100%;border-collapse:collapse;font-size:12px}
+.table th{position:sticky;top:0;background:#0f172b;text-align:left;padding:9px 7px;border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#8f9db5;z-index:2}
+.table td{padding:8px 7px;border-bottom:1px solid rgba(255,255,255,.05);white-space:nowrap;color:#ecf2ff}
+.table td.tight{max-width:230px;overflow:hidden;text-overflow:ellipsis}
+.table td.num{text-align:right;font-variant-numeric:tabular-nums}
+.table tr{cursor:pointer;transition:.14s}
+.table tr:hover{background:rgba(255,223,0,.08)}
+.table td.positive,.kv .v.positive,.detail-value.positive{color:var(--green)!important}
+.table td.negative,.kv .v.negative,.detail-value.negative{color:var(--red)!important}
+
+.data-qa-banner{margin:14px 18px 0;padding:12px 14px;border:1px solid rgba(255,223,0,.28);background:rgba(255,223,0,.08);border-radius:14px;color:#dfe8f8;font-size:12px;line-height:1.45}
+.data-qa-banner strong{color:#FFDF00}
+.data-qa-banner .bad{color:#d94a4a;font-weight:900}
+.data-qa-banner .good{color:#2ec27e;font-weight:900}
+
+.cards{display:none}
+.record{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg, rgba(17,24,40,.98), rgba(12,18,33,.98));padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.20)}
+.record-title{font-size:20px;font-weight:950;line-height:1.12;letter-spacing:-.3px}
+.record-sub{margin-top:6px;color:#95a2bb;font-size:15px;line-height:1.3}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.kv .k{font-size:10px;font-weight:950;color:#7f8ca5;text-transform:uppercase;letter-spacing:1.2px}
+.kv .v{font-size:16px;font-weight:900;color:#f3f7ff;margin-top:5px;word-break:break-word}
+.delta-note{font-size:11px;font-weight:800;color:#7b889f;margin-top:3px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.mini{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#ecf1ff;border-radius:999px;padding:10px 12px;font-weight:900;cursor:pointer}
+.mini.yellow{background:var(--yellow);border-color:var(--yellow);color:#111}
+.detail{position:fixed;right:0;top:0;bottom:0;width:min(620px,100vw);background:linear-gradient(180deg,#0d1325,#09111e);border-left:1px solid rgba(255,255,255,.08);z-index:1000;transform:translateX(104%);transition:.22s ease;box-shadow:-16px 0 55px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.detail.open{transform:translateX(0)}
+.detail-head{padding:20px 22px;background:linear-gradient(180deg, rgba(19,27,49,.98), rgba(13,18,34,.98));color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.detail-head button{float:right;background:var(--yellow);border:0;border-radius:999px;padding:10px 14px;font-weight:900;color:#111;cursor:pointer}
+.detail-title{font-size:30px;font-weight:950;letter-spacing:-.7px;line-height:1.05;margin-right:80px}
+.detail-sub{color:#93a2be;margin-top:6px;font-size:15px}
+.detail-body{padding:18px;overflow:auto}
+.detail-section{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);border-radius:18px;padding:16px;margin-bottom:14px}
+.detail-section h4{margin:0 0 12px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9aa9c3}
+.drawer-backdrop{display:none}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);background:#0b1428;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:12px 18px;font-weight:850;z-index:1500;transition:.2s;box-shadow:0 10px 28px rgba(0,0,0,.28)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.error{margin:16px;padding:16px;border-radius:14px;background:#2a1117;border:1px solid rgba(217,74,74,.45);color:#ffbdbd;font-weight:800}
+.leaflet-control-attribution{font-size:10px!important;color:#d7deec!important;background:rgba(10,14,23,.58)!important}
+.leaflet-container{background:#0a1221}
+.geo-label{font-family:Arial,'Segoe UI',sans-serif;color:rgba(255,255,255,.92);text-shadow:0 2px 6px rgba(0,0,0,.95);white-space:nowrap;pointer-events:none;padding:2px 7px;border-radius:999px;background:rgba(8,16,29,.32);backdrop-filter:blur(2px)}
+.geo-label.state{font-size:20px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase}
+.geo-label.county{font-size:12px;font-weight:800;letter-spacing:.8px;color:rgba(255,255,255,.72)}
+
+
+.related-comps{display:grid;gap:10px}
+.comp-row{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:14px;padding:12px}
+.comp-row-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.comp-tenant{font-size:15px;font-weight:950;color:#fff;line-height:1.2}
+.comp-date{font-size:11px;color:#91a0bb;font-weight:800;white-space:nowrap}
+.comp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.comp-mini-k{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#7f8ca5;font-weight:900}
+.comp-mini-v{font-size:12px;color:#f3f7ff;font-weight:850;margin-top:2px;word-break:break-word}
+.comp-note{font-size:12px;line-height:1.4;color:#9aa8bf;margin-top:8px}
+@media(max-width:760px){.comp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.comp-row-head{display:block}.comp-date{margin-top:4px}}
+
+.leaflet-popup-content-wrapper{background:rgba(12,18,33,.96)!important;color:#f4f7ff!important;border:1px solid rgba(255,255,255,.12);border-radius:16px!important;box-shadow:0 18px 42px rgba(0,0,0,.32)!important}
+.leaflet-popup-tip{background:rgba(12,18,33,.96)!important}
+.leaflet-popup-content{margin:14px 14px 13px!important;min-width:220px}
+.map-popup-title{font-size:15px;font-weight:950;line-height:1.15;margin-bottom:5px;color:#fff}
+.map-popup-sub{font-size:12px;color:#97a4bd;line-height:1.35;margin-bottom:10px}
+.map-popup-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.map-popup-k{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#7f8ca5;font-weight:900}
+.map-popup-v{font-size:12px;color:#f3f7ff;font-weight:850;margin-top:2px}
+.map-popup-btn{width:100%;border:0;border-radius:999px;background:#FFDF00;color:#111;padding:10px 12px;font-size:12px;font-weight:950;cursor:pointer}
+.map-popup-btn:hover{filter:brightness(1.05)}
+
+@media(min-width:901px){
+  .map-options>button{display:none}
+  .map-menu{display:block;left:18px;top:18px;right:auto;min-width:220px}
+}
+@media(max-width:1280px){
+  .topbar{grid-template-columns:auto 1fr;grid-template-areas:'brand toolbar' 'nav nav';row-gap:14px}
+  .brand-cluster{grid-area:brand}.toolbar{grid-area:toolbar;justify-content:flex-end}.topnav{grid-area:nav}
+  .toolbar-search{min-width:260px}
+}
+@media(max-width:1024px){
+  .wrap{grid-template-columns:1fr}
+  .filters{position:static;display:none}
+  .filters.open{display:block}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .title{font-size:28px}
+}
+@media(max-width:760px){
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 12px;gap:12px}
+  .brand-cluster{gap:12px;min-width:0}.logo-wrap{width:56px;height:56px}.logo{width:56px;height:56px;border-radius:8px}
+  .kicker{display:none}.title{font-size:22px;white-space:normal;line-height:1.05}.topnav,.toolbar-search,.status-chip{display:none}
+  .filter-btn{padding:13px 18px;border-radius:999px}
+  .wrap{padding:12px;gap:12px}.kpis{gap:12px;margin-bottom:12px}.kpi{padding:15px;min-height:108px;border-radius:18px}.kpi .label{font-size:11px}.kpi .value{font-size:28px}.kpi .sub{font-size:13px}
+  .map-card{height:410px;border-radius:20px;margin-bottom:10px}.map-card:before{display:none}.map-options{right:14px;top:14px}.map-options>button{display:block;font-size:17px;padding:11px 18px}.map-menu{right:-2px;left:auto;top:52px;width:min(280px,calc(100vw - 32px))}
+  .map-stats{left:12px;right:12px;bottom:12px;overflow-x:auto;scrollbar-width:none}.map-stats::-webkit-scrollbar{display:none}.map-stat{min-width:144px}.map-stat strong{font-size:22px}
+  .mobile-intro{display:block;margin:4px 2px 12px;color:#8d9ab2;font-size:15px;line-height:1.35}.data-card{border-radius:20px}.tabs{padding:14px;gap:10px}.tab{font-size:16px;padding:13px 9px}.section-head{display:block;padding:18px}.section-head h2{font-size:28px}.section-head p{font-size:16px}.table-wrap{display:none}.cards{display:grid;grid-template-columns:1fr;gap:13px;padding:14px}.record{padding:18px}.filters{display:block;position:fixed;z-index:1000;left:0;right:0;top:0;max-height:88vh;overflow:auto;border-radius:0 0 24px 24px;transform:translateY(-105%);transition:.22s ease;box-shadow:0 16px 50px rgba(0,0,0,.35)}.filters.open{transform:translateY(0)}.drawer-backdrop{display:none;position:fixed;z-index:900;inset:0;background:rgba(0,0,0,.45)}.drawer-backdrop.open{display:block}.field input,.field select{font-size:17px;height:50px}.reset{font-size:16px;height:50px}.detail{width:100vw}.meta{gap:10px}.leaflet-control-zoom{right:12px!important;left:auto!important}
+}
+
+</style>
 </head>
-<body><div class="card"><div class="logo">savills</div><h1>Industrial Market Intelligence &amp; BD Dashboard</h1><p>Loading dashboard...</p><p><a href="dashboard.html">Open dashboard</a></p></div></body>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand-cluster">
+    <div class="logo-wrap"><img class="logo" src="savills-logo.png" alt="Savills logo"></div>
+    <div class="brand-copy">
+      <div class="kicker">Industrial Advisory</div>
+      <div class="title">Industrial Market Intelligence & BD Dashboard (PHL-PAC-NNJ)</div>
+    </div>
+  </div>
+  <nav class="topnav">
+    <button class="nav-link active" data-side-tab="buildings">Building inventory</button>
+    <button class="nav-link" data-side-tab="events">Lease events</button>
+    <button class="nav-link" data-side-tab="comps">Comp evidence</button>
+    <button class="nav-link" data-side-tab="rents">Market rents</button>
+  </nav>
+  <div class="toolbar">
+    <div class="toolbar-search"><span>⌕</span><input id="quickSearch" placeholder="Search buildings, owners, tenants, deals..."></div>
+    <div class="status-chip">Savills master inventory source</div>
+    <button class="filter-btn" id="filterBtn">Filters</button>
+  </div>
+</header>
+<div class="drawer-backdrop" id="backdrop"></div>
+<div class="wrap">
+  <aside class="filters" id="filters">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Executive summary</div>
+    <div class="sidebar-note">Savills building inventory remains the master building source of truth. CoStar and comp data are used to enrich property profiles, lease comps, and lease-event intelligence.</div>
+  </div>
+  <div class="sidebar-caption">Data and inventory</div>
+  <div class="nav-stack">
+    <button class="sidebar-link active" data-side-tab="buildings">Building inventory</button>
+    <button class="sidebar-link" data-side-tab="events">Lease events</button>
+    <button class="sidebar-link" data-side-tab="comps">Comp evidence</button>
+    <button class="sidebar-link" data-side-tab="rents">Market rents</button>
+  </div>
+  <h3>Search and filters</h3>
+  <div class="field"><label>Search tenant / address</label><input id="search" placeholder="Search tenant, address, city, landlord..."></div>
+  <div class="field"><label>Dataset focus</label><select id="focus"><option value="buildings">Building inventory</option><option value="events">Lease events</option><option value="comps">Lease comps</option><option value="rents">Market rents</option></select></div>
+  <div class="field"><label>Region / focus</label><select id="region"><option value="">All regions</option></select></div>
+  <div class="field"><label>Submarket</label><select id="submarket"><option value="">All</option></select></div>
+  <div class="field"><label>Expiration window</label><select id="expiration"><option value="">All</option></select></div>
+  <div class="field"><label>BD priority</label><select id="priority"><option value="">All</option></select></div>
+  <div class="field"><label>Minimum SF</label><select id="minsf"><option value="0">All sizes</option><option value="50000">50k+ SF</option><option value="100000">100k+ SF</option><option value="200000">200k+ SF</option><option value="500000">500k+ SF</option></select></div>
+  <button class="reset" id="resetBtn">Reset filters</button>
+  <div class="sidebar-footer">Use lease events to pressure-test renewal timing, comp intelligence to benchmark economics, and the map to identify real leverage across the platform.</div>
+</aside>
+  <main class="main"><div class="kpis"><div class="kpi"><div class="label">BD lease events</div><div class="value" id="k-events">—</div><div class="sub" id="k-events-sub">—</div></div><div class="kpi"><div class="label">Inventory buildings / RBA</div><div class="value" id="k-buildings">—</div><div class="sub" id="k-rba">—</div></div><div class="kpi"><div class="label">Direct vacant SF / rate</div><div class="value" id="k-vacant">—</div><div class="sub" id="k-vac-rate">—</div></div><div class="kpi"><div class="label">Availability SF / rate</div><div class="value" id="k-avail">—</div><div class="sub" id="k-avail-rate">—</div></div></div>
+  <section class="map-card"><div class="map" id="map"></div><div class="map-options"><button id="mapOptBtn">⌄ Map options</button><div class="map-menu" id="mapMenu"><div class="field"><label>Map layer</label><div class="pill-row"><button class="pill active" data-layer="buildings">Buildings</button><button class="pill" data-layer="events">Lease events</button><button class="pill" data-layer="comps">Comps</button></div></div></div></div><div class="map-stats"><div class="map-stat primary"><span>Map view records</span><strong id="m-count">0</strong></div><div class="map-stat"><span>High priority</span><strong id="m-priority">0</strong></div><div class="map-stat"><span>0–36 mo. exp.</span><strong id="m-window">0</strong></div><div class="map-stat"><span>SF in view</span><strong id="m-sf">0</strong></div></div></section>
+  <div class="mobile-intro">Mobile view is optimized for fast exploration. Use filters and search to focus the market view.</div>
+  <section class="data-card"><div class="tabs"><button class="tab active" data-tab="buildings">Building inventory</button><button class="tab" data-tab="comps">Comp evidence file</button><button class="tab" data-tab="events">Lease events</button><button class="tab" data-tab="rents">Market rent benchmarks</button></div><div class="section-head"><h2 id="sectionTitle">Building inventory</h2><p id="sectionSub">—</p></div><div id="dataQaBanner"></div><div class="table-wrap" id="tableWrap"></div><div class="cards" id="cards"></div></section>
+  </main>
+</div>
+</div>
+<aside class="detail" id="detail"><div class="detail-head"><button id="detailClose">Close</button><div class="detail-title" id="detailTitle">Record</div><div class="detail-sub" id="detailSub"></div></div><div class="detail-body" id="detailBody"></div></aside><div class="toast" id="toast">Copied</div>
+<script src="data/buildings.js"></script><script src="data/comps.js"></script><script src="data/bd_opportunities.js"></script><script src="data/market_rents.js"></script>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id); const arr=v=>Array.isArray(v)?v:[];
+const BUILDINGS_SAFE=arr((typeof BUILDINGS!=='undefined'?BUILDINGS:window.BUILDINGS)||[]); const COMPS_SAFE=arr((typeof COMPS!=='undefined'?COMPS:window.COMPS)||[]); const EVENTS_SAFE=arr((typeof BD_OPPORTUNITIES!=='undefined'?BD_OPPORTUNITIES:window.BD_OPPORTUNITIES)||[]); const RENT_REGIONS=((((typeof MARKET_RENTS!=='undefined'?MARKET_RENTS:window.MARKET_RENTS)||{}).regions)||[]); const byId=new Map(BUILDINGS_SAFE.map(b=>[b.BuildingID,b])); let activeTab='buildings'; let mapLayer='buildings'; let current=[]; let map=null; let markers=null; let labelLayer=null; let referenceLabels=null;
+function fmt(n){n=Number(n)||0;return n.toLocaleString()} function sf(n){n=Number(n)||0;if(!n)return '—'; if(n>=1e9)return (n/1e9).toFixed(2)+' BSF'; if(n>=1e6)return (n/1e6).toFixed(n>=1e8?0:1)+' MSF'; if(n>=1000)return Math.round(n/1000)+'K SF'; return fmt(n)+' SF'} function money(n){n=Number(n);return isFinite(n)&&n>0?'$'+n.toFixed(2):'—'} function pct(n){n=Number(n)||0;return n?n.toFixed(1)+'%':'—'}
+function val(o,keys){for(const k of keys){if(o&&o[k]!==undefined&&o[k]!==null&&String(o[k]).trim()!=='')return o[k]}return ''} function num(o,keys){return Number(val(o,keys))||0}
+function compRentVal(o){return toNum(o.StartingRentPSF)||toNum(o.CompRentPSF)||toNum(o.StartingRent)||toNum(o.RentPSF)||toNum(o.Rent)}
+function compNerVal(o){return toNum(o.CalculatedNERPSF)||toNum(o.NetEffectiveRentPSF)||toNum(o.NER)||toNum(o.NetEffectiveRent)}
+function compTiVal(o){return toNum(o.TIValuePSF)||toNum(o.TIPerSF)||toNum(o.TIAllowancePSF)||toNum(o.TI)}
+function compFreeRentVal(o){return toNum(o.FreeRentMonths)||toNum(o.FreeRent)||toNum(o.AbatementMonths)}
+function sameTenant(a,b){a=String(a||'').toLowerCase().replace(/[^a-z0-9]/g,''); b=String(b||'').toLowerCase().replace(/[^a-z0-9]/g,''); return a&&b&&(a===b||a.includes(b)||b.includes(a));}
+function latestCompFor(o){
+  const addr=String(o.StreetAddress||'').toLowerCase().trim();
+  const city=String(o.City||'').toLowerCase().trim();
+  const tenant=String(o.Tenant||'').toLowerCase().trim();
+  const set=COMPS_SAFE.filter(c=>{
+    const hasRent=toNum(c.StartingRentPSF)!==null||toNum(c.NetEffectiveRentPSF)!==null||toNum(c.EstimatedStartingRentTodayPSF)!==null;
+    if(!hasRent)return false;
+    const caddr=String(c.StreetAddress||'').toLowerCase().trim();
+    const ccity=String(c.City||'').toLowerCase().trim();
+    return (o.BuildingID&&c.BuildingID===o.BuildingID)
+      || (addr&&caddr&&addr===caddr&&(!city||!ccity||city===ccity))
+      || (sameTenant(c.Tenant,o.Tenant)&&addr&&caddr&&addr===caddr);
+  });
+  set.sort((a,b)=>String(b.ExecutionDate||b.CommencementDate||'').localeCompare(String(a.ExecutionDate||a.CommencementDate||'')));
+  return set[0]||null;
+}
+function marketRentFor(o){
+  // Benchmark policy: use Savills research / Savills market benchmark data only.
+  // Do NOT use CoStar asking rents, direct asking rents, or estimated asking rents as market benchmarks.
+  let v=toNum(o.MarketBenchmarkPSF)||toNum(o.MarketRentPSF)||toNum(o.SavillsMarketRentPSF)||toNum(o.SavillsBenchmarkPSF);
+  if(v!==null&&v>0)return v;
+  const b=byId.get(o.BuildingID)||{};
+  v=toNum(b.MarketBenchmarkPSF)||toNum(b.MarketRentPSF)||toNum(b.SavillsMarketRentPSF)||toNum(b.SavillsBenchmarkPSF);
+  if(v!==null&&v>0)return v;
+  const keys=[o.Region,o.Market,o.Submarket,b.Region,b.Market,b.Submarket].filter(Boolean).map(x=>String(x).toLowerCase());
+  const r=RENT_REGIONS.find(x=>keys.includes(String(x.region||'').toLowerCase())||keys.includes(String(x.label||'').toLowerCase())||keys.includes(String(x.market||'').toLowerCase())||keys.includes(String(x.submarket||'').toLowerCase()));
+  v=r?toNum(r.overall_asking_rent||r.savills_market_rent_psf||r.market_rent_psf):null;
+  return v!==null&&v>0?v:null;
+}
+function currentRentFor(o){
+  // Current rent policy: use actual lease-event rent or actual Savills comp economics only.
+  // Do NOT use estimated asking rent.
+  let v=toNum(o.CurrentRentPSF)||toNum(o.StartingRentPSF)||toNum(o.CompRentPSF)||toNum(o.NetEffectiveRentPSF);
+  if(v!==null&&v>0)return v;
+  const c=latestCompFor(o);
+  v=c?(toNum(c.StartingRentPSF)||toNum(c.NetEffectiveRentPSF)):null;
+  return v!==null&&v>0?v:null;
+}
+function rentDeltaFor(o){let v=toNum(o.RentDeltaPSF); if(v!==null)return v; const cur=currentRentFor(o), m=marketRentFor(o); return cur!==null&&m!==null?cur-m:null;}
+function rentDeltaPctFor(o){let v=toNum(o.RentDeltaPct); if(v!==null)return v; const d=rentDeltaFor(o), m=marketRentFor(o); return d!==null&&m?d/m:null;}
+function rentPositionFor(o){if(o.RentPosition)return o.RentPosition; const d=rentDeltaFor(o); if(d===null)return '—'; return d>0?'Above market':d<0?'Below market':'At market';}
+function derivedValue(o,k){if(!o)return ''; if(k==='CurrentRentPSF')return currentRentFor(o); if(k==='MarketBenchmarkPSF')return marketRentFor(o); if(k==='RentDeltaPSF')return rentDeltaFor(o); if(k==='RentDeltaPct')return rentDeltaPctFor(o); if(k==='RentPosition')return rentPositionFor(o); if(k==='StartingRentPSF')return compRentVal(o); if(k==='NetEffectiveRentPSF')return compNerVal(o); if(k==='TIValuePSF')return compTiVal(o); if(k==='FreeRentMonths')return compFreeRentVal(o); return o[k];}
+
+
+function showLoadStatus(){
+  if(BUILDINGS_SAFE.length||EVENTS_SAFE.length||COMPS_SAFE.length)return;
+  const msg='<div class="error"><b>No dashboard data loaded.</b><br>Check that data/buildings.js, data/bd_opportunities.js, data/comps.js, and data/market_rents.js were uploaded to the same folder as dashboard.html.</div>';
+  const main=document.querySelector('.main'); if(main)main.insertAdjacentHTML('afterbegin',msg);
+}
+
+function init(){showLoadStatus(); populateFilters(); initMap(); bind(); render(); setTimeout(()=>{try{if(map)map.invalidateSize()}catch(e){}},400)}
+function populateFilters(){addOpts('region',[...BUILDINGS_SAFE.map(b=>b.Region),...EVENTS_SAFE.map(e=>e.Region),...COMPS_SAFE.map(c=>c.Region)]);addOpts('submarket',[...BUILDINGS_SAFE.map(b=>b.Submarket),...EVENTS_SAFE.map(e=>e.Submarket),...COMPS_SAFE.map(c=>c.Submarket)]);addOpts('expiration',[...EVENTS_SAFE.map(e=>e.ExpirationWindow),...COMPS_SAFE.map(c=>c.ExpirationWindow)]);addOpts('priority',EVENTS_SAFE.map(e=>e.BDPriority));}
+function addOpts(id,values){const el=$(id);[...new Set(values.filter(Boolean).map(String))].sort().forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;el.appendChild(o);});}
+function filters(){return {q:$('search').value.trim().toLowerCase(),focus:$('focus').value,region:$('region').value,submarket:$('submarket').value,expiration:$('expiration').value,priority:$('priority').value,minsf:Number($('minsf').value)||0};}
+function textMatch(o,q){if(!q)return true; return [o.Tenant,o.Company,o.PropertyName,o.StreetAddress,o.Address,o.City,o.State,o.OwnerName,o.LandlordOwner,o.Submarket,o.Region].filter(Boolean).join(' ').toLowerCase().includes(q)}
+function common(o,f){return textMatch(o,f.q)&&(!f.region||o.Region===f.region)&&(!f.submarket||o.Submarket===f.submarket)}
+function buildingRows(){const f=filters();return BUILDINGS_SAFE.filter(o=>common(o,f)&&num(o,['RBA','RentableBuildingArea'])>=f.minsf)}
+function eventRows(){const f=filters();return EVENTS_SAFE.filter(o=>common(o,f)&&(!f.expiration||o.ExpirationWindow===f.expiration)&&(!f.priority||o.BDPriority===f.priority)&&num(o,['LeasedSF','SF'])>=f.minsf)}
+function compRows(){
+  const f=filters();
+  return COMPS_SAFE
+    .filter(o=>common(o,f)&&(!f.expiration||o.ExpirationWindow===f.expiration)&&num(o,['LeaseSF','AggregateLeasedSFOrCompTotal','LeasedSF'])>=f.minsf)
+    .sort((a,b)=>String(b.ExecutionDate||b.CommencementDate||b.ExpirationDate||'').localeCompare(String(a.ExecutionDate||a.CommencementDate||a.ExpirationDate||'')));
+}
+function rentRows(){const f=filters();return RENT_REGIONS.filter(o=>(!f.q||JSON.stringify(o).toLowerCase().includes(f.q))&&(!f.region||o.region===f.region||o.label===f.region))}
+function rows(){if(activeTab==='events')return eventRows(); if(activeTab==='comps')return compRows(); if(activeTab==='rents')return rentRows(); return buildingRows();}
+function render(){current=rows(); updateKpis(); updateSection(); renderDataQa(); renderRecords(); renderMap(); closeFilters();}
+
+function renderDataQa(){
+  const el=$('dataQaBanner'); if(!el)return;
+  if(activeTab!=='comps'){el.innerHTML=''; return;}
+  const raw=COMPS_SAFE.length;
+  const matched=COMPS_SAFE.filter(x=>x.DashboardInclude===true||!!x.BuildingID).length;
+  const visible=current.length;
+  const rents=current.filter(x=>toNum(x.StartingRentPSF)!==null||toNum(x.NetEffectiveRentPSF)!==null).length;
+  const status=(raw===1459&&matched===829)?'<span class="good">Correct fresh Savills comp file loaded</span>':'<span class="bad">Check data folder - unexpected comp count loaded</span>';
+  el.innerHTML='<div class="data-qa-banner"><strong>Comp data QA:</strong> '+status+' · visible matched comps: <strong>'+fmt(visible)+'</strong> · comps with actual rent economics: <strong>'+fmt(rents)+'</strong> · raw comps retained: <strong>'+fmt(raw)+'</strong>. Rent comparison uses Savills research / benchmark data and actual Savills comp economics only - not CoStar asking rents or estimated asking rents.</div>';
+}
+
+function updateKpis(){const b=buildingRows(), e=eventRows(); const rba=b.reduce((s,o)=>s+num(o,['RBA','RentableBuildingArea']),0), vac=b.reduce((s,o)=>s+num(o,['DirectVacantSF','VacantSF']),0), avail=b.reduce((s,o)=>s+num(o,['AvailableSF','TotalAvailableSF']),0); $('k-events').textContent=fmt(e.length); $('k-events-sub').textContent=fmt(e.filter(x=>String(x.BDPriority||'').toLowerCase().includes('high')).length)+' high priority'; $('k-buildings').textContent=fmt(b.length); $('k-rba').textContent=sf(rba); $('k-vacant').textContent=sf(vac); $('k-vac-rate').textContent=rba?pct(vac/rba*100):'—'; $('k-avail').textContent=sf(avail); $('k-avail-rate').textContent=rba?pct(avail/rba*100):'—';}
+function updateSection(){const names={buildings:'Building inventory',comps:'Lease comp intelligence',events:'Lease events',rents:'Market rent benchmarks'}; const notes={buildings:'Master Savills building inventory - source of truth for property profiles.',events:'BD workflow view - upcoming lease expirations, current rent, market rent, and renewal/relocation leverage.',comps:'Evidence file - uploaded matched Savills lease comp transactions tied to the master building inventory, including actual rents, term, concessions, TI, NER, landlord, and timing.',rents:'Savills market rent benchmark layer used to support rent guidance and lease-event deltas.'}; $('sectionTitle').textContent=names[activeTab]; let extra=''; if(activeTab==='comps'){const rentCt=current.filter(x=>toNum(x.StartingRentPSF)!==null||toNum(x.NetEffectiveRentPSF)!==null).length; extra=' · '+fmt(rentCt)+' with actual rent economics · source: uploaded matched comp sheet';} $('sectionSub').textContent=fmt(current.length)+' visible '+(activeTab==='buildings'?'building':activeTab==='events'?'lease event':activeTab==='comps'?'comp':'market rent')+' records'+extra+' · '+notes[activeTab];}
+function renderRecords(){renderTable(); renderCards();}
+function cols(){return activeTab==='events'?['Tenant','StreetAddress','City','State','LeasedSF','LeaseExpirationDate','CurrentRentPSF','MarketBenchmarkPSF','RentDeltaPct','LandlordOwner']:activeTab==='comps'?['Tenant','StreetAddress','City','State','LeaseSF','ExecutionDate','CommencementDate','ExpirationDate','LeaseTermMonths','TransactionType','StartingRentPSF','RentType','RentEscalation','FreeRentMonths','TIValuePSF','NetEffectiveRentPSF','OwnerLandlord']:activeTab==='rents'?['region','label','overall_asking_rent','overall_vacancy_pct','inventory_msf','report_date']:['StreetAddress','City','State','RBA','OwnerName','DirectVacantSF','AvailableSF','Submarket'];}
+function colClass(k,v,r){let c=''; if(/SF|Rent|PSF|Pct|Year|Months/i.test(k))c+=' num'; if(/Rent|PSF|Pct|Position/i.test(k))c+=' rent'; if(['Tenant','StreetAddress','LandlordOwner','OwnerName','PropertyName'].includes(k))c+=' tight'; const vc=valueClass(k,v,r); return (c+' '+vc).trim();}
+function renderTable(){const c=cols();let html='<table class="table"><thead><tr>'+c.map(x=>'<th>'+label(x)+'</th>').join('')+'</tr></thead><tbody>';current.slice(0,1200).forEach((r,i)=>{html+='<tr data-i="'+i+'">'+c.map(k=>{const v=derivedValue(r,k); return '<td class="'+colClass(k,v,r)+'">'+cell(k,v,r)+'</td>'}).join('')+'</tr>'});html+='</tbody></table>'; $('tableWrap').innerHTML=html; $('tableWrap').querySelectorAll('[data-i]').forEach(el=>el.onclick=()=>openDetail(current[Number(el.dataset.i)]));}
+
+function renderCards(){let html=''; current.slice(0,160).forEach((r,i)=>{html+=card(r,i)}); if(current.length>160) html+='<div class="record">Showing first 160 records. Use filters/search to narrow the list.</div>'; $('cards').innerHTML=html||'<div class="record">No matching records.</div>'; $('cards').querySelectorAll('[data-i]').forEach(el=>el.onclick=()=>openDetail(current[Number(el.dataset.i)])); $('cards').querySelectorAll('[data-email]').forEach(el=>el.onclick=(ev)=>{ev.stopPropagation();copyPrompt(EVENTS_SAFE[Number(el.dataset.email)]);});}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function label(k){const custom={CurrentRentPSF:'Current rent',MarketBenchmarkPSF:'Market rent',RentDeltaPSF:'$ delta',RentDeltaPct:'% above/below',LeaseExpirationDate:'Expiration',LeasedSF:'Leased SF',LeaseSF:'Lease SF',StartingRentPSF:'Starting rent',NetEffectiveRentPSF:'Calc NER',TIValuePSF:'TI / PSF',FreeRentMonths:'Free rent',LeaseTermMonths:'Term',ExecutionDate:'Executed',CommencementDate:'Commenced',ExpirationDate:'Expires',OwnerLandlord:'Landlord'}; if(custom[k])return custom[k]; return String(k).replace(/BD/g,'B D').replace(/PSF/g,' P S F').replace(/Pct/g,' Pct').replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase()).replace(' S F',' SF').replace(' R B A','RBA').replace(' P S F',' PSF').replace(' Pct',' pct')}
+function isNil(v){return v===undefined||v===null||v===''||Number.isNaN(v)}
+function toNum(v){if(isNil(v))return null; if(typeof v==='number')return Number.isFinite(v)?v:null; const n=Number(String(v).replace(/[$,%\s,]/g,'')); return Number.isFinite(n)?n:null}
+function fmtYear(v){const n=toNum(v); return n?String(Math.round(n)):(v||'—')}
+function moneyPsf(v){const n=toNum(v); return n===null?'—':'$'+n.toFixed(2)+' PSF'}
+function moneyPlain(v){const n=toNum(v); return n===null?'—':'$'+n.toFixed(2)}
+function deltaPsf(v){const n=toNum(v); if(n===null)return '—'; return (n<0?'-':'')+'$'+Math.abs(n).toFixed(2)+' PSF'}
+function pctVal(v){let n=toNum(v); if(n===null)return '—'; if(Math.abs(n)<=1)n=n*100; return n.toFixed(Math.abs(n)<10?1:0)+'%'}
+function signedPct(v){let n=toNum(v); if(n===null)return '—'; if(Math.abs(n)<=1)n=n*100; return (n>0?'+':'')+n.toFixed(1)+'%'}
+function monthsVal(v){const n=toNum(v); return n===null?(v||'—'):String(Math.round(n))}
+function fmtValue(k,v,o){
+  if(isNil(v))return '—'; const key=String(k).toLowerCase();
+  if(/expirationyear|yearbuilt|yearrenovated|year$/i.test(k))return fmtYear(v);
+  if(/monthstoexpiration|leasetermmonths/i.test(k))return monthsVal(v);
+  if(/rentdeltapct|deltapercent|delta_pct|delta percent/i.test(k))return signedPct(v);
+  if(/vacancyrate|percentleased|pct|percentage|rate$/i.test(k)&&!/rent|escalation/i.test(k))return pctVal(v);
+  if(/rentdeltapsf|delta psf|rent delta/i.test(k))return deltaPsf(v);
+  if(/rent|psf|marketbenchmark/i.test(k)&&typeof v!=='boolean')return moneyPsf(v);
+  if(/sf|rba|building size|inventory|available|vacant/i.test(k)&&typeof v==='number')return sf(v);
+  if(/latitude|longitude/i.test(k)){const n=toNum(v); return n===null?String(v):n.toFixed(6)}
+  if(typeof v==='number')return fmt(v);
+  return String(v);
+}
+function valueClass(k,v,o){
+  const key=String(k).toLowerCase(); const pos=String((o&&o.RentPosition)||'').toLowerCase(); const n=toNum(v);
+  if(key.includes('rentposition')){if(pos.includes('above'))return 'positive'; if(pos.includes('below'))return 'negative';}
+  if(key.includes('rentdeltapsf')||key.includes('rentdeltapct')||key.includes('delta')){if(n>0)return 'positive'; if(n<0)return 'negative';}
+  if((key.includes('currentrent')||key.includes('current rent'))&&pos.includes('below'))return 'negative';
+  if((key.includes('currentrent')||key.includes('current rent'))&&pos.includes('above'))return 'positive';
+  return '';
+}
+function cell(k,v,o){return fmtValue(k,v,o||null)}
+function kv(k,v,cls){return '<div class="kv"><div class="k">'+k+'</div><div class="v '+(cls||'')+'">'+(v||'—')+'</div></div>'}
+function kvField(k,v,o){return kv(label(k),fmtValue(k,v,o),valueClass(k,v,o))}
+function card(o,i){if(activeTab==='events'){const ei=EVENTS_SAFE.indexOf(o);return '<div class="record" data-i="'+i+'"><div class="record-title">'+(o.Tenant||'Tenant')+'</div><div class="record-sub">'+[o.StreetAddress,o.City,o.State].filter(Boolean).join(', ')+'</div><div class="meta">'+kv('SF',sf(num(o,['LeasedSF'])))+kv('Exp.',o.LeaseExpirationDate)+kv('Current',moneyPsf(currentRentFor(o)),valueClass('CurrentRentPSF',currentRentFor(o),o))+kv('Market',moneyPsf(marketRentFor(o)))+kv('$ delta',deltaPsf(rentDeltaFor(o)),valueClass('RentDeltaPSF',rentDeltaFor(o),o))+kv('% delta',signedPct(rentDeltaPctFor(o)),valueClass('RentDeltaPct',rentDeltaPctFor(o),o))+kv('Rent position',rentPositionFor(o),valueClass('RentPosition',rentPositionFor(o),o))+'</div><div class="actions"><button class="mini yellow" data-email="'+ei+'">Copy email prompt</button><button class="mini">Open details</button></div></div>'} if(activeTab==='comps')return '<div class="record" data-i="'+i+'"><div class="record-title">'+(o.Tenant||'Lease comp')+'</div><div class="record-sub">'+[o.StreetAddress,o.City,o.State].filter(Boolean).join(', ')+'</div><div class="meta">'+kv('Lease SF',sf(num(o,['LeaseSF','AggregateLeasedSFOrCompTotal'])))+kv('Starting rent',moneyPsf(compRentVal(o)))+kv('NER',moneyPsf(compNerVal(o)))+kv('Executed',o.ExecutionDate)+kv('Term',o.LeaseTermMonths?o.LeaseTermMonths+' mo.':'—')+kv('Free rent',compFreeRentVal(o)!==null?compFreeRentVal(o)+' mo.':'—')+kv('TI / PSF',moneyPsf(compTiVal(o)))+kv('Landlord',o.OwnerLandlord)+'</div></div>'; if(activeTab==='rents')return '<div class="record" data-i="'+i+'"><div class="record-title">'+(o.label||o.region)+'</div><div class="record-sub">'+(o.report_date||'')+'</div><div class="meta">'+kv('Asking rent',moneyPsf(o.overall_asking_rent))+kv('Vacancy',pctVal(o.overall_vacancy_pct))+kv('Inventory',o.inventory_msf?o.inventory_msf+' MSF':'—')+kv('Source','Savills / master data')+'</div></div>'; return '<div class="record" data-i="'+i+'"><div class="record-title">'+(o.PropertyName||o.StreetAddress||'Building')+'</div><div class="record-sub">'+[o.StreetAddress,o.City,o.State].filter(Boolean).join(', ')+'</div><div class="meta">'+kv('RBA',sf(num(o,['RBA'])))+kv('Owner',o.OwnerName)+kv('Vacant',sf(num(o,['DirectVacantSF'])))+kv('Submarket',o.Submarket)+'</div></div>'}
+function addRegionLabels(){if(!map||!window.L)return; if(labelLayer){map.removeLayer(labelLayer)} labelLayer=L.layerGroup().addTo(map); const labels=[['Pennsylvania',40.55,-76.45,'state'],['New Jersey',40.15,-74.55,'state'],['Delaware',39.15,-75.45,'state'],['Lehigh County',40.62,-75.58,'county'],['Northampton County',40.76,-75.30,'county'],['Berks County',40.38,-75.96,'county'],['Bucks County',40.33,-75.13,'county'],['Montgomery County',40.22,-75.37,'county'],['Philadelphia County',39.99,-75.13,'county'],['Burlington County',39.88,-74.72,'county'],['Camden County',39.81,-74.98,'county'],['Gloucester County',39.72,-75.15,'county'],['Mercer County',40.26,-74.70,'county'],['Middlesex County',40.45,-74.40,'county'],['Somerset County',40.58,-74.62,'county'],['Union County',40.66,-74.31,'county'],['Essex County',40.78,-74.24,'county'],['Bergen County',40.96,-74.05,'county'],['Hudson County',40.74,-74.06,'county'],['Morris County',40.86,-74.55,'county'],['Dauphin County',40.41,-76.79,'county'],['Cumberland County',40.16,-77.26,'county']]; labels.forEach(([name,lat,lng,type])=>{L.marker([lat,lng],{interactive:false,icon:L.divIcon({className:'',html:'<div class="geo-label '+type+'">'+name+'</div>',iconSize:[120,18],iconAnchor:[60,9]})}).addTo(labelLayer);});}
+function initMap(){if(!window.L){$('map').innerHTML='<div class="error">Map library did not load. Data tables are still available below.</div>';return} try{map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([40.25,-75.1],8);L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri'}).addTo(map);referenceLabels=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{attribution:'Labels © Esri',pane:'overlayPane'}).addTo(map);addRegionLabels();markers=L.layerGroup().addTo(map);}catch(e){$('map').innerHTML='<div class="error">Map failed to initialize. Data tables are still available below.</div>';}}
+function popupHtml(o,idx){
+  const b=(o.BuildingID&&byId.get(o.BuildingID))||o;
+  const title=o.Tenant||b.PropertyName||o.PropertyName||o.StreetAddress||'Building profile';
+  const sub=[b.StreetAddress||o.StreetAddress,b.City||o.City,b.State||o.State].filter(Boolean).join(', ');
+  const sfv=sf(num(b,['RBA','RentableBuildingArea'])||num(o,['LeasedSF','LeaseSF','RBA']));
+  const owner=b.OwnerName||o.OwnerName||o.LandlordOwner||o.OwnerLandlord||'—';
+  return '<div class="map-popup"><div class="map-popup-title">'+esc(title)+'</div><div class="map-popup-sub">'+esc(sub)+'</div><div class="map-popup-meta"><div><div class="map-popup-k">Size</div><div class="map-popup-v">'+esc(sfv)+'</div></div><div><div class="map-popup-k">Owner</div><div class="map-popup-v">'+esc(owner)+'</div></div></div><button class="map-popup-btn" data-map-profile="'+idx+'">Open building profile</button></div>';
+}
+function openMapProfile(idx){
+  const source=mapLayer==='events'?eventRows():mapLayer==='comps'?compRows():buildingRows();
+  const mappable=source.filter(o=>Number(o.Latitude||o.lat)&&Number(o.Longitude||o.lng));
+  const o=mappable[Number(idx)];
+  if(!o)return;
+  const b=(o.BuildingID&&byId.get(o.BuildingID))||o;
+  openDetail(b);
+}
+function renderMap(){let source=mapLayer==='events'?eventRows():mapLayer==='comps'?compRows():buildingRows(); source=source.filter(o=>Number(o.Latitude||o.lat)&&Number(o.Longitude||o.lng)); if(!map||!markers){updateMapStats(source);return} markers.clearLayers(); const isMobile=innerWidth<=760; const cap=isMobile?700:1600; const pts=[]; source.slice(0,cap).forEach((o,idx)=>{const lat=Number(o.Latitude||o.lat), lng=Number(o.Longitude||o.lng); if(!lat||!lng)return; pts.push([lat,lng]); const cls=(mapLayer==='events'&&String(o.BDPriority||'').toLowerCase().includes('high'))?'#CE181E':'#8d99aa'; const icon=L.divIcon({className:'',html:'<div style="width:16px;height:16px;border-radius:50%;background:'+cls+';border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.45)"></div>',iconSize:[16,16]}); L.marker([lat,lng],{icon}).bindPopup(popupHtml(o,idx)).addTo(markers);}); updateMapStats(source); if(pts.length){try{map.fitBounds(pts.slice(0,120).map(p=>p),{padding:[30,30],maxZoom:isMobile?9:10})}catch(e){}}}
+function updateMapStats(source){$('m-count').textContent=fmt(source.length);$('m-priority').textContent=fmt(source.filter(o=>String(o.BDPriority||'').toLowerCase().includes('high')).length);$('m-window').textContent=fmt(source.filter(o=>/0.?36|0-36|12-24|24-36/i.test(String(o.ExpirationWindow||''))).length);$('m-sf').textContent=sf(source.reduce((s,o)=>s+num(o,['LeasedSF','LeaseSF','RBA']),0));}
+function openDetail(o){if(!o)return; const title=o.Tenant||o.PropertyName||o.StreetAddress||o.label||o.region||'Record'; $('detailTitle').textContent=title; $('detailSub').textContent=[o.StreetAddress,o.City,o.State].filter(Boolean).join(', ')||o.report_date||''; $('detailBody').innerHTML=detailHtml(o); $('detail').classList.add('open'); $('detailBody').querySelectorAll('[data-copy-detail]').forEach(b=>b.onclick=()=>copyPrompt(o));}
+
+function buildingIdForRecord(o){if(!o)return ''; if(o.BuildingID)return o.BuildingID; if(o.CoStarPropertyID){const b=BUILDINGS_SAFE.find(x=>String(x.CoStarPropertyID||x.PropertyID||'')===String(o.CoStarPropertyID)); if(b)return b.BuildingID;} return '';}
+function compsForBuildingRecord(o){
+  const bid=buildingIdForRecord(o);
+  const addr=String(o.StreetAddress||'').toLowerCase().trim();
+  const city=String(o.City||'').toLowerCase().trim();
+  const exact=COMPS_SAFE.filter(c=>bid&&c.BuildingID===bid);
+  const fallback=COMPS_SAFE.filter(c=>{
+    if(!addr)return false;
+    const ca=String(c.StreetAddress||'').toLowerCase().trim();
+    const cc=String(c.City||'').toLowerCase().trim();
+    return ca===addr&&(!city||!cc||cc===city);
+  });
+  const seen=new Set(); const all=[];
+  [...exact,...fallback].forEach(c=>{const id=c.CompEventID||c.LeaseCompID||JSON.stringify([c.Tenant,c.StreetAddress,c.ExecutionDate,c.StartingRentPSF]); if(!seen.has(id)){seen.add(id); all.push(c);}});
+  all.sort((a,b)=>String(b.ExecutionDate||b.CommencementDate||b.ExpirationDate||'').localeCompare(String(a.ExecutionDate||a.CommencementDate||a.ExpirationDate||'')));
+  return all;
+}
+function compMini(k,v){return '<div><div class="comp-mini-k">'+esc(k)+'</div><div class="comp-mini-v">'+esc(v||'—')+'</div></div>'}
+function relatedCompsHtml(o){
+  const comps=compsForBuildingRecord(o);
+  const isBuilding=!!(o&&o.BuildingID&&BUILDINGS_SAFE.some(b=>b.BuildingID===o.BuildingID));
+  if(!isBuilding&&!comps.length)return '';
+  let html='<div class="detail-section"><h4>Historical lease comps attached to this building</h4>';
+  html+='<div class="comp-note">'+fmt(comps.length)+' comp record'+(comps.length===1?'':'s')+' matched by master BuildingID'+(comps.length?' and sorted most recent first.':' - no matched comp records currently tied to this building.')+'</div>';
+  if(comps.length){
+    html+='<div class="related-comps">';
+    comps.forEach(c=>{
+      html+='<div class="comp-row"><div class="comp-row-head"><div class="comp-tenant">'+esc(c.Tenant||'Unknown tenant')+'</div><div class="comp-date">'+esc(c.ExecutionDate||c.CommencementDate||c.ExpirationDate||'Date unavailable')+'</div></div>';
+      html+='<div class="comp-grid">'
+        +compMini('Lease SF',sf(num(c,['LeaseSF','AggregateLeasedSFOrCompTotal'])))
+        +compMini('Starting rent',moneyPsf(compRentVal(c)))
+        +compMini('NER',moneyPsf(compNerVal(c)))
+        +compMini('Term',c.LeaseTermMonths?c.LeaseTermMonths+' mo.':'—')
+        +compMini('Free rent',compFreeRentVal(c)!==null?compFreeRentVal(c)+' mo.':'—')
+        +compMini('TI / PSF',moneyPsf(compTiVal(c)))
+        +compMini('Type',c.TransactionType||'—')
+        +compMini('Landlord',c.OwnerLandlord||'—')
+        +compMini('Commenced',c.CommencementDate||'—')
+        +compMini('Expires',c.ExpirationDate||'—')
+        +compMini('Rent type',c.RentType||'—')
+        +compMini('Escalation',c.RentEscalation||'—')
+        +'</div></div>';
+    });
+    html+='</div>';
+  }
+  html+='</div>';
+  return html;
+}
+
+function detailHtml(o){
+  const preferred=['BDOpportunityID','BuildingID','CoStarPropertyID','Tenant','StreetAddress','City','State','Region','Market','Submarket','LeasedSF','LeaseExpirationDate','ExpirationYear','MonthsToExpiration','ExpirationWindow','CurrentRentPSF','MarketBenchmarkPSF','RentDeltaPSF','RentDeltaPct','RentPosition','LandlordOwner','OwnerName','SourceConfidence','BDPriority','ContactStatus','MatchStatus','MarketBDStory','InternalEmailBrief'];
+  const seen=new Set(); let entries=[]; preferred.forEach(k=>{const dv=derivedValue(o,k); if(!isNil(dv)){entries.push([k,dv]); seen.add(k);}});
+  Object.entries(o).forEach(([k,v])=>{if(entries.length<42&&!seen.has(k)&&!isNil(v))entries.push([k,v]);});
+  let html='<div class="detail-section"><h4>Record detail</h4><div class="meta">';
+  entries.forEach(([k,v])=>html+=kvField(k,v,o));
+  html+='</div></div>';
+  html+=relatedCompsHtml(o);
+  if(o.BDOpportunityID||o.Tenant){html+='<button class="mini yellow" data-copy-detail>Copy two-version email prompt</button>'}
+  return html;
+}
+function copyPrompt(o){if(!o)return; const b=byId.get(o.BuildingID)||{}; const comps=COMPS_SAFE.filter(c=>c.BuildingID&&c.BuildingID===o.BuildingID).slice(0,5); const prompt=`Create two prospecting email drafts for John Leskow at Savills using the full market context below. Use tenant-representation language, avoid "compare notes" and "worth a conversation," use "tenant," and end with "Either way, please let me know." when appropriate.\n\nVersion 1: Short CTA email, ideally under 75 words, with a 1-4 word trigger-based subject line.\n\nVersion 2: Longer strategic due-diligence email that makes clear Savills has relevant market intelligence the tenant should review before evaluating renewal, relocation, expansion, consolidation, or restructuring options.\n\nSelected lease event:\nTenant: ${o.Tenant||''}\nAddress: ${[o.StreetAddress,o.City,o.State].filter(Boolean).join(', ')}\nLeased SF: ${sf(num(o,['LeasedSF']))}\nExpiration: ${o.LeaseExpirationDate||''}\nExpiration window: ${o.ExpirationWindow||''}\nCurrent rent / comp rent: ${moneyPsf(currentRentFor(o))}
+Market rent benchmark: ${moneyPsf(marketRentFor(o))}
+Rent delta: ${deltaPsf(rentDeltaFor(o))} / ${signedPct(rentDeltaPctFor(o))}
+Rent position: ${rentPositionFor(o)||''}\nBD priority: ${o.BDPriority||''}\nMarket story: ${o.MarketBDStory||o.InternalEmailBrief||''}\n\nBuilding / CoStar context:\nProperty: ${b.PropertyName||o.MatchedPropertyName||''}\nOwner/landlord: ${o.LandlordOwner||b.OwnerName||''}\nRegion/submarket: ${o.Region||b.Region||''} / ${o.Submarket||b.Submarket||''}\nRBA: ${sf(num(b,['RBA']))}\nMarket rent benchmark: ${moneyPsf(marketRentFor(o))}\nVacant SF: ${sf(num(b,['DirectVacantSF']))}\nClear height: ${b.CeilingHt||''}\nDocks: ${b.LoadingDocks||''}\nLeasing company/broker: ${[b.LeasingCompanyName,b.PrimaryAgentName,b.LeasingCompanyContact].filter(Boolean).join(' ')}\n\nMatched lease comps at same building:\n${comps.length?comps.map(c=>`- ${c.Tenant||c.PropertyName||'Comp'}: ${sf(num(c,['LeaseSF','AggregateLeasedSFOrCompTotal']))}, ${moneyPsf(num(c,['StartingRentPSF']))}, ${c.ExecutionDate||''}, ${c.TransactionType||''}`).join('\n'):'No matched same-building comps available. Use nearby/regional comp and market benchmark context instead.'}`; if(navigator.clipboard){navigator.clipboard.writeText(prompt).then(()=>toast('Email prompt copied')).catch(()=>fallbackCopy(prompt));}else fallbackCopy(prompt)}
+function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Email prompt copied')}
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
+function openFilters(){$('filters').classList.add('open');$('backdrop').classList.add('open')} function closeFilters(){$('filters').classList.remove('open');$('backdrop').classList.remove('open')}
+function bind(){['search','focus','region','submarket','expiration','priority','minsf'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='search' && $('quickSearch'))$('quickSearch').value=$('search').value; activeTab=$('focus').value; setTabs(); render();})); if($('quickSearch')) $('quickSearch').addEventListener('input',()=>{$('search').value=$('quickSearch').value; render();}); $('filterBtn').onclick=()=>{if(innerWidth<=1024) openFilters(); else document.getElementById('filters').scrollIntoView({behavior:'smooth',block:'start'});}; $('backdrop').onclick=closeFilters; $('resetBtn').onclick=()=>{['search','region','submarket','expiration','priority'].forEach(id=>$(id).value=''); if($('quickSearch')) $('quickSearch').value=''; $('minsf').value='0'; render();}; $('mapOptBtn').onclick=()=>$('mapMenu').classList.toggle('open'); document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-layer]').forEach(x=>x.classList.remove('active'));b.classList.add('active');mapLayer=b.dataset.layer;renderMap();}); document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;$('focus').value=activeTab;setTabs();render();}); document.querySelectorAll('[data-side-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.sideTab;$('focus').value=activeTab;setTabs();render();}); $('detailClose').onclick=()=>$('detail').classList.remove('open'); document.addEventListener('click',e=>{const btn=e.target.closest('[data-map-profile]'); if(btn)openMapProfile(btn.dataset.mapProfile);}); window.addEventListener('resize',()=>setTimeout(()=>{try{if(map)map.invalidateSize(); renderMap();}catch(e){}},180));}
+function setTabs(){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===activeTab)); document.querySelectorAll('[data-side-tab]').forEach(b=>b.classList.toggle('active',b.dataset.sideTab===activeTab)); if($('focus')) $('focus').value=activeTab;}
+try{init()}catch(e){document.body.innerHTML='<div class="error"><b>Dashboard failed to initialize.</b><br>'+String(e)+'</div>'; console.error(e)}
+})();
+</script>
+</body>
 </html>
