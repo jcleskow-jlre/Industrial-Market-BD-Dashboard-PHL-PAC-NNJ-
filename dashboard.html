@@ -2262,11 +2262,11 @@ body.auth-locked .app{filter:blur(6px);pointer-events:none;user-select:none}
 
 
 
-<script src="data/market_rents.js"></script><script src="data/bd_opportunities.js"></script><script src="data/comps.js"></script><script src="data/buildings.js"></script><script>
+<script src="data/market_rents.js?v=94"></script><script src="data/bd_opportunities.js?v=94"></script><script src="data/comps_v94.js?v=94"></script><script src="data/buildings.js?v=94"></script><script>
 (function(){
 'use strict';
 const $=id=>document.getElementById(id); const arr=v=>Array.isArray(v)?v:[];
-const BUILDINGS_SAFE=arr((typeof BUILDINGS!=='undefined'?BUILDINGS:window.BUILDINGS)||[]); const COMPS_SAFE=arr((typeof COMPS!=='undefined'?COMPS:window.COMPS)||[]); const EVENTS_SAFE=arr((typeof BD_OPPORTUNITIES!=='undefined'?BD_OPPORTUNITIES:window.BD_OPPORTUNITIES)||[]); const RENT_REGIONS=((((typeof MARKET_RENTS!=='undefined'?MARKET_RENTS:window.MARKET_RENTS)||{}).regions)||[]); const byId=new Map(BUILDINGS_SAFE.map(b=>[b.BuildingID,b])); let activeTab='buildings'; let mapLayer='buildings'; let current=[]; let sortState={tab:'',key:'',dir:'asc'}; let compFilterState={q:'',submarket:'',leaseType:'',size:''}; let map=null; let markers=null; let labelLayer=null; let referenceLabels=null;
+const BUILDINGS_SAFE=arr((typeof BUILDINGS!=='undefined'?BUILDINGS:window.BUILDINGS)||[]); const COMPS_SAFE=arr((typeof COMPS_V94!=='undefined'?COMPS_V94:(typeof COMPS!=='undefined'?COMPS:window.COMPS))||[]); const EVENTS_SAFE=arr((typeof BD_OPPORTUNITIES!=='undefined'?BD_OPPORTUNITIES:window.BD_OPPORTUNITIES)||[]); const RENT_REGIONS=((((typeof MARKET_RENTS!=='undefined'?MARKET_RENTS:window.MARKET_RENTS)||{}).regions)||[]); const byId=new Map(BUILDINGS_SAFE.map(b=>[b.BuildingID,b])); let activeTab='buildings'; let mapLayer='buildings'; let current=[]; let sortState={tab:'',key:'',dir:'asc'}; let compFilterState={q:'',submarket:'',leaseType:'',size:''}; let map=null; let markers=null; let labelLayer=null; let referenceLabels=null;
 function fmt(n){n=Number(n)||0;return n.toLocaleString()} 
 function msf(n){
   n=Number(n)||0;
@@ -2812,7 +2812,7 @@ function recentCompsForRegion(regionKey){
   return COMPS_SAFE.filter(c=>compRegionKey(c)===regionKey && isRecentComp(c,12));
 }
 function compRentForAnalysis(c){
-  return toNum(c.StartingRentPSF)||toNum(c.CurrentRentPSF)||toNum(c.NetEffectiveRentPSF)||null;
+  return toNum(c.StartingRentPSF)||toNum(c.CurrentRentPSF)||toNum(c.NetEffectiveRentPSF)||toNum(c.CalculatedNERPSF)||toNum(c.SourceNetEffectiveRentPSF)||null;
 }
 function compSizeForAnalysis(c){
   return toNum(c.LeaseSF)||toNum(c.AggregateLeasedSFOrCompTotal)||toNum(c.LeasedSF)||0;
